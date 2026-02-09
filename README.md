@@ -1,17 +1,33 @@
-# React + Vite
+# 💋🎣 Sexy-Phish
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Sexy-Phish** is a cybersecurity education project exploring human behavioral vulnerabilities in the context of phishing, social engineering, and credential harvesting.
 
-Currently, two official plugins are available:
+The project blends storytelling and technical concepts to focusing on awareness, prevention, and ethical security design.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Think:
+> *rom-com charm*  
+> *romantasy allure*  
+> *Mr. Robot-style security realism*
 
-## React Compiler
+## What this project does
+- Demonstrates common phishing patterns and social-engineering tactics
+- Supports classroom discussion about prevention and detection
+- Recognize technical + psychological indicators of scams
+- Practice safe security design principles (least privilege, logging, validation, etc.)
+- Document and communicate security risks clearly
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Getting Started
 
-## Expanding the ESLint configuration
+### Prerequisites
+- Node.js
+- npm 
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+> No additional setup required. All dependencies (including React and Chakra UI) are installed automatically.
 
+### Clone the repository
+```bash
+git clone https://github.com/Tangerinedream13/sexy-phish.git
+cd sexy-phish
+
+npm install
+npm run dev
