@@ -56,7 +56,6 @@ The project explores:
 - Common phishing attack methods
 - Credential harvesting
 - Social engineering techniques
-- Emotional manipulation tactics
 - Ethical considerations in cybersecurity
 - Risk communication
 
@@ -74,9 +73,9 @@ The project explores:
 ## Creative Influences
 
 - Romance novels and rom-com storytelling
-- Interactive narrative design
-- Psychological themes in cybersecurity (e.g., Mr. Robot)
-- Technology-driven suspense fiction
+- Interactive narrative 
+- Psychological themes in cybersecurity (i.e., Mr. Robot)
+- Technology-driven fiction
 
 ---
 
