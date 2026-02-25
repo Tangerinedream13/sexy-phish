@@ -1,33 +1,88 @@
-# 💋🎣 Sexy-Phish
+# Sexy-Phish 💋🎣  
+*A Romance-Themed Cybersecurity Learning Experience*
 
-**Sexy-Phish** is a cybersecurity education project exploring human behavioral vulnerabilities in the context of phishing, social engineering, and credential harvesting.
+## The Core Question
+What are the most commonly employed phishing methods and how do they exploit human behavior?
 
-The project blends storytelling and technical concepts to focusing on awareness, prevention, and ethical security design.
+---
 
-Think:
-> *rom-com charm*  
-> *romantasy allure*  
-> *Mr. Robot-style security realism*
+## Project Overview
 
-## What this project does
-- Demonstrates common phishing patterns and social-engineering tactics
-- Supports classroom discussion about prevention and detection
-- Recognize technical + psychological indicators of scams
-- Practice safe security design principles (least privilege, logging, validation, etc.)
-- Document and communicate security risks clearly
+Sexy-Phish is an interactive “Choose Your Own Adventure” web application that teaches phishing awareness through a romance narrative.
 
-## Getting Started
+Rather than presenting cybersecurity as technical and intimidating, this project makes it:
+- Relatable
+- Story-driven
+- Playful but educational
+- Focused on human psychology
 
-### Prerequisites
+The goal is to make digital safety memorable.
+
+---
+
+## Story Structure
+
+The experience unfolds in three acts:
+
+**Act 1: Meet Cute**  
+`hello.friend`
+
+**Act 2: Situationship**  
+`trust_me.exe`
+
+**Act 3: Damage Control**  
+`this_feels_real.txt`
+
+Each act includes 3–4 interactive decision points highlighting phishing red flags.
+
+A final questionnaire assesses learning outcomes.
+
+---
+
+## Target Audience
+
+This project is designed for:
+- People who enjoy romance stories and interactive narratives
+- Users who may not engage with traditional cybersecurity education
+- Learners who benefit from storytelling rather than lectures
+
+By embedding cybersecurity lessons in romance tropes, Sexy-Phish reframes online safety as modern and human-centered.
+
+---
+
+## Educational Focus
+
+The project explores:
+- Common phishing attack methods
+- Credential harvesting
+- Social engineering techniques
+- Emotional manipulation tactics
+- Ethical considerations in cybersecurity
+- Risk communication
+
+---
+
+## Tech Stack
+
+- React
 - Node.js
-- npm 
+- Express
+- PostgreSQL
 
-> No additional setup required. All dependencies (including React and Chakra UI) are installed automatically.
+---
 
-### Clone the repository
-```bash
-git clone https://github.com/Tangerinedream13/sexy-phish.git
-cd sexy-phish
+## Creative Influences
 
-npm install
+- Romance novels and rom-com storytelling
+- Interactive narrative design
+- Psychological themes in cybersecurity (e.g., Mr. Robot)
+- Technology-driven suspense fiction
+
+---
+
+## About the Author
+
+Built by Maria Haddon  
+B.S. Computer Science, UNC Asheville, '26
+CSCI-364 Cybersecurity
 npm run dev
