@@ -83,5 +83,7 @@ The project explores:
 
 Built by Maria Haddon  
 B.S. Computer Science, UNC Asheville, '26
+
 CSCI-364 Cybersecurity
+
 npm run dev
