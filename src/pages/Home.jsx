@@ -12,43 +12,26 @@ import {
 
 export default function Home({ onStartAct1 }) {
   return (
-    <Box
-      minH="100vh"
-      bgGradient="linear(to-b, gray.950, purple.950, black)"
-      color="white"
-      px={6}
-      py={12}
-    >
-      <Container maxW="6xl">
-        <VStack align="stretch" spacing={10}>
-          <VStack align="start" spacing={4} maxW="3xl">
-            <Badge
-              colorScheme="pink"
-              px={3}
-              py={1}
-              rounded="full"
-              fontSize="0.8rem"
-            >
+    <Box minH="100vh" bg="pink.50" px={6} py={12}>
+      <Container maxW="5xl">
+        <VStack spacing={10}>
+          <VStack spacing={4} textAlign="center" maxW="2xl">
+            <Badge colorScheme="pink" px={3} py={1} rounded="full">
               Romance • Deception • Social Engineering
             </Badge>
 
-            <Heading
-              size="2xl"
-              lineHeight="1"
-              bgGradient="linear(to-r, pink.300, purple.300, cyan.300)"
-              bgClip="text"
-            >
+            <Heading size="2xl" color="pink.700">
               Sexy Phish
             </Heading>
 
-            <Text fontSize="xl" color="gray.300">
+            <Text fontSize="xl" color="gray.700">
               A cyber-thriller where attraction, trust, and manipulation become
               the attack surface.
             </Text>
 
-            <Text color="gray.400" maxW="2xl">
-              Play through interactive acts, spot red flags, and watch how
-              social engineering works when charm becomes a weapon.
+            <Text color="gray.600">
+              Play through interactive acts, spot red flags, and see how social
+              engineering works when charm becomes a weapon.
             </Text>
 
             <HStack spacing={4} pt={2}>
@@ -56,37 +39,29 @@ export default function Home({ onStartAct1 }) {
                 Start Act 1
               </Button>
 
-              <Button
-                variant="outline"
-                borderColor="whiteAlpha.400"
-                color="gray.200"
-                size="lg"
-              >
+              <Button variant="outline" colorScheme="pink" size="lg">
                 How It Works
               </Button>
             </HStack>
           </VStack>
 
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} w="full">
             <Box
-              bg="whiteAlpha.100"
-              border="1px solid"
-              borderColor="whiteAlpha.200"
-              rounded="2xl"
-              p={6}
-              backdropFilter="blur(10px)"
+              bg="white"
+              borderRadius="2xl"
               boxShadow="xl"
+              p={6}
             >
               <VStack align="start" spacing={4}>
-                <Badge colorScheme="purple">Act 1</Badge>
+                <Badge colorScheme="pink">Act 1</Badge>
 
                 <Heading size="lg">hello.friend</Heading>
 
-                <Text color="gray.300" fontWeight="medium">
+                <Text color="gray.700" fontWeight="medium">
                   The Meet-Cute
                 </Text>
 
-                <Text color="gray.400">
+                <Text color="gray.600">
                   Las Vegas. A cybersecurity summit. A charismatic operative. A
                   billionaire CEO with too much access and not enough caution.
                 </Text>
@@ -101,27 +76,28 @@ export default function Home({ onStartAct1 }) {
                 </Button>
               </VStack>
             </Box>
+
             <Box
-              bg="whiteAlpha.50"
-              border="1px dashed"
-              borderColor="whiteAlpha.200"
-              rounded="2xl"
+              bg="white"
+              borderRadius="2xl"
+              boxShadow="lg"
               p={6}
+              opacity={0.9}
             >
               <VStack align="start" spacing={4}>
                 <Badge colorScheme="gray">Coming Soon</Badge>
 
-                <Heading size="md" color="gray.300">
+                <Heading size="md" color="gray.700">
                   Future Acts
                 </Heading>
 
-                <Text color="gray.400">
+                <Text color="gray.600">
                   More chapters, more red flags, more dangerous decisions.
                 </Text>
 
                 <Text color="gray.500" fontSize="sm">
                   Later add locked act cards here for Act 2, Act 3, recaps,
-                  and/or continue game state.
+                  and continue game state.
                 </Text>
               </VStack>
             </Box>
