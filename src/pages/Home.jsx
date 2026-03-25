@@ -33,25 +33,10 @@ export default function Home({ onStartAct1 }) {
               Play through interactive acts, spot red flags, and see how social
               engineering works when charm becomes a weapon.
             </Text>
-
-            <HStack spacing={4} pt={2}>
-              <Button colorScheme="pink" size="lg" onClick={onStartAct1}>
-                Start Act 1
-              </Button>
-
-              <Button variant="outline" colorScheme="pink" size="lg">
-                How It Works
-              </Button>
-            </HStack>
           </VStack>
 
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} w="full">
-            <Box
-              bg="white"
-              borderRadius="2xl"
-              boxShadow="xl"
-              p={6}
-            >
+            <Box bg="white" borderRadius="2xl" boxShadow="xl" p={6}>
               <VStack align="start" spacing={4}>
                 <Badge colorScheme="pink">Act 1</Badge>
 
@@ -96,8 +81,8 @@ export default function Home({ onStartAct1 }) {
                 </Text>
 
                 <Text color="gray.500" fontSize="sm">
-                  Later add locked act cards here for Act 2, Act 3, recaps,
-                  and continue game state.
+                  Later add locked act cards here for Act 2, Act 3, recaps, and
+                  continue game state.
                 </Text>
               </VStack>
             </Box>
