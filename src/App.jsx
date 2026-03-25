@@ -1,5 +1,5 @@
 import { useState } from "react";
-import HomePage from "./pages/HomePage";
+import Home from "./pages/Home";
 import PlayAct1 from "./pages/PlayAct1";
 
 export default function App() {
@@ -9,5 +9,5 @@ export default function App() {
     return <PlayAct1 onBack={() => setScreen("home")} />;
   }
 
-  return <HomePage onStartAct1={() => setScreen("act1")} />;
+  return <Home onStartAct1={() => setScreen("act1")} />;
 }
