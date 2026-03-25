@@ -9,7 +9,6 @@ export default function App() {
   if (screen === "act1") {
     return (
       <PlayAct1
-        onBack={() => setScreen("home")}
         onGoHome={() => setScreen("home")}
         onGoAct2={() => setScreen("act2")}
       />
