@@ -476,7 +476,7 @@ const act1 = {
         },
         {
           id: "c10_intro_bold",
-          label: "Flirt hard: “Someone who likes dangerous men.”",
+          label: "Flirt hard: “Someone who likes powerful men.”",
           next: "s03_flirt_bold",
           effects: { score: { heat: 2, risk: 1 } },
         },
