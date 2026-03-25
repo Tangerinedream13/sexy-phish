@@ -2,9 +2,9 @@ import { useMemo, useState } from "react";
 import {
   Badge,
   Box,
+  Button,
   Heading,
   HStack,
-  IconButton,
   Stack,
   Text,
 } from "@chakra-ui/react";
@@ -13,7 +13,7 @@ import act1 from "../data/act1";
 import ChoiceButton from "../components/ChoiceButton";
 import RedFlagToast from "../components/RedFlagToast";
 
-export default function PlayAct1() {
+export default function PlayAct1({ onGoHome, onGoAct2 }) {
   const [sceneId, setSceneId] = useState(act1.startSceneId);
   const [history, setHistory] = useState([]);
   const [future, setFuture] = useState([]);
@@ -82,6 +82,7 @@ export default function PlayAct1() {
   const lines = Array.isArray(scene.text)
     ? scene.text
     : [String(scene.text ?? "")];
+
   const toast = scene.ui?.showToast ?? null;
 
   const redFlags = useMemo(() => {
@@ -107,8 +108,7 @@ export default function PlayAct1() {
       <Box w="380px" bg="white" borderRadius="2xl" boxShadow="xl" p={5}>
         <Stack gap={4}>
           <HStack justify="space-between" align="center">
-            <IconButton
-              aria-label="Go back"
+            <Button
               onClick={goBack}
               isDisabled={history.length === 0}
               variant="outline"
@@ -116,14 +116,13 @@ export default function PlayAct1() {
               size="sm"
             >
               ←
-            </IconButton>
+            </Button>
 
             <Text fontSize="sm" color="gray.500" fontWeight="medium">
               Act 1
             </Text>
 
-            <IconButton
-              aria-label="Go forward"
+            <Button
               onClick={goForward}
               isDisabled={future.length === 0}
               variant="outline"
@@ -131,7 +130,7 @@ export default function PlayAct1() {
               size="sm"
             >
               →
-            </IconButton>
+            </Button>
           </HStack>
 
           <Stack gap={1}>
@@ -185,32 +184,44 @@ export default function PlayAct1() {
                   ? "Trust Gain"
                   : "Neutral"}
               </Text>
+
               {scene.end.hook ? (
-                <Text fontSize="sm" opacity={0.85}>
+                <Text fontSize="sm" opacity={0.85} mt={1} mb={3}>
                   {scene.end.hook}
                 </Text>
               ) : null}
+
+              <HStack pt={2} spacing={3}>
+                <Button colorScheme="pink" variant="outline" onClick={onGoHome}>
+                  Return Home
+                </Button>
+                <Button colorScheme="pink" onClick={onGoAct2}>
+                  Continue to Act 2
+                </Button>
+              </HStack>
             </Box>
           ) : null}
 
-          <Stack gap={2} pt={1}>
-            {choices.map((choice) => (
-              <ChoiceButton
-                key={choice.id}
-                onClick={() => {
-                  if (!choice.next) {
-                    setSceneId(act1.startSceneId);
-                    setHistory([]);
-                    setFuture([]);
-                    return;
-                  }
-                  goToScene(choice.next);
-                }}
-              >
-                {choice.label}
-              </ChoiceButton>
-            ))}
-          </Stack>
+          {!isEndScene ? (
+            <Stack gap={2} pt={1}>
+              {choices.map((choice) => (
+                <ChoiceButton
+                  key={choice.id}
+                  onClick={() => {
+                    if (!choice.next) {
+                      setSceneId(act1.startSceneId);
+                      setHistory([]);
+                      setFuture([]);
+                      return;
+                    }
+                    goToScene(choice.next);
+                  }}
+                >
+                  {choice.label}
+                </ChoiceButton>
+              ))}
+            </Stack>
+          ) : null}
         </Stack>
       </Box>
     </Box>
