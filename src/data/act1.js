@@ -17,7 +17,7 @@ const act1 = {
       venue: "CyberSteel Executive Summit",
       vibe: "City of sin: confidence, distraction, and opportunity",
     },
-    version: 1,
+    version: 2,
   },
 
   characters: {
@@ -72,7 +72,6 @@ const act1 = {
     },
   },
 
-  // Optional starter state for future features (your current UI can ignore)
   state: {
     flags: {
       sawBadge: false,
@@ -352,7 +351,10 @@ const act1 = {
           id: "c04_charm",
           label: "Turn on charm: “Come on, just a hint?”",
           next: "s02_ivy_charm",
-          effects: { flags: { ivyNoticed: true }, score: { heat: 1, risk: 1 } },
+          effects: {
+            flags: { ivyNoticed: true },
+            score: { heat: 1, risk: 1 },
+          },
         },
       ],
     },
@@ -479,6 +481,208 @@ const act1 = {
           label: "Flirt hard: “Someone who likes powerful men.”",
           next: "s03_flirt_bold",
           effects: { score: { heat: 2, risk: 1 } },
+        },
+        {
+          id: "c10_badge_banter",
+          label: "Tease him about the badge and lanyard",
+          next: "s02_badge_banter",
+          effects: { score: { heat: 1, risk: 1 } },
+        },
+      ],
+    },
+
+    s02_badge_banter: {
+      id: "s02_badge_banter",
+      title: "Nice Lanyard",
+      location: "Lobby bar",
+      text: [
+        "Gemma tilts her head toward his badge like she’s admiring a watch.",
+        "“That lanyard practically screams important,” she says.",
+        "Rex glances down and smiles. “You can tell a lot from conference accessories?”",
+        "“Only whether someone’s worth talking to,” Gemma says.",
+        "He laughs again, this time a little warmer. Vanity is such a cooperative technology.",
+      ],
+      redFlags: ["credentialHarvesting", "reciprocity", "oversharing"],
+      ui: {
+        showToast: {
+          title: "Red flag: charm as access",
+          body: "Flattery and curiosity can be used to gather sensitive details without sounding suspicious.",
+          kind: "warning",
+        },
+      },
+      choices: [
+        {
+          id: "c11_badge_probe",
+          label: "Ask what kind of access the badge gives him",
+          next: "s03_smalltalk",
+          effects: { score: { risk: 2, heat: 1 } },
+        },
+        {
+          id: "c11_playful_redirect",
+          label: "Keep it playful and steer back to small talk",
+          next: "s03_smalltalk",
+          effects: { score: { heat: 1, security: 1 } },
+        },
+      ],
+    },
+
+    s02_observe_rex: {
+      id: "s02_observe_rex",
+      title: "Read the Room",
+      location: "Lobby bar • mirror line",
+      text: [
+        "Gemma lingers just outside his orbit and watches the rhythm around him.",
+        "People approach Rex in three categories: starstruck, transactional, and useful.",
+        "No one checks whether his badge is visible. No one asks why his phone is unlocked on the counter for half a second.",
+        "The lesson hums beneath the music: busy important people leak data in fragments.",
+      ],
+      redFlags: ["oversharing", "credentialHarvesting"],
+      ui: {
+        showToast: {
+          title: "Observation is a tactic",
+          body: "A lot of social engineering starts by gathering tiny public clues before first contact.",
+          kind: "neutral",
+        },
+      },
+      choices: [
+        {
+          id: "c09_join_now",
+          label: "Approach him now with a polished opener",
+          next: "s02_meet_cute",
+          effects: { score: { security: 1, heat: 1 } },
+        },
+        {
+          id: "c09_wait_for_gap",
+          label: "Wait until he’s alone, then make your move",
+          next: "s03_smalltalk",
+          effects: { flags: { gotAloneTime: true }, score: { heat: 1 } },
+        },
+      ],
+    },
+
+    // ------------------------------------------------------------
+    // S03 - Conversation branches
+    // ------------------------------------------------------------
+    s03_smalltalk: {
+      id: "s03_smalltalk",
+      title: "Velvet Small Talk",
+      location: "Lobby bar",
+      text: [
+        "Gemma gives him something polished, professional, and just personal enough to feel real.",
+        "Rex relaxes into the exchange. He likes people who seem to understand the cost of building things.",
+        "For a minute it sounds like harmless flirtation. Underneath it, she is mapping tone, ego, impatience, and appetite.",
+      ],
+      redFlags: ["pretexting", "reciprocity"],
+      choices: [
+        {
+          id: "c12_cipher",
+          label: "Ask how intense it must be protecting something like Cipher",
+          next: "s04_cipher_hook",
+          effects: { score: { risk: 1, heat: 1 } },
+        },
+        {
+          id: "c12_invite",
+          label: "Let him talk and see if he offers something first",
+          next: "s04_rex_opens_up",
+          effects: { score: { security: 1, heat: 1 } },
+        },
+      ],
+    },
+
+    s03_flirt_bold: {
+      id: "s03_flirt_bold",
+      title: "Too Smooth",
+      location: "Lobby bar",
+      text: [
+        "“Someone who likes powerful men,” Gemma says, like she’s testing whether vanity can pick a lock.",
+        "Rex smiles, but only with half his face.",
+        "He has heard lines from people who want money, access, and selfies. The trick is proving you are a different category.",
+      ],
+      redFlags: ["reciprocity", "authority"],
+      choices: [
+        {
+          id: "c13_soften",
+          label: "Dial it back and pivot to smart conversation",
+          next: "s03_smalltalk",
+          effects: { score: { heat: 1, security: 1 } },
+        },
+        {
+          id: "c13_double_down",
+          label: "Double down: ask for a private demo of Cipher",
+          next: "s04_private_demo_push",
+          effects: { score: { risk: 2, heat: 1 } },
+        },
+      ],
+    },
+
+    // ------------------------------------------------------------
+    // S04 - Consequences / outcomes
+    // ------------------------------------------------------------
+    s04_cipher_hook: {
+      id: "s04_cipher_hook",
+      title: "The Name Drop",
+      location: "Lobby bar",
+      text: [
+        "The moment Gemma says Cipher, Rex’s expression changes by less than a heartbeat.",
+        "Not fear. Ownership.",
+        "He answers carefully, which is its own kind of answer.",
+      ],
+      redFlags: ["oversharing"],
+      end: {
+        outcome: "neutral",
+        hook: "You got him talking, but you also revealed exactly what interested you.",
+      },
+      choices: [
+        {
+          id: "c14_restart",
+          label: "Restart Act 1",
+          next: null,
+        },
+      ],
+    },
+
+    s04_rex_opens_up: {
+      id: "s04_rex_opens_up",
+      title: "Voluntary Disclosure",
+      location: "Lobby bar",
+      text: [
+        "Rex starts talking without being asked the dangerous questions directly.",
+        "He complains about investors, previews, and people trying to get close before tomorrow’s private session.",
+        "Gemma barely has to guide him. The best leaks feel self-authored.",
+      ],
+      redFlags: ["oversharing", "reciprocity"],
+      end: {
+        outcome: "trust_gain",
+        hook: "By being patient, you let the target do the work for you.",
+      },
+      choices: [
+        {
+          id: "c15_restart",
+          label: "Restart Act 1",
+          next: null,
+        },
+      ],
+    },
+
+    s04_private_demo_push: {
+      id: "s04_private_demo_push",
+      title: "Too Much, Too Fast",
+      location: "Lobby bar",
+      text: [
+        "Gemma asks for a private demo too soon.",
+        "Rex’s amusement cools into pattern recognition.",
+        "Charm works best before intent becomes visible.",
+      ],
+      redFlags: ["pretexting", "urgency"],
+      end: {
+        outcome: "high_risk",
+        hook: "You pushed for access before enough trust was built.",
+      },
+      choices: [
+        {
+          id: "c16_restart",
+          label: "Restart Act 1",
+          next: null,
         },
       ],
     },
