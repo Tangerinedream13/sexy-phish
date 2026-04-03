@@ -116,7 +116,7 @@ export default function ActPlayer({
                             <Text fontSize="sm">{definition}</Text>
                             {citationText ? (
                               <Text fontSize="xs" mt={1} color="gray.200">
-                                Source {citationText}
+                                Sources {citationText}
                               </Text>
                             ) : null}
                           </Box>
