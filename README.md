@@ -1,17 +1,89 @@
-# React + Vite
+# Sexy-Phish 💋🎣  
+*A Romance-Themed Cybersecurity Learning Experience*
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## The Core Question
+What are the most commonly employed phishing methods and how do they exploit human behavior?
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Overview
 
-## React Compiler
+Sexy-Phish is an interactive “Choose Your Own Adventure” web application that teaches phishing awareness through a romance narrative.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Rather than presenting cybersecurity as technical and intimidating, this project makes it:
+- Relatable
+- Story-driven
+- Playful but educational
+- Focused on human psychology
 
-## Expanding the ESLint configuration
+The goal is to make digital safety memorable.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
 
+## Story Structure
+
+The experience unfolds in three acts:
+
+**Act 1: Meet Cute**  
+`hello.friend`
+
+**Act 2: Situationship**  
+`trust_me.exe`
+
+**Act 3: Damage Control**  
+`this_feels_real.txt`
+
+Each act includes 3–4 interactive decision points highlighting phishing red flags.
+
+A final questionnaire assesses learning outcomes.
+
+---
+
+## Target Audience
+
+This project is designed for:
+- People who enjoy romance stories and interactive narratives
+- Users who may not engage with traditional cybersecurity education
+- Learners who benefit from storytelling rather than lectures
+
+By embedding cybersecurity lessons in romance tropes, Sexy-Phish reframes online safety as modern and human-centered.
+
+---
+
+## Educational Focus
+
+The project explores:
+- Common phishing attack methods
+- Credential harvesting
+- Social engineering techniques
+- Ethical considerations in cybersecurity
+- Risk communication
+
+---
+
+## Tech Stack
+
+- React
+- Node.js
+- Express
+- PostgreSQL
+
+---
+
+## Creative Influences
+
+- Romance novels and rom-com storytelling
+- Interactive narrative 
+- Psychological themes in cybersecurity (i.e., Mr. Robot)
+- Technology-driven fiction
+
+---
+
+## About the Author
+
+Built by Maria Haddon  
+B.S. Computer Science, UNC Asheville, '26
+
+CSCI-364 Cybersecurity
+
+npm run dev
