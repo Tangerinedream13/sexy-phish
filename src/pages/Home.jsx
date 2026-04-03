@@ -82,13 +82,8 @@ export default function Home({ onStartAct1, onStartAct2, onStartAct3 }) {
                   exception abuse
                 </Text>
 
-                <Button
-                  mt={2}
-                  colorScheme="pink"
-                  onClick={onStartAct2}
-                  isDisabled={!onStartAct2}
-                >
-                  {onStartAct2 ? "Play Act 2" : "Coming Soon"}
+                <Button mt={2} colorScheme="pink" onClick={onStartAct2}>
+                  Play Act 2
                 </Button>
               </VStack>
             </Box>
