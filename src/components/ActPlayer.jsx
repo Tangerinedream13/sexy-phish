@@ -6,11 +6,8 @@ import {
   Stack,
   Text,
   Badge,
-  Wrap,
-  WrapItem,
   VStack,
   HStack,
-  Tooltip,
 } from "@chakra-ui/react";
 
 export default function ActPlayer({
@@ -21,15 +18,21 @@ export default function ActPlayer({
   isFinalAct = false,
 }) {
   const [currentSceneId, setCurrentSceneId] = useState(act.startSceneId);
+  const [activeFlag, setActiveFlag] = useState(null);
 
-  const scene = useMemo(() => act.scenes[currentSceneId], [act, currentSceneId]);
+  const scene = useMemo(
+    () => act.scenes[currentSceneId],
+    [act, currentSceneId]
+  );
 
   const handleChoice = (choice) => {
+    setActiveFlag(null);
     if (!choice.next) return;
     setCurrentSceneId(choice.next);
   };
 
   const handleRestart = () => {
+    setActiveFlag(null);
     setCurrentSceneId(act.startSceneId);
   };
 
@@ -44,9 +47,18 @@ export default function ActPlayer({
     return `[${sources.join(", ")}]`;
   };
 
+  const activeEntry = activeFlag ? getRedFlagEntry(activeFlag) : null;
+
   return (
     <Box minH="100vh" bg="pink.50" display="flex" justifyContent="center" p={6}>
-      <Box w="full" maxW="3xl" bg="white" borderRadius="2xl" boxShadow="xl" p={6}>
+      <Box
+        w="full"
+        maxW="3xl"
+        bg="white"
+        borderRadius="2xl"
+        boxShadow="xl"
+        p={6}
+      >
         <Stack gap={5}>
           <VStack align="start" spacing={2}>
             <HStack spacing={3} wrap="wrap">
@@ -91,52 +103,58 @@ export default function ActPlayer({
               <Text fontWeight="semibold" color="gray.700" mb={2}>
                 Red Flags
               </Text>
-              <Wrap>
+
+              <Box display="flex" flexWrap="wrap" gap={2}>
                 {scene.redFlags.map((flag) => {
                   const entry = getRedFlagEntry(flag);
                   const label = entry?.term || flag;
-                  const definition = entry?.definition || "No definition available.";
-                  const citationText = getCitationText(entry?.sources || []);
+                  const isSelected = activeFlag === flag;
 
                   return (
-                    <WrapItem key={flag}>
-                      <Tooltip
-                        hasArrow
-                        placement="top"
-                        openDelay={150}
-                        bg="gray.800"
-                        color="white"
-                        borderRadius="md"
-                        px={3}
-                        py={2}
-                        maxW="280px"
-                        label={
-                          <Box>
-                            <Text fontWeight="bold">{label}</Text>
-                            <Text fontSize="sm">{definition}</Text>
-                            {citationText ? (
-                              <Text fontSize="xs" mt={1} color="gray.200">
-                                Sources {citationText}
-                              </Text>
-                            ) : null}
-                          </Box>
-                        }
-                      >
-                        <Badge
-                          colorScheme="red"
-                          variant="subtle"
-                          px={3}
-                          py={1}
-                          borderRadius="full"
-                          cursor="help"
-                        >
-                          {label}
-                        </Badge>
-                      </Tooltip>
-                    </WrapItem>
+                    <Badge
+                      key={flag}
+                      colorScheme="red"
+                      variant={isSelected ? "solid" : "subtle"}
+                      px={3}
+                      py={1}
+                      borderRadius="full"
+                      cursor="pointer"
+                      onClick={() =>
+                        setActiveFlag((prev) => (prev === flag ? null : flag))
+                      }
+                    >
+                      {label}
+                    </Badge>
                   );
                 })}
-              </Wrap>
+              </Box>
+
+              {activeEntry ? (
+                <Box
+                  mt={3}
+                  bg="gray.50"
+                  border="1px solid"
+                  borderColor="gray.200"
+                  borderRadius="lg"
+                  p={4}
+                >
+                  <Text fontWeight="bold" color="gray.800">
+                    {activeEntry.term}
+                  </Text>
+                  <Text color="gray.700" mt={1}>
+                    {activeEntry.definition}
+                  </Text>
+                  {activeEntry.sources?.length ? (
+                    <Text color="gray.500" fontSize="sm" mt={2}>
+                      Sources {getCitationText(activeEntry.sources)}
+                    </Text>
+                  ) : null}
+                </Box>
+              ) : (
+                <Text color="gray.500" fontSize="sm" mt={2}>
+                  Click a red flag term to see its definition and citation.
+                </Text>
+              )}
             </Box>
           ) : null}
 
