@@ -9,7 +9,7 @@ import {
   SimpleGrid,
 } from "@chakra-ui/react";
 
-export default function Home({ onStartAct1, onStartAct2 }) {
+export default function Home({ onStartAct1, onStartAct2, onStartAct3 }) {
   return (
     <Box minH="100vh" bg="pink.50" px={6} py={12}>
       <Container maxW="6xl">
@@ -42,7 +42,7 @@ export default function Home({ onStartAct1, onStartAct2 }) {
                 <Heading size="lg">hello.friend</Heading>
 
                 <Text color="gray.700" fontWeight="medium">
-                  The Meet-Cute
+                  Meet Cute
                 </Text>
 
                 <Text color="gray.600">
@@ -68,13 +68,13 @@ export default function Home({ onStartAct1, onStartAct2 }) {
                 <Heading size="lg">trust_me.exe</Heading>
 
                 <Text color="gray.700" fontWeight="medium">
-                  The Situationship
+                  Situationship
                 </Text>
 
                 <Text color="gray.600">
-                  The flirting is over. Now trust becomes the vulnerability.
-                  Private messages, blurred boundaries, and one “small” exception
-                  can open the door.
+                  The connection deepens. Boundaries blur. Trust becomes the
+                  vulnerability as private messages, quick favors, and small
+                  exceptions start to open bigger doors.
                 </Text>
 
                 <Text color="gray.500" fontSize="sm">
@@ -97,28 +97,49 @@ export default function Home({ onStartAct1, onStartAct2 }) {
               <VStack align="start" spacing={4}>
                 <Badge colorScheme="pink">Act 3</Badge>
 
-                <Heading size="lg">seen_zoned.exe</Heading>
+                <Heading size="lg">this_feels_real.txt</Heading>
 
                 <Text color="gray.700" fontWeight="medium">
-                  The Fallout
+                  Damage Control
                 </Text>
 
                 <Text color="gray.600">
-                  Trust has already been exploited. Now the consequences unfold:
-                  exposure, escalation, and the damage left behind when the wrong
-                  person gets in.
+                  The emotional hook is set. Now the fallout begins as urgency,
+                  guilt, and confusion make the scam feel personal, believable,
+                  and dangerously real.
                 </Text>
 
                 <Text color="gray.500" fontSize="sm">
-                  Themes: compromise, consequences, containment, aftermath
+                  Themes: compromise, escalation, emotional manipulation,
+                  damage control
                 </Text>
 
-                <Button mt={2} colorScheme="pink" isDisabled>
-                  Coming Soon
+                <Button
+                  mt={2}
+                  colorScheme="pink"
+                  onClick={onStartAct3}
+                  isDisabled={!onStartAct3}
+                >
+                  {onStartAct3 ? "Play Act 3" : "Coming Soon"}
                 </Button>
               </VStack>
             </Box>
           </SimpleGrid>
+
+          <Box w="full" bg="white" borderRadius="2xl" boxShadow="lg" p={6}>
+            <VStack align="start" spacing={3}>
+              <Heading size="md" color="pink.700">
+                Learning Structure
+              </Heading>
+              <Text color="gray.700">
+                Each act includes 3–4 interactive decision points highlighting
+                phishing red flags.
+              </Text>
+              <Text color="gray.600">
+                A final questionnaire assesses learning outcomes.
+              </Text>
+            </VStack>
+          </Box>
         </VStack>
       </Container>
     </Box>
