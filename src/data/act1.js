@@ -2,8 +2,8 @@
 // Act 1: hello.friend, “The Meet-Cute”
 //
 // IMPORTANT:
-// - This file is DATA ONLY. No JSX. No Chakra components.
-// - Your PlayAct1.jsx renders: scene.title, scene.location, scene.text (array),
+//  This file is DATA ONLY. No JSX. No Chakra components.
+//  PlayAct1.jsx renders: scene.title, scene.location, scene.text (array),
 //   scene.redFlags (array), scene.ui.showToast, and scene.choices (label/next).
 
 const act1 = {

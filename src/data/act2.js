@@ -2,9 +2,9 @@
 // Act 2: trust_me.exe, “The Situationship”
 //
 // IMPORTANT:
-// - This file is DATA ONLY. No JSX. No Chakra components.
-// - Assumes renderer supports: title, location, text[], redFlags[], ui.showToast, choices[].
-// - Tone: intimacy as attack surface; trust used to bypass process.
+// This file is DATA ONLY. No JSX. No Chakra components.
+// Assumes renderer supports: title, location, text[], redFlags[], ui.showToast, choices[].
+// Tone: intimacy as attack surface; trust used to bypass process.
 
 const act2 = {
     meta: {

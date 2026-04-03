@@ -1,24 +1,13 @@
-import { Box, Button, Heading, Stack, Text } from "@chakra-ui/react";
+import ActPlayer from "../components/ActPlayer";
+import act2 from "../data/act2";
 
-export default function PlayAct2({ onBack }) {
+export default function PlayAct2({ onBack, onGoAct3 }) {
   return (
-    <Box
-      minH="100vh"
-      bg="pink.50"
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-      p={4}
-    >
-      <Box w="380px" bg="white" borderRadius="2xl" boxShadow="xl" p={5}>
-        <Stack gap={4}>
-          <Heading size="md">Act 2: Situationship</Heading>
-          <Text>trust_me.exe</Text>
-          <Button colorScheme="pink" onClick={onBack}>
-            Return Home
-          </Button>
-        </Stack>
-      </Box>
-    </Box>
+    <ActPlayer
+      act={act2}
+      onHome={onBack}
+      onNextAct={onGoAct3}
+      nextActLabel="Go to Act 3"
+    />
   );
 }
