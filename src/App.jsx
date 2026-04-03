@@ -17,7 +17,12 @@ export default function App() {
   }
 
   if (screen === "act2") {
-    return <PlayAct2 onBack={() => setScreen("home")} />;
+    return (
+      <PlayAct2
+        onBack={() => setScreen("home")}
+        onGoAct3={() => setScreen("act3")}
+      />
+    );
   }
 
   if (screen === "act3") {

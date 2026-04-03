@@ -109,8 +109,13 @@ export default function Home({ onStartAct1, onStartAct2, onStartAct3 }) {
                   damage control
                 </Text>
 
-                <Button mt={2} colorScheme="pink" onClick={onStartAct3}>
-                  Play Act 3
+                <Button
+                  mt={2}
+                  colorScheme="pink"
+                  onClick={onStartAct3}
+                  isDisabled={!onStartAct3}
+                >
+                  {onStartAct3 ? "Play Act 3" : "Coming Soon"}
                 </Button>
               </VStack>
             </Box>
