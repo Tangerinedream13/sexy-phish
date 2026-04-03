@@ -10,6 +10,7 @@ import {
   WrapItem,
   VStack,
   HStack,
+  Tooltip,
 } from "@chakra-ui/react";
 
 export default function ActPlayer({
@@ -33,6 +34,15 @@ export default function ActPlayer({
   };
 
   const isEndingScene = Boolean(scene?.end);
+
+  const getRedFlagEntry = (flagKey) => {
+    return act?.glossary?.redFlags?.[flagKey] || null;
+  };
+
+  const getCitationText = (sources = []) => {
+    if (!sources.length) return "";
+    return `[${sources.join(", ")}]`;
+  };
 
   return (
     <Box minH="100vh" bg="pink.50" display="flex" justifyContent="center" p={6}>
@@ -82,19 +92,50 @@ export default function ActPlayer({
                 Red Flags
               </Text>
               <Wrap>
-                {scene.redFlags.map((flag) => (
-                  <WrapItem key={flag}>
-                    <Badge
-                      colorScheme="red"
-                      variant="subtle"
-                      px={3}
-                      py={1}
-                      borderRadius="full"
-                    >
-                      {flag}
-                    </Badge>
-                  </WrapItem>
-                ))}
+                {scene.redFlags.map((flag) => {
+                  const entry = getRedFlagEntry(flag);
+                  const label = entry?.term || flag;
+                  const definition = entry?.definition || "No definition available.";
+                  const citationText = getCitationText(entry?.sources || []);
+
+                  return (
+                    <WrapItem key={flag}>
+                      <Tooltip
+                        hasArrow
+                        placement="top"
+                        openDelay={150}
+                        bg="gray.800"
+                        color="white"
+                        borderRadius="md"
+                        px={3}
+                        py={2}
+                        maxW="280px"
+                        label={
+                          <Box>
+                            <Text fontWeight="bold">{label}</Text>
+                            <Text fontSize="sm">{definition}</Text>
+                            {citationText ? (
+                              <Text fontSize="xs" mt={1} color="gray.200">
+                                Source {citationText}
+                              </Text>
+                            ) : null}
+                          </Box>
+                        }
+                      >
+                        <Badge
+                          colorScheme="red"
+                          variant="subtle"
+                          px={3}
+                          py={1}
+                          borderRadius="full"
+                          cursor="help"
+                        >
+                          {label}
+                        </Badge>
+                      </Tooltip>
+                    </WrapItem>
+                  );
+                })}
               </Wrap>
             </Box>
           ) : null}
