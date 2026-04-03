@@ -13,7 +13,7 @@ export default function PlayAct2({ onBack }) {
       <Box w="380px" bg="white" borderRadius="2xl" boxShadow="xl" p={5}>
         <Stack gap={4}>
           <Heading size="md">Act 2: Situationship</Heading>
-          <Text>The next act starts here.</Text>
+          <Text>trust_me.exe</Text>
           <Button colorScheme="pink" onClick={onBack}>
             Return Home
           </Button>
