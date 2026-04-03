@@ -11,7 +11,8 @@ const act1 = {
     actId: "act1",
     title: "hello.friend",
     subtitle: "The Meet-Cute",
-    theme: "Vegas neon • dangerous chemistry • first contact social engineering",
+    theme:
+      "Vegas neon • dangerous chemistry • first contact social engineering",
     setting: {
       city: "Las Vegas",
       venue: "CyberSteel Executive Summit",
@@ -65,7 +66,8 @@ const act1 = {
   glossary: {
     Cipher: {
       term: "Cipher",
-      definition: "CyberSteel's coveted AI tool and sensitive intellectual property.",
+      definition:
+        "CyberSteel's coveted AI tool and sensitive intellectual property.",
       sources: [],
     },
     badge: {
@@ -123,8 +125,7 @@ const act1 = {
     },
     attackVector: {
       term: "attack vector",
-      definition:
-        "The path or method used to begin or advance an attack.",
+      definition: "The path or method used to begin or advance an attack.",
       sources: [4],
     },
     confidentialInformation: {
@@ -154,66 +155,78 @@ const act1 = {
 
     redFlags: {
       socialEngineering: {
+        term: "social engineering",
         definition:
           "Manipulating people through trust, deception, and social interaction to gain access or sensitive information.",
         sources: [2, 4],
       },
       trust: {
+        term: "trust",
         definition:
           "A sense of emotional safety that lowers skepticism and makes disclosure easier.",
         sources: [1, 3, 4],
       },
       tailgating: {
+        term: "tailgating",
         definition:
           "Following someone into a restricted area without proper authorization.",
         sources: [1],
       },
       luring: {
+        term: "luring",
         definition:
           "Using attraction, attention, or curiosity to draw someone into a risky interaction.",
         sources: [1, 3],
       },
       urgency: {
+        term: "urgency",
         definition:
           "Creating time pressure so a person acts before fully verifying the situation.",
         sources: [1],
       },
       oversharing: {
+        term: "oversharing",
         definition:
           "Revealing sensitive information too casually, too emotionally, or too early.",
         sources: [2, 3, 4],
       },
       socialProof: {
+        term: "social proof",
         definition:
           "Assuming something is safe because other people appear comfortable with it.",
         sources: [1],
       },
       humanFactors: {
+        term: "human factors",
         definition:
           "The human behaviors and judgments that attackers exploit instead of technical flaws alone.",
         sources: [4],
       },
       attackVector: {
-        definition:
-          "The path or method used to begin or advance an attack.",
+        term: "attack vector",
+        definition: "The path or method used to begin or advance an attack.",
         sources: [4],
       },
       confidentialInformation: {
+        term: "confidential information",
         definition:
           "Sensitive details that should not be disclosed without proper need and verification.",
         sources: [4],
       },
       warningFlags: {
+        term: "warning flags",
         definition:
           "Signs that a situation may be manipulative, deceptive, or unsafe.",
         sources: [1, 3],
       },
       manipulation: {
+        term: "manipulation",
         definition:
           "Influencing someone through psychological pressure, emotion, or misdirection.",
         sources: [1, 2, 4],
       },
       deception: {
+        term: "deception",
         definition:
           "Misleading someone in order to influence their actions or gain information.",
         sources: [2, 4],
@@ -346,7 +359,7 @@ const act1 = {
       text: [
         "Gemma slips into the wake of a suited attendee like it is choreography.",
         "Marco glances up, just long enough to register that something is not quite right.",
-        "\"Ma'am,\" he says. \"Badge?\"",
+        '"Ma\'am," he says. "Badge?"',
       ],
       redFlags: ["tailgating", "warningFlags"],
       choices: [
@@ -438,7 +451,7 @@ const act1 = {
       text: [
         "The expo hall is a sea of logos, polished smiles, and soft bragging.",
         "Gemma moves with purpose. Purpose often reads as permission.",
-        "A booth demo flashes: \"Cipher: Secure Intelligence at Scale.\"",
+        'A booth demo flashes: "Cipher: Secure Intelligence at Scale."',
         "There it is, the name out in the open, like the most sensitive things are always hidden better than that.",
       ],
       redFlags: ["confidentialInformation", "humanFactors"],
@@ -466,7 +479,7 @@ const act1 = {
         "Ivy runs conference ops like a chessboard.",
         "Gemma asks casual questions about VIP rooms and whether Rex is speaking.",
         "Ivy smiles, pleasant and not fooled.",
-        "\"All speaker updates are in the official app,\" she says. \"And we do not share VIP schedules.\"",
+        '"All speaker updates are in the official app," she says. "And we do not share VIP schedules."',
       ],
       redFlags: ["warningFlags", "socialEngineering"],
       ui: {
@@ -528,7 +541,7 @@ const act1 = {
       text: [
         "Gemma signs in.",
         "The app shows partial VIP info, room numbers, and time blocks.",
-        "One label catches her eye: \"Cipher Private Preview.\"",
+        'One label catches her eye: "Cipher Private Preview."',
       ],
       redFlags: ["confidentialInformation"],
       choices: [
@@ -551,7 +564,7 @@ const act1 = {
       text: [
         "Gemma leans closer, voice soft like a secret.",
         "Ivy's smile stays put. Her eyes do not.",
-        "\"We have a strict policy,\" Ivy says. \"And people notice when policy bends.\"",
+        '"We have a strict policy," Ivy says. "And people notice when policy bends."',
         "Gemma clocks it immediately. Ivy is the kind of person who files reports without raising her voice.",
       ],
       redFlags: ["trust", "warningFlags"],
@@ -578,7 +591,7 @@ const act1 = {
       text: [
         "Gemma drops a half truth and tries to sound like she already belongs inside the system.",
         "Ivy's expression goes polite and cold.",
-        "\"Then Rex can confirm,\" Ivy says. \"Through official channels.\"",
+        '"Then Rex can confirm," Ivy says. "Through official channels."',
       ],
       redFlags: ["deception", "warningFlags"],
       choices: [
@@ -597,9 +610,9 @@ const act1 = {
       location: "Lobby bar",
       text: [
         "Gemma slides onto the stool beside him like she has done it in another life and fully intends to do it again in this one.",
-        "\"Let me guess,\" she says, eyeing the badge. \"You're the reason everyone in this building is pretending they understand AI.\"",
+        '"Let me guess," she says, eyeing the badge. "You\'re the reason everyone in this building is pretending they understand AI."',
         "Rex laughs, short and surprised.",
-        "\"And you are?\"",
+        '"And you are?"',
       ],
       redFlags: ["luring"],
       choices: [
@@ -630,7 +643,7 @@ const act1 = {
       location: "Lobby bar",
       text: [
         "Gemma tilts her head toward his badge like she is admiring a watch.",
-        "\"That credential practically screams important,\" she says.",
+        '"That credential practically screams important," she says.',
         "Rex glances down and smiles. Vanity is such a cooperative human factor.",
       ],
       redFlags: ["luring", "manipulation", "oversharing"],
@@ -722,7 +735,7 @@ const act1 = {
       title: "Too Smooth",
       location: "Lobby bar",
       text: [
-        "\"Someone who likes powerful men,\" Gemma says, like she is testing whether vanity can unlock a door.",
+        '"Someone who likes powerful men," Gemma says, like she is testing whether vanity can unlock a door.',
         "Rex smiles, but only with half his face.",
         "The trick is making manipulation feel like attraction instead of an obvious warning flag.",
       ],
