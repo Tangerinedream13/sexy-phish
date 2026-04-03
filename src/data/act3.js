@@ -2,8 +2,8 @@
 // Act 3: this_feels_real.txt, “Damage Control”
 //
 // IMPORTANT:
-// - This file is DATA ONLY. No JSX. No Chakra components.
-// - Matches the same general structure/feel as act1.js and act2.js.
+// This file is DATA ONLY. No JSX. No Chakra components.
+// Matches the same general structure/feel as act1.js and act2.js.
 
 const act3 = {
     meta: {
