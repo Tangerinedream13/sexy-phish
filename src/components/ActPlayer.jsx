@@ -6,8 +6,6 @@ import {
   Stack,
   Text,
   Badge,
-  Wrap,
-  WrapItem,
   VStack,
   HStack,
 } from "@chakra-ui/react";
@@ -20,19 +18,33 @@ export default function ActPlayer({
   isFinalAct = false,
 }) {
   const [currentSceneId, setCurrentSceneId] = useState(act.startSceneId);
+  const [activeFlag, setActiveFlag] = useState(null);
 
   const scene = useMemo(() => act.scenes[currentSceneId], [act, currentSceneId]);
 
   const handleChoice = (choice) => {
+    setActiveFlag(null);
     if (!choice.next) return;
     setCurrentSceneId(choice.next);
   };
 
   const handleRestart = () => {
+    setActiveFlag(null);
     setCurrentSceneId(act.startSceneId);
   };
 
   const isEndingScene = Boolean(scene?.end);
+
+  const getRedFlagEntry = (flagKey) => {
+    return act?.glossary?.redFlags?.[flagKey] || null;
+  };
+
+  const getCitationText = (sources = []) => {
+    if (!sources.length) return "";
+    return `[${sources.join(", ")}]`;
+  };
+
+  const activeEntry = activeFlag ? getRedFlagEntry(activeFlag) : null;
 
   return (
     <Box minH="100vh" bg="pink.50" display="flex" justifyContent="center" p={6}>
@@ -81,21 +93,58 @@ export default function ActPlayer({
               <Text fontWeight="semibold" color="gray.700" mb={2}>
                 Red Flags
               </Text>
-              <Wrap>
-                {scene.redFlags.map((flag) => (
-                  <WrapItem key={flag}>
+
+              <Box display="flex" flexWrap="wrap" gap={2}>
+                {scene.redFlags.map((flag) => {
+                  const entry = getRedFlagEntry(flag);
+                  const label = entry?.term || flag;
+                  const isSelected = activeFlag === flag;
+
+                  return (
                     <Badge
+                      key={flag}
                       colorScheme="red"
-                      variant="subtle"
+                      variant={isSelected ? "solid" : "subtle"}
                       px={3}
                       py={1}
                       borderRadius="full"
+                      cursor="pointer"
+                      onClick={() =>
+                        setActiveFlag((prev) => (prev === flag ? null : flag))
+                      }
                     >
-                      {flag}
+                      {label}
                     </Badge>
-                  </WrapItem>
-                ))}
-              </Wrap>
+                  );
+                })}
+              </Box>
+
+              {activeEntry ? (
+                <Box
+                  mt={3}
+                  bg="gray.50"
+                  border="1px solid"
+                  borderColor="gray.200"
+                  borderRadius="lg"
+                  p={4}
+                >
+                  <Text fontWeight="bold" color="gray.800">
+                    {activeEntry.term}
+                  </Text>
+                  <Text color="gray.700" mt={1}>
+                    {activeEntry.definition}
+                  </Text>
+                  {activeEntry.sources?.length ? (
+                    <Text color="gray.500" fontSize="sm" mt={2}>
+                      Sources {getCitationText(activeEntry.sources)}
+                    </Text>
+                  ) : null}
+                </Box>
+              ) : (
+                <Text color="gray.500" fontSize="sm" mt={2}>
+                  Click a red flag term to see its definition and citation.
+                </Text>
+              )}
             </Box>
           ) : null}
 
