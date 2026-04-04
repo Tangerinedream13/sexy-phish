@@ -76,8 +76,13 @@ export default function ActPlayer({
               ) : null}
             </VStack>
 
-            <Button variant="outline" onClick={onHome}>
-              Return Home
+            <Button
+              variant="outline"
+              colorScheme="pink"
+              borderRadius="full"
+              onClick={onHome}
+            >
+              🏠 Return Home
             </Button>
           </HStack>
 

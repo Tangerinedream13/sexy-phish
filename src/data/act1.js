@@ -12,11 +12,11 @@ const act1 = {
     title: "hello.friend",
     subtitle: "The Meet-Cute",
     theme:
-      "Vegas neon • dangerous chemistry • first contact social engineering",
+      "Vegas neon • dangerous chemistry • first contact social engineering • warning flags in plain sight",
     setting: {
       city: "Las Vegas",
       venue: "CyberSteel Executive Summit",
-      vibe: "City of sin: confidence, distraction, temptation, and opportunity",
+      vibe: "City of sin, expensive temptation, and just enough chemistry to make caution slip",
     },
     version: 4,
   },
@@ -42,7 +42,7 @@ const act1 = {
       name: "Rex Vale",
       publicBio: "Billionaire tech executive, CEO of CyberSteel",
       hiddenBio: "Protective of Cipher, anxious about leaks, used to attention",
-      archetype: "high-value target",
+      archetype: "high value target",
       traits: ["confident", "guarded", "busy"],
     },
     ivy: {
@@ -64,17 +64,6 @@ const act1 = {
   },
 
   glossary: {
-    Cipher: {
-      term: "Cipher",
-      definition:
-        "CyberSteel's coveted AI tool and sensitive intellectual property.",
-      sources: [],
-    },
-    badge: {
-      term: "badge",
-      definition: "A conference credential that signals identity and access.",
-      sources: [],
-    },
     socialEngineering: {
       term: "social engineering",
       definition:
@@ -151,6 +140,30 @@ const act1 = {
       definition:
         "Misleading someone in order to influence their actions or gain information.",
       sources: [2, 4],
+    },
+    socialInteraction: {
+      term: "social interaction",
+      definition:
+        "Ordinary conversation and rapport building that can be used to lower defenses and make a risky exchange feel natural.",
+      sources: [2, 4],
+    },
+    credentialHarvesting: {
+      term: "credential harvesting",
+      definition:
+        "Collecting badge details, access clues, or login information that can later be used to gain entry or impersonate someone.",
+      sources: [1, 4],
+    },
+    baiting: {
+      term: "baiting",
+      definition:
+        "Using something tempting, flattering, or emotionally charged to override caution.",
+      sources: [1],
+    },
+    confirmationBias: {
+      term: "confirmation bias",
+      definition:
+        "Interpreting events the way you want them to be true rather than the way they are.",
+      sources: [1],
     },
 
     redFlags: {
@@ -231,6 +244,30 @@ const act1 = {
           "Misleading someone in order to influence their actions or gain information.",
         sources: [2, 4],
       },
+      socialInteraction: {
+        term: "social interaction",
+        definition:
+          "Ordinary conversation and rapport building that can be used to lower defenses and make a risky exchange feel natural.",
+        sources: [2, 4],
+      },
+      credentialHarvesting: {
+        term: "credential harvesting",
+        definition:
+          "Collecting badge details, access clues, or login information that can later be used to gain entry or impersonate someone.",
+        sources: [1, 4],
+      },
+      baiting: {
+        term: "baiting",
+        definition:
+          "Using something tempting, flattering, or emotionally charged to override caution.",
+        sources: [1],
+      },
+      confirmationBias: {
+        term: "confirmation bias",
+        definition:
+          "Interpreting events the way you want them to be true rather than the way they are.",
+        sources: [1],
+      },
     },
   },
 
@@ -257,16 +294,16 @@ const act1 = {
       title: "Neon Check-In",
       location: "Conference lobby • CyberSteel Executive Summit",
       text: [
-        "Las Vegas is all velvet light and sharp edges.",
-        "At the CyberSteel Executive Summit, badges shine like tiny passports into other people's power.",
+        "Las Vegas is all velvet light, mirrored ceilings, and expensive mistakes.",
+        "At the CyberSteel Executive Summit, badges flash like tiny passports into other people's power.",
         "Gemma steps into the crowd looking effortless, but nothing about tonight is accidental.",
-        "She is here for one person, Rex Vale, and for whatever trust he can be persuaded to mistake for fate.",
+        "She is here for one man, Rex Vale, and for whatever trust he can be seduced into mistaking for fate.",
       ],
-      redFlags: [],
+      redFlags: ["socialEngineering", "attackVector"],
       ui: {
         showToast: {
           title: "Act 1: hello.friend",
-          body: "A meet cute can also be an attack vector. Watch how trust, deception, and social interaction begin to work together.",
+          body: "A meet-cute can also be an attack scenario. Watch how chemistry, trust, and charm start building the same attack vector that Act 2 deepens and Act 3 pays for.",
           kind: "neutral",
         },
       },
@@ -293,13 +330,13 @@ const act1 = {
       text: [
         "The registration desk hands Gemma a badge and a bright professional smile.",
         "A staffer reminds everyone that badges are required for all sessions, including VIP floors.",
-        "Gemma's eyes linger on the word VIP just long enough to look curious instead of calculated.",
+        "Gemma lets her gaze rest on the word VIP just long enough to look intrigued instead of intentional.",
       ],
       redFlags: ["socialEngineering", "humanFactors"],
       ui: {
         showToast: {
-          title: "Red flag: social engineering",
-          body: "Ordinary interactions can become the opening move in a larger manipulation.",
+          title: "Red flag: social engineering setup",
+          body: "The best setups do not feel dramatic. They feel flirtatious, casual, and perfectly ordinary.",
           kind: "warning",
         },
       },
@@ -325,14 +362,14 @@ const act1 = {
       location: "VIP entrance",
       text: [
         "Marco checks badges with the speed of someone doing three jobs at once.",
-        "Attendees flash credentials and keep moving. Nobody wants to be the person who slows the line down.",
-        "Gemma notes it immediately. Visual compliance and social proof can make weak verification look normal.",
+        "Attendees flash credentials and keep moving. Nobody wants to be the person who breaks the rhythm.",
+        "Gemma sees it immediately. Social proof can make weak verification look polished, even sexy.",
       ],
       redFlags: ["socialProof", "tailgating"],
       ui: {
         showToast: {
           title: "Red flags: social proof and tailgating",
-          body: "Crowds and motion can make people trust a flow that has not actually been verified.",
+          body: "Crowds, status, and momentum can make bad security feel normal enough to slip inside.",
           kind: "warning",
         },
       },
@@ -357,16 +394,16 @@ const act1 = {
       title: "Two Steps Behind",
       location: "VIP entrance",
       text: [
-        "Gemma slips into the wake of a suited attendee like it is choreography.",
-        "Marco glances up, just long enough to register that something is not quite right.",
-        '"Ma\'am," he says. "Badge?"',
+        "Gemma slips into the wake of a suited attendee like the move was rehearsed in silk and neon.",
+        "Marco glances up, just long enough to catch that something is off.",
+        "Ma'am, he says. Badge?",
       ],
       redFlags: ["tailgating", "warningFlags"],
       choices: [
         {
-          id: "c01_softcover",
-          label: "Smile and improvise a quick explanation",
-          next: "s01_badge_issue",
+          id: "c01_pretext",
+          label: "Smile and say your badge is acting up",
+          next: "s01_pretext_badge_issue",
           effects: { score: { risk: 2, heat: 1 } },
         },
         {
@@ -378,20 +415,21 @@ const act1 = {
       ],
     },
 
-    s01_badge_issue: {
-      id: "s01_badge_issue",
-      title: "Badge Trouble",
+    s01_pretext_badge_issue: {
+      id: "s01_pretext_badge_issue",
+      title: "Badge Issue",
       location: "VIP entrance",
       text: [
-        "Gemma's voice is honeyed, polite, and designed to sound harmless.",
-        "Marco looks at the growing line behind her and makes the calculation tired people make under pressure.",
-        "Urgency is not always loud. Sometimes it is just inconvenience dressed as a reason to bend process.",
+        "Gemma's voice turns honey-soft, all polish and plausible embarrassment.",
+        "Marco's gaze flicks to the impatient line behind her and to the cost of slowing everything down for one beautiful inconvenience.",
+        "Security and speed pull in opposite directions. In real life, speed gets kissed first.",
+        "He waves her away. Get it fixed. Do not come back up without it.",
       ],
       redFlags: ["urgency", "manipulation"],
       ui: {
         showToast: {
           title: "Red flag: urgency",
-          body: "When people are rushed or overloaded, they are more likely to choose speed over verification.",
+          body: "When people are rushed, overloaded, or distracted, process starts to loosen.",
           kind: "warning",
         },
       },
@@ -416,22 +454,22 @@ const act1 = {
       title: "Target Acquired",
       location: "Lobby bar • off the main floor",
       text: [
-        "Rex Vale stands at the bar, sleeves rolled, relaxed for exactly twelve seconds.",
-        "His conference badge hangs forward and catches the light like a wink.",
-        "He looks up just as Gemma's reflection appears behind him in the mirror, and for one charged second it feels less like surveillance and more like destiny.",
+        "Rex Vale stands at the bar with his sleeves rolled and his attention finally unguarded.",
+        "His badge hangs forward, the NFC chip catching the light like an invitation it was never meant to be.",
+        "He looks up just as Gemma appears behind him in the mirror, and for one dangerous second the scene reads less like surveillance and more like destiny.",
       ],
-      redFlags: ["oversharing", "humanFactors"],
+      redFlags: ["credentialHarvesting", "humanFactors"],
       ui: {
         showToast: {
-          title: "Human factors moment",
-          body: "Public spaces, visible badges, and distraction create openings before anyone even starts asking direct questions.",
+          title: "Human factor moment",
+          body: "Badges, phones, and small lapses become much easier to exploit when attraction and distraction enter the room.",
           kind: "neutral",
         },
       },
       choices: [
         {
           id: "c02_meetcute",
-          label: "Do the meet cute and order a drink next to him",
+          label: "Do the meet-cute and order a drink beside him",
           next: "s02_meet_cute",
           effects: { score: { heat: 2 } },
         },
@@ -543,7 +581,7 @@ const act1 = {
         "The app shows partial VIP info, room numbers, and time blocks.",
         'One label catches her eye: "Cipher Private Preview."',
       ],
-      redFlags: ["confidentialInformation"],
+      redFlags: ["confidentialInformation", "credentialHarvesting"],
       choices: [
         {
           id: "c06_rex",
@@ -743,7 +781,7 @@ const act1 = {
       choices: [
         {
           id: "c13_soften",
-          label: "Dial it back and pivot to smart conversation",
+          label: "Dial it back and pivot to smarter conversation",
           next: "s03_smalltalk",
           effects: { score: { heat: 1, security: 1 } },
         },
@@ -765,7 +803,7 @@ const act1 = {
         "Not fear. Ownership.",
         "He answers carefully, which is its own kind of answer.",
       ],
-      redFlags: ["confidentialInformation"],
+      redFlags: ["confidentialInformation", "warningFlags"],
       end: {
         outcome: "neutral",
         hook: "You got him talking, but you also revealed exactly what interested you.",
@@ -791,7 +829,7 @@ const act1 = {
       redFlags: ["oversharing", "trust", "socialEngineering"],
       end: {
         outcome: "trust_gain",
-        hook: "By being patient, you let the target do the work for you.",
+        hook: "By being patient, you let the target do the work for you and set up the emotional slide into Act 2.",
       },
       choices: [
         {
@@ -814,7 +852,7 @@ const act1 = {
       redFlags: ["warningFlags", "attackVector"],
       end: {
         outcome: "high_risk",
-        hook: "You pushed for access before enough trust was built.",
+        hook: "You pushed for access before enough trust and ambiguity were built.",
       },
       choices: [
         {
