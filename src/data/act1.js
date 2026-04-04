@@ -11,7 +11,8 @@ const act1 = {
     actId: "act1",
     title: "hello.friend",
     subtitle: "The Meet-Cute",
-    theme: "Vegas neon • dangerous chemistry • first-contact social engineering • warning flags in plain sight",
+    theme:
+      "Vegas neon • dangerous chemistry • first-contact social engineering • warning flags in plain sight",
     setting: {
       city: "Las Vegas",
       venue: "CyberSteel Executive Summit",
@@ -55,41 +56,83 @@ const act1 = {
     },
   },
 
-  glossary: {
-    Cipher: "CyberSteel’s coveted AI tool (trade secret / IP).",
-    badge: "Conference credential that implies access and trust.",
-    lanyard: "A convenient security vulnerability in fabric form.",
-    socialEngineering:
-      "Manipulating people through trust, emotion, and social interaction to gain access or information.",
-    humanVulnerability:
-      "The tendency for emotion, distraction, ego, or attraction to weaken judgment.",
-    attackVector:
-      "The path used to begin or advance an attack.",
-    warningFlags:
-      "Small signs that something is off, even when the moment still feels exciting or harmless.",
-    redFlags: {
-      trust:
-        "A sense of emotional safety that lowers skepticism and speeds disclosure.",
-      urgency:
-        "Creating time pressure so verification feels inconvenient or optional.",
-      luring:
-        "Using attraction, attention, or curiosity to pull someone closer to risk.",
-      tailgating:
-        "Following into a secure area without authorization.",
-      baiting:
-        "Using something tempting or flattering to override caution.",
-      credentialHarvesting:
-        "Trying to obtain usernames, passwords, badges, tokens, or access-enabling details.",
-      oversharing:
-        "Revealing sensitive information casually, emotionally, or too early.",
-      confirmationBias:
-        "Interpreting events the way you want them to be true rather than the way they are.",
-      socialProof:
-        "Assuming something is safe because other people seem comfortable with it.",
-      socialInteraction:
-        "Ordinary conversation and rapport that can be used as part of a social engineering attack.",
-      confidentialInformation:
-        "Sensitive details that should not be disclosed casually or without verification.",
+  redFlags: {
+    socialEngineering: {
+      term: "social engineering",
+      definition:
+        "Manipulating people through trust, deception, and social interaction to gain access or sensitive information.",
+      sources: [2, 4],
+    },
+    trust: {
+      term: "trust",
+      definition:
+        "A sense of emotional safety that lowers skepticism and makes disclosure easier.",
+      sources: [1, 3, 4],
+    },
+    tailgating: {
+      term: "tailgating",
+      definition:
+        "Following someone into a restricted area without proper authorization.",
+      sources: [1],
+    },
+    luring: {
+      term: "luring",
+      definition:
+        "Using attraction, attention, or curiosity to draw someone into a risky interaction.",
+      sources: [1, 3],
+    },
+    urgency: {
+      term: "urgency",
+      definition:
+        "Creating time pressure so a person acts before fully verifying the situation.",
+      sources: [1],
+    },
+    oversharing: {
+      term: "oversharing",
+      definition:
+        "Revealing sensitive information too casually, too emotionally, or too early.",
+      sources: [2, 3, 4],
+    },
+    socialProof: {
+      term: "social proof",
+      definition:
+        "Assuming something is safe because other people appear comfortable with it.",
+      sources: [1],
+    },
+    humanFactors: {
+      term: "human factors",
+      definition:
+        "The human behaviors and judgments that attackers exploit instead of technical flaws alone.",
+      sources: [4],
+    },
+    attackVector: {
+      term: "attack vector",
+      definition: "The path or method used to begin or advance an attack.",
+      sources: [4],
+    },
+    confidentialInformation: {
+      term: "confidential information",
+      definition:
+        "Sensitive details that should not be disclosed without proper need and verification.",
+      sources: [4],
+    },
+    warningFlags: {
+      term: "warning flags",
+      definition:
+        "Signs that a situation may be manipulative, deceptive, or unsafe.",
+      sources: [1, 3],
+    },
+    manipulation: {
+      term: "manipulation",
+      definition:
+        "Influencing someone through psychological pressure, emotion, or misdirection.",
+      sources: [1, 2, 4],
+    },
+    deception: {
+      term: "deception",
+      definition:
+        "Misleading someone in order to influence their actions or gain information.",
+      sources: [2, 4],
     },
   },
 

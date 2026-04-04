@@ -20,7 +20,10 @@ export default function ActPlayer({
   const [currentSceneId, setCurrentSceneId] = useState(act.startSceneId);
   const [activeFlag, setActiveFlag] = useState(null);
 
-  const scene = useMemo(() => act.scenes[currentSceneId], [act, currentSceneId]);
+  const scene = useMemo(
+    () => act.scenes[currentSceneId],
+    [act, currentSceneId]
+  );
 
   const handleChoice = (choice) => {
     setActiveFlag(null);
@@ -48,7 +51,14 @@ export default function ActPlayer({
 
   return (
     <Box minH="100vh" bg="pink.50" display="flex" justifyContent="center" p={6}>
-      <Box w="full" maxW="3xl" bg="white" borderRadius="2xl" boxShadow="xl" p={6}>
+      <Box
+        w="full"
+        maxW="3xl"
+        bg="white"
+        borderRadius="2xl"
+        boxShadow="xl"
+        p={6}
+      >
         <Stack gap={5}>
           <HStack justify="space-between" align="start" wrap="wrap">
             <VStack align="start" spacing={2}>
@@ -66,8 +76,13 @@ export default function ActPlayer({
               ) : null}
             </VStack>
 
-            <Button variant="outline" onClick={onHome}>
-              Return Home
+            <Button
+              variant="outline"
+              colorScheme="pink"
+              borderRadius="full"
+              onClick={onHome}
+            >
+              🏠 Return Home
             </Button>
           </HStack>
 
