@@ -28,7 +28,6 @@ const act1 = {
     4: "Wang, Z., Sun, L., & Zhu, H. (2020). Defining social engineering in cybersecurity.",
   },
 
-  
   characters: {
     gemma: {
       id: "gemma",
