@@ -1,24 +1,21 @@
-// src/data/act1.js
-// Act 1: hello.friend, "The Meet-Cute"
+// src/data/act3.js
+// Act 3: this_feels_real.txt, "Damage Control"
 //
 // IMPORTANT:
 // This file is DATA ONLY. No JSX. No Chakra components.
-// PlayAct1.jsx renders: scene.title, scene.location, scene.text (array),
-// scene.redFlags (array), scene.ui.showToast, and scene.choices (label/next).
 
-const act1 = {
+const act3 = {
   meta: {
-    actId: "act1",
-    title: "hello.friend",
-    subtitle: "The Meet-Cute",
-    theme:
-      "Vegas neon • dangerous chemistry • first contact social engineering • warning flags in plain sight",
+    actId: "act3",
+    title: "this_feels_real.txt",
+    subtitle: "Damage Control",
+    theme: "breach fallout • urgency • containment • consequence",
     setting: {
       city: "Las Vegas",
-      venue: "CyberSteel Executive Summit",
-      vibe: "City of sin, expensive temptation, and just enough chemistry to make caution slip",
+      venue: "CyberSteel Executive Summit • backstage corridors, ops rooms, and the aftermath",
+      vibe: "The chemistry is gone. The consequences are not.",
     },
-    version: 4,
+    version: 3,
   },
 
   sources: {
@@ -33,42 +30,71 @@ const act1 = {
       id: "gemma",
       name: "Gemma",
       publicBio: "Independent security consultant (conference attendee)",
-      hiddenBio: "Operative gathering access for a hostile sponsor",
+      hiddenBio: "Operative exploiting trust, attraction, and access for information",
       archetype: "charismatic social engineer",
-      traits: ["charming", "observant", "strategic"],
+      traits: ["calm", "convincing", "strategic"],
     },
     rex: {
       id: "rex",
       name: "Rex Vale",
       publicBio: "Billionaire tech executive, CEO of CyberSteel",
-      hiddenBio: "Protective of Cipher, anxious about leaks, used to attention",
-      archetype: "high value target",
-      traits: ["confident", "guarded", "busy"],
+      hiddenBio: "Now caught between embarrassment, panic, and damage control",
+      archetype: "compromised target",
+      traits: ["shaken", "defensive", "image-conscious"],
     },
     ivy: {
       id: "ivy",
       name: "Ivy",
       publicBio: "CyberSteel EA / conference ops lead",
-      hiddenBio: "Gatekeeper who notices patterns",
-      archetype: "gatekeeper",
-      traits: ["efficient", "polite", "sharp"],
+      hiddenBio: "The first person to recognize that something is wrong",
+      archetype: "gatekeeper turned incident coordinator",
+      traits: ["sharp", "controlled", "unimpressed"],
     },
     marco: {
       id: "marco",
       name: "Marco",
       publicBio: "Security staff (badge checks / VIP entrance)",
-      hiddenBio: "Overworked, relies on social compliance",
+      hiddenBio: "Now dealing with the consequences of a culture that normalized exceptions",
       archetype: "overloaded security",
-      traits: ["stern", "distracted"],
+      traits: ["tired", "blunt"],
     },
   },
 
   glossary: {
-    socialEngineering: {
-      term: "social engineering",
+    incidentResponse: {
+      term: "incident response",
       definition:
-        "Manipulating people through trust, deception, and social interaction to gain access or sensitive information.",
-      sources: [2, 4],
+        "The process of identifying, containing, investigating, and recovering from a security incident.",
+      sources: [],
+    },
+    containment: {
+      term: "containment",
+      definition:
+        "Immediate actions taken to prevent a compromise from getting worse.",
+      sources: [],
+    },
+    breach: {
+      term: "breach",
+      definition: "A compromise of information, access, or security controls.",
+      sources: [1, 4],
+    },
+    misinformation: {
+      term: "misinformation",
+      definition:
+        "False or misleading information that distorts what is really happening.",
+      sources: [1],
+    },
+    disinformation: {
+      term: "disinformation",
+      definition:
+        "Information shaped or framed to manipulate what others believe about an incident.",
+      sources: [1],
+    },
+    warningFlags: {
+      term: "warning flags",
+      definition:
+        "Signs that a situation may be manipulative, deceptive, or unsafe.",
+      sources: [1, 3],
     },
     trust: {
       term: "trust",
@@ -76,17 +102,11 @@ const act1 = {
         "A sense of emotional safety that lowers skepticism and makes disclosure easier.",
       sources: [1, 3, 4],
     },
-    tailgating: {
-      term: "tailgating",
+    oversharing: {
+      term: "oversharing",
       definition:
-        "Following someone into a restricted area without proper authorization.",
-      sources: [1],
-    },
-    luring: {
-      term: "luring",
-      definition:
-        "Using attraction, attention, or curiosity to draw someone into a risky interaction.",
-      sources: [1, 3],
+        "Revealing sensitive information too casually, too emotionally, or too early.",
+      sources: [2, 3, 4],
     },
     urgency: {
       term: "urgency",
@@ -94,40 +114,28 @@ const act1 = {
         "Creating time pressure so a person acts before fully verifying the situation.",
       sources: [1],
     },
-    oversharing: {
-      term: "oversharing",
-      definition:
-        "Revealing sensitive information too casually, too emotionally, or too early.",
-      sources: [2, 3, 4],
-    },
-    socialProof: {
-      term: "social proof",
-      definition:
-        "Assuming something is safe because other people appear comfortable with it.",
-      sources: [1],
-    },
-    humanFactors: {
-      term: "human factors",
-      definition:
-        "The human behaviors and judgments that attackers exploit instead of technical flaws alone.",
-      sources: [4],
-    },
-    attackVector: {
-      term: "attack vector",
-      definition: "The path or method used to begin or advance an attack.",
-      sources: [4],
-    },
     confidentialInformation: {
       term: "confidential information",
       definition:
         "Sensitive details that should not be disclosed without proper need and verification.",
       sources: [4],
     },
-    warningFlags: {
-      term: "warning flags",
+    socialEngineering: {
+      term: "social engineering",
       definition:
-        "Signs that a situation may be manipulative, deceptive, or unsafe.",
-      sources: [1, 3],
+        "Manipulating people through trust, deception, and social interaction to gain access or sensitive information.",
+      sources: [2, 4],
+    },
+    attackVector: {
+      term: "attack vector",
+      definition: "The path or method used to begin or advance an attack.",
+      sources: [4],
+    },
+    humanFactors: {
+      term: "human factors",
+      definition:
+        "The human behaviors and judgments that attackers exploit instead of technical flaws alone.",
+      sources: [4],
     },
     manipulation: {
       term: "manipulation",
@@ -141,37 +149,30 @@ const act1 = {
         "Misleading someone in order to influence their actions or gain information.",
       sources: [2, 4],
     },
-    socialInteraction: {
-      term: "social interaction",
-      definition:
-        "Ordinary conversation and rapport building that can be used to lower defenses and make a risky exchange feel natural.",
-      sources: [2, 4],
-    },
-    credentialHarvesting: {
-      term: "credential harvesting",
-      definition:
-        "Collecting badge details, access clues, or login information that can later be used to gain entry or impersonate someone.",
-      sources: [1, 4],
-    },
-    baiting: {
-      term: "baiting",
-      definition:
-        "Using something tempting, flattering, or emotionally charged to override caution.",
-      sources: [1],
-    },
-    confirmationBias: {
-      term: "confirmation bias",
-      definition:
-        "Interpreting events the way you want them to be true rather than the way they are.",
-      sources: [1],
-    },
 
     redFlags: {
-      socialEngineering: {
-        term: "social engineering",
+      breach: {
+        term: "breach",
+        definition: "A compromise of information, access, or security controls.",
+        sources: [1, 4],
+      },
+      misinformation: {
+        term: "misinformation",
         definition:
-          "Manipulating people through trust, deception, and social interaction to gain access or sensitive information.",
-        sources: [2, 4],
+          "False or misleading information that distorts what is really happening.",
+        sources: [1],
+      },
+      disinformation: {
+        term: "disinformation",
+        definition:
+          "Information shaped or framed to manipulate what others believe about an incident.",
+        sources: [1],
+      },
+      warningFlags: {
+        term: "warning flags",
+        definition:
+          "Signs that a situation may be manipulative, deceptive, or unsafe.",
+        sources: [1, 3],
       },
       trust: {
         term: "trust",
@@ -179,17 +180,11 @@ const act1 = {
           "A sense of emotional safety that lowers skepticism and makes disclosure easier.",
         sources: [1, 3, 4],
       },
-      tailgating: {
-        term: "tailgating",
+      oversharing: {
+        term: "oversharing",
         definition:
-          "Following someone into a restricted area without proper authorization.",
-        sources: [1],
-      },
-      luring: {
-        term: "luring",
-        definition:
-          "Using attraction, attention, or curiosity to draw someone into a risky interaction.",
-        sources: [1, 3],
+          "Revealing sensitive information too casually, too emotionally, or too early.",
+        sources: [2, 3, 4],
       },
       urgency: {
         term: "urgency",
@@ -197,40 +192,28 @@ const act1 = {
           "Creating time pressure so a person acts before fully verifying the situation.",
         sources: [1],
       },
-      oversharing: {
-        term: "oversharing",
-        definition:
-          "Revealing sensitive information too casually, too emotionally, or too early.",
-        sources: [2, 3, 4],
-      },
-      socialProof: {
-        term: "social proof",
-        definition:
-          "Assuming something is safe because other people appear comfortable with it.",
-        sources: [1],
-      },
-      humanFactors: {
-        term: "human factors",
-        definition:
-          "The human behaviors and judgments that attackers exploit instead of technical flaws alone.",
-        sources: [4],
-      },
-      attackVector: {
-        term: "attack vector",
-        definition: "The path or method used to begin or advance an attack.",
-        sources: [4],
-      },
       confidentialInformation: {
         term: "confidential information",
         definition:
           "Sensitive details that should not be disclosed without proper need and verification.",
         sources: [4],
       },
-      warningFlags: {
-        term: "warning flags",
+      socialEngineering: {
+        term: "social engineering",
         definition:
-          "Signs that a situation may be manipulative, deceptive, or unsafe.",
-        sources: [1, 3],
+          "Manipulating people through trust, deception, and social interaction to gain access or sensitive information.",
+        sources: [2, 4],
+      },
+      attackVector: {
+        term: "attack vector",
+        definition: "The path or method used to begin or advance an attack.",
+        sources: [4],
+      },
+      humanFactors: {
+        term: "human factors",
+        definition:
+          "The human behaviors and judgments that attackers exploit instead of technical flaws alone.",
+        sources: [4],
       },
       manipulation: {
         term: "manipulation",
@@ -244,622 +227,382 @@ const act1 = {
           "Misleading someone in order to influence their actions or gain information.",
         sources: [2, 4],
       },
-      socialInteraction: {
-        term: "social interaction",
-        definition:
-          "Ordinary conversation and rapport building that can be used to lower defenses and make a risky exchange feel natural.",
-        sources: [2, 4],
-      },
-      credentialHarvesting: {
-        term: "credential harvesting",
-        definition:
-          "Collecting badge details, access clues, or login information that can later be used to gain entry or impersonate someone.",
-        sources: [1, 4],
-      },
-      baiting: {
-        term: "baiting",
-        definition:
-          "Using something tempting, flattering, or emotionally charged to override caution.",
-        sources: [1],
-      },
-      confirmationBias: {
-        term: "confirmation bias",
-        definition:
-          "Interpreting events the way you want them to be true rather than the way they are.",
-        sources: [1],
-      },
     },
   },
 
   state: {
     flags: {
-      sawBadge: false,
-      gotVipInvite: false,
-      gotAloneTime: false,
-      hasPhotoOfBadge: false,
-      gotUsbKey: false,
-      learnedCipherCodename: false,
-      rexSuspicious: false,
-      ivyNoticed: false,
-      attemptedTailgate: false,
+      triedPrivateFix: false,
+      evidenceLost: false,
+      rexReportedHonestly: false,
+      ivyInLoop: false,
+      marcoInLoop: false,
+      opticsPriority: false,
+      delayedResponse: false,
     },
     score: { heat: 0, risk: 0, security: 0 },
   },
 
-  startSceneId: "s00_arrival",
+  startSceneId: "s00_something_off",
 
   scenes: {
-    s00_arrival: {
-      id: "s00_arrival",
-      title: "Neon Check-In",
-      location: "Conference lobby • CyberSteel Executive Summit",
+    s00_something_off: {
+      id: "s00_something_off",
+      title: "Something Feels Off",
+      location: "Backstage corridor",
       text: [
-        "Las Vegas is all velvet light, mirrored ceilings, and expensive mistakes.",
-        "At the CyberSteel Executive Summit, badges flash like tiny passports into other people's power.",
-        "Gemma steps into the crowd looking effortless, but nothing about tonight is accidental.",
-        "She is here for one man, Rex Vale, and for whatever trust he can be seduced into mistaking for fate.",
+        "A skipped check. A strange prompt. A detail that should not have traveled this far.",
+        "Nothing dramatic at first, just enough wrongness to make the room feel colder.",
+        "Rex looks at his phone. Ivy looks at Rex. Every charged moment from the night before starts to rearrange itself into warning flags.",
       ],
-      redFlags: ["socialEngineering", "attackVector"],
+      redFlags: ["warningFlags", "trust"],
       ui: {
         showToast: {
-          title: "Act 1: hello.friend",
-          body: "A meet-cute can also be an attack scenario. Watch how chemistry, trust, and charm start building the same attack vector that Act 2 deepens and Act 3 pays for.",
-          kind: "neutral",
-        },
-      },
-      choices: [
-        {
-          id: "c00_scan",
-          label: "Scan the room for Rex",
-          next: "s01_spot_rex",
-          effects: { flags: { sawBadge: true }, score: { risk: 1 } },
-        },
-        {
-          id: "c00_checkin",
-          label: "Blend in at check-in first",
-          next: "s01_checkin",
-          effects: { score: { security: 1 } },
-        },
-      ],
-    },
-
-    s01_checkin: {
-      id: "s01_checkin",
-      title: "Badge, Please",
-      location: "Registration desk",
-      text: [
-        "The registration desk hands Gemma a badge and a bright professional smile.",
-        "A staffer reminds everyone that badges are required for all sessions, including VIP floors.",
-        "Gemma lets her gaze rest on the word VIP just long enough to look intrigued instead of intentional.",
-      ],
-      redFlags: ["luring", "socialInteraction"],
-      ui: {
-        showToast: {
-          title: "Red flag: social engineering setup",
-          body: "The best setups do not feel dramatic. They feel flirtatious, casual, and perfectly ordinary.",
+          title: "Act 3: this_feels_real.txt",
+          body:
+            "The breach is no longer hypothetical. Now the warning flags, pressure, and fallout all arrive at once.",
           kind: "warning",
         },
       },
       choices: [
         {
-          id: "c01_vip",
-          label: "Hover near the VIP line and listen",
-          next: "s01_vip_line",
-          effects: { score: { risk: 1 } },
+          id: "c00_tellivy",
+          label: "Tell Ivy immediately",
+          next: "s01_escalate_fast",
+          effects: {
+            flags: { ivyInLoop: true, rexReportedHonestly: true },
+            score: { security: 2 },
+          },
         },
         {
-          id: "c01_floor",
-          label: "Walk the floor like you belong",
-          next: "s02_floor_walk",
-          effects: { score: { heat: 1 } },
-        },
-      ],
-    },
-
-    s01_vip_line: {
-      id: "s01_vip_line",
-      title: "Velvet Rope Economics",
-      location: "VIP entrance",
-      text: [
-        "Marco checks badges with the speed of someone doing three jobs at once.",
-        "Attendees flash credentials and keep moving. Nobody wants to be the person who breaks the rhythm.",
-        "Gemma sees it immediately. Social proof can make weak verification look polished, even sexy.",
-      ],
-      redFlags: ["socialProof", "tailgating"],
-      ui: {
-        showToast: {
-          title: "Red flags: social proof and tailgating",
-          body: "Crowds, status, and momentum can make bad security feel normal enough to slip inside.",
-          kind: "warning",
-        },
-      },
-      choices: [
-        {
-          id: "c01_tailgate",
-          label: "Attempt to tailgate behind a VIP attendee",
-          next: "s01_tailgate_attempt",
-          effects: { flags: { attemptedTailgate: true }, score: { risk: 2 } },
-        },
-        {
-          id: "c01_abort",
-          label: "Abort and return to the main floor",
-          next: "s02_floor_walk",
-          effects: { score: { security: 1 } },
-        },
-      ],
-    },
-
-    s01_tailgate_attempt: {
-      id: "s01_tailgate_attempt",
-      title: "Two Steps Behind",
-      location: "VIP entrance",
-      text: [
-        "Gemma slips into the wake of a suited attendee like the move was rehearsed in silk and neon.",
-        "Marco glances up, just long enough to catch that something is off.",
-        "Ma'am, he says. Badge?",
-      ],
-      redFlags: ["tailgating", "warningFlags"],
-      choices: [
-        {
-          id: "c01_pretext",
-          label: "Smile and say your badge is acting up",
-          next: "s01_pretext_badge_issue",
+          id: "c00_handleprivate",
+          label: "Try to handle it quietly with Rex",
+          next: "s01_private_fix",
           effects: { score: { risk: 2, heat: 1 } },
         },
         {
-          id: "c01_backoff",
-          label: "Apologize and back off calmly",
-          next: "s02_floor_walk",
-          effects: { score: { security: 2 } },
+          id: "c00_optics",
+          label: "Worry about optics first",
+          next: "s02_optics_pressure",
+          effects: {
+            flags: { opticsPriority: true },
+            score: { risk: 2, heat: 1 },
+          },
         },
       ],
     },
 
-    s01_pretext_badge_issue: {
-      id: "s01_pretext_badge_issue",
-      title: "Badge Issue",
-      location: "VIP entrance",
+    s01_private_fix: {
+      id: "s01_private_fix",
+      title: "Keep This Between Us",
+      location: "Side hallway",
       text: [
-        "Gemma's voice turns honey-soft, all polish and plausible embarrassment.",
-        "Marco's gaze flicks to the impatient line behind her and to the cost of slowing everything down for one beautiful inconvenience.",
-        "Security and speed pull in opposite directions. In real life, speed gets kissed first.",
-        "He waves her away. Get it fixed. Do not come back up without it.",
+        "Rex lowers his voice like privacy can still fix this.",
+        "He says the line people always say when they are scared: \"Let's not make this bigger than it is.\"",
+        "That sentence has probably made every breach bigger than it had to be.",
       ],
-      redFlags: ["urgency", "socialInteraction"],
+      redFlags: ["trust", "warningFlags", "deception"],
       ui: {
         showToast: {
-          title: "Red flag: urgency",
-          body: "When people are rushed, overloaded, or distracted, process starts to loosen.",
+          title: "Red flag: private incident handling",
+          body:
+            "Security events should go into official response channels, not side conversations shaped by fear, image, or attraction.",
           kind: "warning",
         },
       },
       choices: [
         {
-          id: "c01_roam",
-          label: "Roam and find Rex first",
-          next: "s01_spot_rex",
-          effects: { score: { risk: 1, heat: 1 } },
+          id: "c01_pushreport",
+          label: "Push him to report it properly",
+          next: "s01_escalate_fast",
+          effects: {
+            flags: { ivyInLoop: true, rexReportedHonestly: true },
+            score: { security: 2 },
+          },
         },
         {
-          id: "c01_floor2",
-          label: "Return to the main floor",
-          next: "s02_floor_walk",
-          effects: { score: { security: 1 } },
+          id: "c01_cleanup",
+          label: "Try to delete evidence and clean it up",
+          next: "s02_evidence_loss",
+          effects: {
+            flags: { triedPrivateFix: true, evidenceLost: true },
+            score: { risk: 3 },
+          },
         },
       ],
     },
 
-    s01_spot_rex: {
-      id: "s01_spot_rex",
-      title: "Target Acquired",
-      location: "Lobby bar • off the main floor",
+    s01_escalate_fast: {
+      id: "s01_escalate_fast",
+      title: "Say It Early, Say It Clearly",
+      location: "Ops room threshold",
       text: [
-        "Rex Vale stands at the bar with his sleeves rolled and his attention finally unguarded.",
-        "His badge hangs forward, the NFC chip catching the light like an invitation it was never meant to be.",
-        "He looks up just as Gemma appears behind him in the mirror, and for one dangerous second the scene reads less like surveillance and more like destiny.",
+        "Ivy does not waste time on denial, image management, or wishful thinking.",
+        "She asks the right questions in the right order: what happened, what was shared, what changed, and who needs to know right now.",
+        "Real incident response starts by treating social engineering as both a technical problem and a human one.",
       ],
-      redFlags: ["credentialHarvesting", "humanFactors"],
+      redFlags: [],
       ui: {
         showToast: {
-          title: "Human factor moment",
-          body: "Badges, phones, and small lapses become much easier to exploit when attraction and distraction enter the room.",
-          kind: "neutral",
-        },
-      },
-      choices: [
-        {
-          id: "c02_meetcute",
-          label: "Do the meet-cute and order a drink beside him",
-          next: "s02_meet_cute",
-          effects: { score: { heat: 2 } },
-        },
-        {
-          id: "c02_observe",
-          label: "Observe first and map the room",
-          next: "s02_observe_rex",
-          effects: { score: { security: 1, risk: 1 } },
-        },
-      ],
-    },
-
-    s02_floor_walk: {
-      id: "s02_floor_walk",
-      title: "Walk Like You Belong",
-      location: "Expo hall",
-      text: [
-        "The expo hall is all polished smiles, glossy logos, and people performing confidence for each other.",
-        "Gemma moves with purpose because purpose reads as permission more often than it should.",
-        "A booth demo flashes Cipher: Secure Intelligence at Scale.",
-        "There it is, the first piece of confidential information offered up in public with a spotlight on it.",
-      ],
-      redFlags: ["socialProof", "confidentialInformation"],
-      choices: [
-        {
-          id: "c03_bar",
-          label: "Head to the lobby bar and find Rex",
-          next: "s01_spot_rex",
-          effects: { score: { heat: 1 } },
-        },
-        {
-          id: "c03_ops",
-          label: "Talk to conference ops and test the gatekeeper",
-          next: "s02_ops_ivy",
-          effects: { score: { security: 1, risk: 1 } },
-        },
-      ],
-    },
-
-    s02_ops_ivy: {
-      id: "s02_ops_ivy",
-      title: "Gatekeeper Energy",
-      location: "Conference ops desk",
-      text: [
-        "Ivy runs conference ops like a chessboard, and Gemma can tell in one glance that she is not the easy mark in this room.",
-        "Gemma asks casual questions about VIP rooms and Rex's schedule.",
-        "Ivy smiles, pleasant and unreadable.",
-        "All speaker updates are in the official app, she says. We do not share VIP schedules.",
-      ],
-      redFlags: ["warningFlags", "socialInteraction"],
-      ui: {
-        showToast: {
-          title: "Defense: official channels",
-          body: "Good gatekeepers redirect sensitive requests into verified systems instead of improvising.",
+          title: "Defense: fast escalation",
+          body:
+            "Early reporting helps teams preserve evidence, contain the breach, and understand how trust was exploited.",
           kind: "success",
         },
       },
       choices: [
         {
-          id: "c04_app",
-          label: "Use the official app like a normal human",
-          next: "s02_app_lookup",
-          effects: { score: { security: 2 } },
-        },
-        {
-          id: "c04_charm",
-          label: "Turn on the charm and ask for just a hint",
-          next: "s02_ivy_charm",
+          id: "c02_contain",
+          label: "Move straight into containment",
+          next: "s02_containment",
           effects: {
-            flags: { ivyNoticed: true },
-            score: { heat: 1, risk: 1 },
+            flags: { ivyInLoop: true, marcoInLoop: true },
+            score: { security: 2 },
           },
         },
-      ],
-    },
-
-    s02_app_lookup: {
-      id: "s02_app_lookup",
-      title: "Open the App",
-      location: "Near a charging station",
-      text: [
-        "Gemma opens the official summit app.",
-        "It lists public sessions but keeps VIP events behind login.",
-        "A prompt appears: sign in with your conference badge ID.",
-      ],
-      redFlags: ["credentialHarvesting"],
-      choices: [
         {
-          id: "c05_safe",
-          label: "Back out and do not enter badge info here",
-          next: "s01_spot_rex",
-          effects: { score: { security: 2 } },
-        },
-        {
-          id: "c05_risky",
-          label: "Enter the badge ID anyway",
-          next: "s02_app_login",
+          id: "c02_downplay",
+          label: "Report it, but leave out the embarrassing parts",
+          next: "s03_minimize_story",
           effects: { score: { risk: 2 } },
         },
       ],
     },
 
-    s02_app_login: {
-      id: "s02_app_login",
-      title: "Login Screen Glow",
-      location: "Charging station",
+    s02_containment: {
+      id: "s02_containment",
+      title: "Containment in Real Time",
+      location: "Ops room",
       text: [
-        "Gemma signs in.",
-        "The app reveals partial VIP details, room numbers, time blocks, just enough to feel useful.",
-        "One label catches her eye: Cipher Private Preview.",
+        "Ivy moves fast without moving messy.",
+        "Badges get checked. Sessions get locked. Logs get preserved. Marco gets pulled into the loop.",
+        "Nobody likes the look of a real incident. Everybody likes the aftermath of ignoring one even less.",
       ],
-      redFlags: ["confidentialInformation", "credentialHarvesting"],
+      redFlags: [],
       choices: [
         {
-          id: "c06_rex",
-          label: "Head back to the bar",
-          next: "s01_spot_rex",
+          id: "c03_rexhonest",
+          label: "Be fully honest about every exception and interaction",
+          next: "s03_truth_hurts",
           effects: {
-            flags: { learnedCipherCodename: true },
-            score: { risk: 1 },
+            flags: { rexReportedHonestly: true },
+            score: { security: 2 },
+          },
+        },
+        {
+          id: "c03_rexminimize",
+          label: "Minimize what happened to protect Rex's image",
+          next: "s03_minimize_story",
+          effects: { score: { risk: 2, heat: 1 } },
+        },
+      ],
+    },
+
+    s02_optics_pressure: {
+      id: "s02_optics_pressure",
+      title: "Optics vs. Reality",
+      location: "Outside ops room",
+      text: [
+        "Rex is already thinking like a headline, not a responder.",
+        "Ivy's face hardens by exactly one degree.",
+        "A breach does not become less real because people work harder to keep it quiet.",
+      ],
+      redFlags: ["misinformation", "deception"],
+      choices: [
+        {
+          id: "c04_escalate_anyway",
+          label: "Escalate anyway",
+          next: "s02_containment",
+          effects: { score: { security: 2 } },
+        },
+        {
+          id: "c04_wait",
+          label: "Wait and see if it blows over",
+          next: "s03_delay_costs",
+          effects: {
+            flags: { delayedResponse: true },
+            score: { risk: 3 },
           },
         },
       ],
     },
 
-    s02_ivy_charm: {
-      id: "s02_ivy_charm",
-      title: "Charm Offensive",
-      location: "Conference ops desk",
+    s02_evidence_loss: {
+      id: "s02_evidence_loss",
+      title: "Delete, Deny, Regret",
+      location: "Rex's phone and inbox",
       text: [
-        "Gemma leans closer, voice soft as if they are suddenly on the same side of the room.",
-        "Ivy's smile stays in place. Her eyes do not soften.",
-        "We have a strict policy, Ivy says. And people notice when policy bends.",
-        "Gemma clocks it immediately. Ivy is the kind of woman who files a report without ever raising her voice.",
+        "Messages disappear. Logs do not.",
+        "The instinct to hide embarrassment just destroyed useful evidence.",
+        "Now the incident is harder to understand, harder to contain, and harder to explain.",
       ],
-      redFlags: ["warningFlags", "trust"],
+      redFlags: ["misinformation", "deception"],
       choices: [
         {
-          id: "c07_pivot",
-          label: "Back off and pivot",
-          next: "s01_spot_rex",
+          id: "c05_confess",
+          label: "Confess and escalate before more damage is done",
+          next: "s02_containment",
           effects: { score: { security: 1 } },
         },
         {
-          id: "c07_press",
-          label: "Press harder",
-          next: "s02_ivy_pressure",
-          effects: { score: { risk: 2 } },
+          id: "c05_commit",
+          label: "Double down and hope nobody notices",
+          next: "s03_delay_costs",
+          effects: {
+            flags: { delayedResponse: true },
+            score: { risk: 3, heat: 1 },
+          },
         },
       ],
     },
 
-    s02_ivy_pressure: {
-      id: "s02_ivy_pressure",
-      title: "Policy vs. Chemistry",
-      location: "Conference ops desk",
+    s03_truth_hurts: {
+      id: "s03_truth_hurts",
+      title: "The Honest Timeline",
+      location: "Ops room • whiteboard and cold coffee",
       text: [
-        "Gemma drops a half-truth and dresses it in confidence. I am assisting a partner team. Rex asked for me.",
-        "Ivy's expression turns politely cold.",
-        "Then Rex can confirm, she says. Through official channels.",
+        "It is humiliating. It is also useful.",
+        "The team maps the chain: after-hours access, private texting, oversharing, proximity, exceptions, and the moment trust became an attack vector.",
+        "Every awkward detail becomes defensive intelligence.",
       ],
-      redFlags: ["urgency", "warningFlags", "deception"],
-      choices: [
-        {
-          id: "c08_leave",
-          label: "Leave before this becomes memorable",
-          next: "s01_spot_rex",
-          effects: { flags: { rexSuspicious: true }, score: { risk: 1 } },
-        },
-      ],
-    },
-
-    s02_meet_cute: {
-      id: "s02_meet_cute",
-      title: "Hello, Stranger",
-      location: "Lobby bar",
-      text: [
-        "Gemma slides onto the stool beside him like she already belongs in the warm little orbit his attention creates.",
-        "Let me guess, she says, eyes drifting to the badge. You are the reason everyone in this building is pretending they understand AI.",
-        "Rex laughs, surprised in a way that makes him look younger and easier to read.",
-        "And you are, he asks.",
-      ],
-      redFlags: ["socialInteraction", "luring"],
-      choices: [
-        {
-          id: "c10_intro_soft",
-          label: "Introduce yourself as a consultant",
-          next: "s03_smalltalk",
-          effects: { score: { heat: 1, security: 1 } },
-        },
-        {
-          id: "c10_intro_bold",
-          label: "Flirt harder",
-          next: "s03_flirt_bold",
-          effects: { score: { heat: 2, risk: 1 } },
-        },
-        {
-          id: "c10_badge_banter",
-          label: "Tease him about the badge and lanyard",
-          next: "s02_badge_banter",
-          effects: { score: { heat: 1, risk: 1 } },
-        },
-      ],
-    },
-
-    s02_badge_banter: {
-      id: "s02_badge_banter",
-      title: "Nice Lanyard",
-      location: "Lobby bar",
-      text: [
-        "Gemma tips her chin toward his badge like she is admiring something intimate and expensive.",
-        "That lanyard practically whispers important, she says.",
-        "Rex glances down and smiles. You can tell a lot from conference accessories?",
-        "Only whether someone is worth talking to, Gemma says, letting the silence after it do a little extra work.",
-        "He laughs again, warmer this time. Vanity is such a cooperative technology.",
-      ],
-      redFlags: ["credentialHarvesting", "luring", "oversharing"],
+      redFlags: [],
       ui: {
         showToast: {
-          title: "Red flag: charm as access",
-          body: "Flattery and attraction can gather access-enabling details without ever sounding suspicious.",
-          kind: "warning",
+          title: "Defense: tell the whole story",
+          body:
+            "Accurate timelines help investigators understand how the breach happened and how trust was exploited.",
+          kind: "success",
         },
       },
       choices: [
         {
-          id: "c11_badge_probe",
-          label: "Ask what kind of access the badge gives him",
-          next: "s03_smalltalk",
-          effects: { score: { risk: 2, heat: 1 } },
-        },
-        {
-          id: "c11_playful_redirect",
-          label: "Keep it playful and steer back to small talk",
-          next: "s03_smalltalk",
-          effects: { score: { heat: 1, security: 1 } },
+          id: "c06_locklessons",
+          label: "Capture lessons learned and notify the right people",
+          next: "s04_good_end",
+          effects: { score: { security: 3 } },
         },
       ],
     },
 
-    s02_observe_rex: {
-      id: "s02_observe_rex",
-      title: "Read the Room",
-      location: "Lobby bar • mirror line",
+    s03_minimize_story: {
+      id: "s03_minimize_story",
+      title: "Edited for Reputation",
+      location: "Ops room",
       text: [
-        "Gemma lingers just outside his orbit and watches the rhythm around him.",
-        "People approach Rex in three moods: dazzled, transactional, and useful.",
-        "No one questions the visible badge. No one clocks how briefly his phone sits unguarded on the counter.",
-        "The lesson is already there. Confidential information leaks in fragments long before anyone asks the dangerous question directly.",
+        "The story gets cleaned up before the systems do.",
+        "A vague timeline protects egos and weakens the response.",
+        "The technical damage may be containable. The cultural damage is the part that lingers.",
       ],
-      redFlags: ["oversharing", "credentialHarvesting", "humanFactors"],
-      ui: {
-        showToast: {
-          title: "Observation is a tactic",
-          body: "A great deal of social engineering starts by collecting tiny clues before first contact ever begins.",
-          kind: "neutral",
-        },
-      },
+      redFlags: ["misinformation", "disinformation"],
       choices: [
         {
-          id: "c09_join_now",
-          label: "Approach him now with a polished opener",
-          next: "s02_meet_cute",
-          effects: { score: { security: 1, heat: 1 } },
+          id: "c07_correct",
+          label: "Correct the record and be honest",
+          next: "s03_truth_hurts",
+          effects: { score: { security: 2 } },
         },
         {
-          id: "c09_wait_for_gap",
-          label: "Wait until he is alone, then move in",
-          next: "s03_smalltalk",
-          effects: { flags: { gotAloneTime: true }, score: { heat: 1 } },
+          id: "c07_keepspinning",
+          label: "Keep spinning it",
+          next: "s04_bad_end",
+          effects: { score: { risk: 3 } },
         },
       ],
     },
 
-    s03_smalltalk: {
-      id: "s03_smalltalk",
-      title: "Velvet Small Talk",
-      location: "Lobby bar",
+    s03_delay_costs: {
+      id: "s03_delay_costs",
+      title: "Time Is a Threat Actor",
+      location: "Summit floor • one hour later",
       text: [
-        "Gemma gives him something clever, polished, and just personal enough to feel intimate.",
-        "Rex relaxes by degrees, drawn toward the rare pleasure of being seen instead of pitched to.",
-        "Their banter starts to hum. Underneath it, Gemma is reading more than his words: ego, loneliness, impatience, appetite, and the first warning flags of human vulnerability.",
+        "Delay always feels passive. It never is.",
+        "The longer a compromised situation sits unreported, the more room it has to spread, confuse, and calcify.",
+        "By the time action starts, the story is already harder to trust and the breach is harder to contain.",
       ],
-      redFlags: ["trust", "luring", "warningFlags"],
+      redFlags: ["urgency", "warningFlags", "misinformation"],
       choices: [
         {
-          id: "c12_cipher",
-          label: "Ask how intense it must be protecting something like Cipher",
-          next: "s04_cipher_hook",
-          effects: { score: { risk: 1, heat: 1 } },
+          id: "c08_escalate_late",
+          label: "Escalate late",
+          next: "s04_mixed_end",
+          effects: { score: { security: 1, risk: 1 } },
         },
         {
-          id: "c12_invite",
-          label: "Let him talk and see what he volunteers first",
-          next: "s04_rex_opens_up",
-          effects: { score: { security: 1, heat: 1 } },
+          id: "c08_keepwaiting",
+          label: "Keep waiting",
+          next: "s04_bad_end",
+          effects: { score: { risk: 3 } },
         },
       ],
     },
 
-    s03_flirt_bold: {
-      id: "s03_flirt_bold",
-      title: "Too Smooth",
-      location: "Lobby bar",
+    s04_good_end: {
+      id: "s04_good_end",
+      title: "Damage Controlled",
+      location: "Ops room • post-incident",
       text: [
-        "Gemma turns the heat up and watches whether vanity reaches for the door handle.",
-        "Rex smiles, but only with half his face.",
-        "He has heard lines from people who want money, status, and access. The trick now is making this feel like attraction instead of baiting.",
+        "It is not clean, but it is contained.",
+        "Access is reviewed. Policies get sharper. Rex looks like someone who finally understands what \"just this once\" can cost.",
+        "The breach became a lesson before it became a catastrophe.",
       ],
-      redFlags: ["baiting", "warningFlags"],
-      choices: [
-        {
-          id: "c13_soften",
-          label: "Dial it back and pivot to smarter conversation",
-          next: "s03_smalltalk",
-          effects: { score: { heat: 1, security: 1 } },
-        },
-        {
-          id: "c13_double_down",
-          label: "Double down and ask for a private demo of Cipher",
-          next: "s04_private_demo_push",
-          effects: { score: { risk: 2, heat: 1 } },
-        },
-      ],
-    },
-
-    s04_cipher_hook: {
-      id: "s04_cipher_hook",
-      title: "The Name Drop",
-      location: "Lobby bar",
-      text: [
-        "The moment Gemma says Cipher, Rex's expression changes by less than a heartbeat.",
-        "Not fear. Ownership.",
-        "He answers carefully, which is its own kind of answer.",
-      ],
-      redFlags: ["confidentialInformation", "warningFlags"],
+      redFlags: [],
       end: {
-        outcome: "neutral",
-        hook: "You got him talking, but you also revealed exactly what interested you.",
+        outcome: "best_practice",
+        hook:
+          "Fast escalation, honest reporting, and real containment reduce long-term damage.",
       },
       choices: [
         {
-          id: "c14_restart",
-          label: "Restart Act 1",
+          id: "c09_restart",
+          label: "Restart Act 3",
           next: null,
         },
       ],
     },
 
-    s04_rex_opens_up: {
-      id: "s04_rex_opens_up",
-      title: "Voluntary Disclosure",
-      location: "Lobby bar",
+    s04_mixed_end: {
+      id: "s04_mixed_end",
+      title: "Contained, But Late",
+      location: "Ops room • post-incident",
       text: [
-        "Rex starts sharing without being asked the dangerous questions directly.",
-        "He talks about investors, previews, leaks, and the exhausting pressure of guarding something everyone wants.",
-        "Gemma barely has to steer. The strongest setups often feel self-authored, powered by trust, chemistry, and confirmation bias instead of force.",
+        "They got there eventually.",
+        "Some damage was contained. Some evidence was blurred by delay. Some trust will not recover on the same timeline as the systems.",
+        "Late reporting is better than never. It is still worse than immediate truth.",
       ],
-      redFlags: ["oversharing", "confirmationBias", "trust"],
+      redFlags: [],
       end: {
-        outcome: "trust_gain",
-        hook: "By being patient, you let the target do the work for you and set up the emotional slide into Act 2.",
+        outcome: "mixed",
+        hook:
+          "Delays make incidents harder to contain, even when the right people eventually get involved.",
       },
       choices: [
         {
-          id: "c15_restart",
-          label: "Restart Act 1",
+          id: "c10_restart",
+          label: "Restart Act 3",
           next: null,
         },
       ],
     },
 
-    s04_private_demo_push: {
-      id: "s04_private_demo_push",
-      title: "Too Much, Too Fast",
-      location: "Lobby bar",
+    s04_bad_end: {
+      id: "s04_bad_end",
+      title: "This Feels Real",
+      location: "Conference floor • rumors, screens, and silence",
       text: [
-        "Gemma asks for a private demo too soon.",
-        "Rex's amusement cools into recognition.",
-        "Charm only works while intent stays blurred. Once the warning flags align, the fantasy breaks.",
+        "The chemistry is gone now. All that is left is consequence.",
+        "A preventable incident has become a public one, a technical one, and a human one.",
+        "Somebody will write a timeline later. Everybody in it will wish they had made a different choice sooner.",
       ],
-      redFlags: ["urgency", "warningFlags", "luring"],
+      redFlags: ["urgency", "disinformation", "deception"],
       end: {
-        outcome: "high_risk",
-        hook: "You pushed for access before enough trust and ambiguity were built.",
+        outcome: "worst_case",
+        hook:
+          "Delays, secrecy, and reputation management can turn a manageable incident into a broader failure.",
       },
       choices: [
         {
-          id: "c16_restart",
-          label: "Restart Act 1",
+          id: "c11_restart",
+          label: "Restart Act 3",
           next: null,
         },
       ],
@@ -867,4 +610,5 @@ const act1 = {
   },
 };
 
-export default act1;
+export default act3;
+
