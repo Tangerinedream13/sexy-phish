@@ -1,9 +1,8 @@
 // src/data/act3.js
-// Act 3: this_feels_real.txt, “Damage Control”
+// Act 3: this_feels_real.txt, "Damage Control"
 //
 // IMPORTANT:
 // This file is DATA ONLY. No JSX. No Chakra components.
-// Matches the same general structure and feel as act1.js and act2.js.
 
 const act3 = {
   meta: {
@@ -16,7 +15,14 @@ const act3 = {
       venue: "CyberSteel Executive Summit • backstage corridors, ops rooms, and the aftermath",
       vibe: "The chemistry is gone. The consequences are not.",
     },
-    version: 2,
+    version: 3,
+  },
+
+  sources: {
+    1: "Akeiber, H. J. (2025). The evolution of social engineering attacks: A cybersecurity engineering perspective.",
+    2: "Hatfield, J. M. (2018). Social engineering in cybersecurity: The evolution of a concept.",
+    3: "Iovine, A. (2026). What are romance scams and how can you avoid them?",
+    4: "Wang, Z., Sun, L., & Zhu, H. (2020). Defining social engineering in cybersecurity.",
   },
 
   characters: {
@@ -55,36 +61,172 @@ const act3 = {
   },
 
   glossary: {
-    incidentResponse:
-      "The process of identifying, containing, investigating, and recovering from a security incident.",
-    containment:
-      "Immediate actions taken to prevent a compromise from getting worse.",
-    breach:
-      "A compromise of information, access, or security controls.",
-    misinformation:
-      "False or misleading information that distorts what is really happening.",
-    disinformation:
-      "Information shaped or framed to manipulate what others believe about an incident.",
-    warningFlags:
-      "Small signs that something is off, even when people want the story to stay romantic, harmless, or private.",
-    humanVulnerability:
-      "The tendency for emotion, embarrassment, attraction, urgency, or ego to weaken judgment.",
+    incidentResponse: {
+      term: "incident response",
+      definition:
+        "The process of identifying, containing, investigating, and recovering from a security incident.",
+      sources: [],
+    },
+    containment: {
+      term: "containment",
+      definition:
+        "Immediate actions taken to prevent a compromise from getting worse.",
+      sources: [],
+    },
+    breach: {
+      term: "breach",
+      definition: "A compromise of information, access, or security controls.",
+      sources: [1, 4],
+    },
+    misinformation: {
+      term: "misinformation",
+      definition:
+        "False or misleading information that distorts what is really happening.",
+      sources: [1],
+    },
+    disinformation: {
+      term: "disinformation",
+      definition:
+        "Information shaped or framed to manipulate what others believe about an incident.",
+      sources: [1],
+    },
+    warningFlags: {
+      term: "warning flags",
+      definition:
+        "Signs that a situation may be manipulative, deceptive, or unsafe.",
+      sources: [1, 3],
+    },
+    trust: {
+      term: "trust",
+      definition:
+        "A sense of emotional safety that lowers skepticism and makes disclosure easier.",
+      sources: [1, 3, 4],
+    },
+    oversharing: {
+      term: "oversharing",
+      definition:
+        "Revealing sensitive information too casually, too emotionally, or too early.",
+      sources: [2, 3, 4],
+    },
+    urgency: {
+      term: "urgency",
+      definition:
+        "Creating time pressure so a person acts before fully verifying the situation.",
+      sources: [1],
+    },
+    confidentialInformation: {
+      term: "confidential information",
+      definition:
+        "Sensitive details that should not be disclosed without proper need and verification.",
+      sources: [4],
+    },
+    socialEngineering: {
+      term: "social engineering",
+      definition:
+        "Manipulating people through trust, deception, and social interaction to gain access or sensitive information.",
+      sources: [2, 4],
+    },
+    attackVector: {
+      term: "attack vector",
+      definition: "The path or method used to begin or advance an attack.",
+      sources: [4],
+    },
+    humanFactors: {
+      term: "human factors",
+      definition:
+        "The human behaviors and judgments that attackers exploit instead of technical flaws alone.",
+      sources: [4],
+    },
+    manipulation: {
+      term: "manipulation",
+      definition:
+        "Influencing someone through psychological pressure, emotion, or misdirection.",
+      sources: [1, 2, 4],
+    },
+    deception: {
+      term: "deception",
+      definition:
+        "Misleading someone in order to influence their actions or gain information.",
+      sources: [2, 4],
+    },
+
     redFlags: {
-      urgency: "Pushing immediate action before verification or careful reporting.",
-      shamePressure:
-        "Using embarrassment, fear, or regret to keep someone from reporting quickly and honestly.",
-      trust:
-        "A sense of emotional safety that lowers skepticism and delays proper escalation.",
-      oversharing:
-        "Revealing sensitive details casually, emotionally, or too late in the wrong context.",
-      misinformation:
-        "Framing the situation in a way that hides what really happened.",
-      disinformation:
-        "Actively shaping the story to mislead responders or protect image instead of truth.",
-      warningFlags:
-        "Signals that the incident is bigger than people want to admit.",
-      confidentialInformation:
-        "Sensitive details that should be protected, reported carefully, and reviewed through official channels.",
+      breach: {
+        term: "breach",
+        definition: "A compromise of information, access, or security controls.",
+        sources: [1, 4],
+      },
+      misinformation: {
+        term: "misinformation",
+        definition:
+          "False or misleading information that distorts what is really happening.",
+        sources: [1],
+      },
+      disinformation: {
+        term: "disinformation",
+        definition:
+          "Information shaped or framed to manipulate what others believe about an incident.",
+        sources: [1],
+      },
+      warningFlags: {
+        term: "warning flags",
+        definition:
+          "Signs that a situation may be manipulative, deceptive, or unsafe.",
+        sources: [1, 3],
+      },
+      trust: {
+        term: "trust",
+        definition:
+          "A sense of emotional safety that lowers skepticism and makes disclosure easier.",
+        sources: [1, 3, 4],
+      },
+      oversharing: {
+        term: "oversharing",
+        definition:
+          "Revealing sensitive information too casually, too emotionally, or too early.",
+        sources: [2, 3, 4],
+      },
+      urgency: {
+        term: "urgency",
+        definition:
+          "Creating time pressure so a person acts before fully verifying the situation.",
+        sources: [1],
+      },
+      confidentialInformation: {
+        term: "confidential information",
+        definition:
+          "Sensitive details that should not be disclosed without proper need and verification.",
+        sources: [4],
+      },
+      socialEngineering: {
+        term: "social engineering",
+        definition:
+          "Manipulating people through trust, deception, and social interaction to gain access or sensitive information.",
+        sources: [2, 4],
+      },
+      attackVector: {
+        term: "attack vector",
+        definition: "The path or method used to begin or advance an attack.",
+        sources: [4],
+      },
+      humanFactors: {
+        term: "human factors",
+        definition:
+          "The human behaviors and judgments that attackers exploit instead of technical flaws alone.",
+        sources: [4],
+      },
+      manipulation: {
+        term: "manipulation",
+        definition:
+          "Influencing someone through psychological pressure, emotion, or misdirection.",
+        sources: [1, 2, 4],
+      },
+      deception: {
+        term: "deception",
+        definition:
+          "Misleading someone in order to influence their actions or gain information.",
+        sources: [2, 4],
+      },
     },
   },
 
@@ -117,7 +259,8 @@ const act3 = {
       ui: {
         showToast: {
           title: "Act 3: this_feels_real.txt",
-          body: "The breach is no longer hypothetical. Now the warning flags, pressure, and fallout all arrive at once.",
+          body:
+            "The breach is no longer hypothetical. Now the warning flags, pressure, and fallout all arrive at once.",
           kind: "warning",
         },
       },
@@ -155,14 +298,15 @@ const act3 = {
       location: "Side hallway",
       text: [
         "Rex lowers his voice like privacy can still fix this.",
-        "He says the line people always say when they are scared: “Let’s not make this bigger than it is.”",
+        "He says the line people always say when they are scared: \"Let's not make this bigger than it is.\"",
         "That sentence has probably made every breach bigger than it had to be.",
       ],
-      redFlags: ["shamePressure", "trust", "warningFlags"],
+      redFlags: ["trust", "warningFlags", "deception"],
       ui: {
         showToast: {
           title: "Red flag: private incident handling",
-          body: "Security events should go into official response channels, not side conversations shaped by fear or attraction.",
+          body:
+            "Security events should go into official response channels, not side conversations shaped by fear, image, or attraction.",
           kind: "warning",
         },
       },
@@ -201,7 +345,8 @@ const act3 = {
       ui: {
         showToast: {
           title: "Defense: fast escalation",
-          body: "Early reporting helps teams preserve evidence, contain the breach, and understand how trust was exploited.",
+          body:
+            "Early reporting helps teams preserve evidence, contain the breach, and understand how trust was exploited.",
           kind: "success",
         },
       },
@@ -246,7 +391,7 @@ const act3 = {
         },
         {
           id: "c03_rexminimize",
-          label: "Minimize what happened to protect Rex’s image",
+          label: "Minimize what happened to protect Rex's image",
           next: "s03_minimize_story",
           effects: { score: { risk: 2, heat: 1 } },
         },
@@ -259,10 +404,10 @@ const act3 = {
       location: "Outside ops room",
       text: [
         "Rex is already thinking like a headline, not a responder.",
-        "Ivy’s face hardens by exactly one degree.",
+        "Ivy's face hardens by exactly one degree.",
         "A breach does not become less real because people work harder to keep it quiet.",
       ],
-      redFlags: ["misinformation", "shamePressure"],
+      redFlags: ["misinformation", "deception"],
       choices: [
         {
           id: "c04_escalate_anyway",
@@ -285,13 +430,13 @@ const act3 = {
     s02_evidence_loss: {
       id: "s02_evidence_loss",
       title: "Delete, Deny, Regret",
-      location: "Rex’s phone and inbox",
+      location: "Rex's phone and inbox",
       text: [
         "Messages disappear. Logs do not.",
         "The instinct to hide embarrassment just destroyed useful evidence.",
         "Now the incident is harder to understand, harder to contain, and harder to explain.",
       ],
-      redFlags: ["shamePressure", "misinformation"],
+      redFlags: ["misinformation", "deception"],
       choices: [
         {
           id: "c05_confess",
@@ -324,7 +469,8 @@ const act3 = {
       ui: {
         showToast: {
           title: "Defense: tell the whole story",
-          body: "Accurate timelines help investigators understand how the breach happened and how trust was exploited.",
+          body:
+            "Accurate timelines help investigators understand how the breach happened and how trust was exploited.",
           kind: "success",
         },
       },
@@ -396,13 +542,14 @@ const act3 = {
       location: "Ops room • post-incident",
       text: [
         "It is not clean, but it is contained.",
-        "Access is reviewed. Policies get sharper. Rex looks like someone who finally understands what “just this once” can cost.",
+        "Access is reviewed. Policies get sharper. Rex looks like someone who finally understands what \"just this once\" can cost.",
         "The breach became a lesson before it became a catastrophe.",
       ],
       redFlags: [],
       end: {
         outcome: "best_practice",
-        hook: "Fast escalation, honest reporting, and real containment reduce long-term damage.",
+        hook:
+          "Fast escalation, honest reporting, and real containment reduce long-term damage.",
       },
       choices: [
         {
@@ -425,7 +572,8 @@ const act3 = {
       redFlags: [],
       end: {
         outcome: "mixed",
-        hook: "Delays make incidents harder to contain, even when the right people eventually get involved.",
+        hook:
+          "Delays make incidents harder to contain, even when the right people eventually get involved.",
       },
       choices: [
         {
@@ -445,10 +593,11 @@ const act3 = {
         "A preventable incident has become a public one, a technical one, and a human one.",
         "Somebody will write a timeline later. Everybody in it will wish they had made a different choice sooner.",
       ],
-      redFlags: ["urgency", "disinformation", "shamePressure"],
+      redFlags: ["urgency", "disinformation", "deception"],
       end: {
         outcome: "worst_case",
-        hook: "Delays, secrecy, and reputation management can turn a manageable incident into a broader failure.",
+        hook:
+          "Delays, secrecy, and reputation management can turn a manageable incident into a broader failure.",
       },
       choices: [
         {
