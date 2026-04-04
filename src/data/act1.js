@@ -332,7 +332,7 @@ const act1 = {
         "A staffer reminds everyone that badges are required for all sessions, including VIP floors.",
         "Gemma lets her gaze rest on the word VIP just long enough to look intrigued instead of intentional.",
       ],
-      redFlags: ["luring", "socialInteraction"],
+      redFlags: ["socialEngineering", "humanFactors"],
       ui: {
         showToast: {
           title: "Red flag: social engineering setup",
@@ -425,7 +425,7 @@ const act1 = {
         "Security and speed pull in opposite directions. In real life, speed gets kissed first.",
         "He waves her away. Get it fixed. Do not come back up without it.",
       ],
-      redFlags: ["urgency", "socialInteraction"],
+      redFlags: ["urgency", "manipulation"],
       ui: {
         showToast: {
           title: "Red flag: urgency",
@@ -475,7 +475,7 @@ const act1 = {
         },
         {
           id: "c02_observe",
-          label: "Observe first and map the room",
+          label: "Observe first: who approaches him, who protects him",
           next: "s02_observe_rex",
           effects: { score: { security: 1, risk: 1 } },
         },
@@ -487,12 +487,12 @@ const act1 = {
       title: "Walk Like You Belong",
       location: "Expo hall",
       text: [
-        "The expo hall is all polished smiles, glossy logos, and people performing confidence for each other.",
-        "Gemma moves with purpose because purpose reads as permission more often than it should.",
-        "A booth demo flashes Cipher: Secure Intelligence at Scale.",
-        "There it is, the first piece of confidential information offered up in public with a spotlight on it.",
+        "The expo hall is a sea of logos, polished smiles, and soft bragging.",
+        "Gemma moves with purpose. Purpose often reads as permission.",
+        'A booth demo flashes: "Cipher: Secure Intelligence at Scale."',
+        "There it is, the name out in the open, like the most sensitive things are always hidden better than that.",
       ],
-      redFlags: ["socialProof", "confidentialInformation"],
+      redFlags: ["confidentialInformation", "humanFactors"],
       choices: [
         {
           id: "c03_bar",
@@ -502,7 +502,7 @@ const act1 = {
         },
         {
           id: "c03_ops",
-          label: "Talk to conference ops and test the gatekeeper",
+          label: "Talk to conference ops about schedules and room patterns",
           next: "s02_ops_ivy",
           effects: { score: { security: 1, risk: 1 } },
         },
@@ -514,29 +514,29 @@ const act1 = {
       title: "Gatekeeper Energy",
       location: "Conference ops desk",
       text: [
-        "Ivy runs conference ops like a chessboard, and Gemma can tell in one glance that she is not the easy mark in this room.",
-        "Gemma asks casual questions about VIP rooms and Rex's schedule.",
-        "Ivy smiles, pleasant and unreadable.",
-        "All speaker updates are in the official app, she says. We do not share VIP schedules.",
+        "Ivy runs conference ops like a chessboard.",
+        "Gemma asks casual questions about VIP rooms and whether Rex is speaking.",
+        "Ivy smiles, pleasant and not fooled.",
+        '"All speaker updates are in the official app," she says. "And we do not share VIP schedules."',
       ],
-      redFlags: ["warningFlags", "socialInteraction"],
+      redFlags: ["warningFlags", "socialEngineering"],
       ui: {
         showToast: {
           title: "Defense: official channels",
-          body: "Good gatekeepers redirect sensitive requests into verified systems instead of improvising.",
+          body: "Good gatekeepers redirect sensitive requests into verified systems instead of casual conversation.",
           kind: "success",
         },
       },
       choices: [
         {
           id: "c04_app",
-          label: "Use the official app like a normal human",
+          label: "Use the official app",
           next: "s02_app_lookup",
           effects: { score: { security: 2 } },
         },
         {
           id: "c04_charm",
-          label: "Turn on the charm and ask for just a hint",
+          label: "Turn on the charm and ask for a hint",
           next: "s02_ivy_charm",
           effects: {
             flags: { ivyNoticed: true },
@@ -551,21 +551,21 @@ const act1 = {
       title: "Open the App",
       location: "Near a charging station",
       text: [
-        "Gemma opens the official summit app.",
-        "It lists public sessions but keeps VIP events behind login.",
-        "A prompt appears: sign in with your conference badge ID.",
+        "Gemma opens the summit app.",
+        "It lists public sessions but masks VIP events behind a login.",
+        "A prompt appears and asks for conference credentials.",
       ],
-      redFlags: ["credentialHarvesting"],
+      redFlags: ["warningFlags"],
       choices: [
         {
           id: "c05_safe",
-          label: "Back out and do not enter badge info here",
+          label: "Back out and avoid entering credentials in public",
           next: "s01_spot_rex",
           effects: { score: { security: 2 } },
         },
         {
           id: "c05_risky",
-          label: "Enter the badge ID anyway",
+          label: "Enter the information anyway",
           next: "s02_app_login",
           effects: { score: { risk: 2 } },
         },
@@ -578,14 +578,14 @@ const act1 = {
       location: "Charging station",
       text: [
         "Gemma signs in.",
-        "The app reveals partial VIP details, room numbers, time blocks, just enough to feel useful.",
-        "One label catches her eye: Cipher Private Preview.",
+        "The app shows partial VIP info, room numbers, and time blocks.",
+        'One label catches her eye: "Cipher Private Preview."',
       ],
       redFlags: ["confidentialInformation", "credentialHarvesting"],
       choices: [
         {
           id: "c06_rex",
-          label: "Head back to the bar",
+          label: "Head to the lobby bar",
           next: "s01_spot_rex",
           effects: {
             flags: { learnedCipherCodename: true },
@@ -600,12 +600,12 @@ const act1 = {
       title: "Charm Offensive",
       location: "Conference ops desk",
       text: [
-        "Gemma leans closer, voice soft as if they are suddenly on the same side of the room.",
-        "Ivy's smile stays in place. Her eyes do not soften.",
-        "We have a strict policy, Ivy says. And people notice when policy bends.",
-        "Gemma clocks it immediately. Ivy is the kind of woman who files a report without ever raising her voice.",
+        "Gemma leans closer, voice soft like a secret.",
+        "Ivy's smile stays put. Her eyes do not.",
+        '"We have a strict policy," Ivy says. "And people notice when policy bends."',
+        "Gemma clocks it immediately. Ivy is the kind of person who files reports without raising her voice.",
       ],
-      redFlags: ["warningFlags", "trust"],
+      redFlags: ["trust", "warningFlags"],
       choices: [
         {
           id: "c07_pivot",
@@ -627,11 +627,11 @@ const act1 = {
       title: "Policy vs. Chemistry",
       location: "Conference ops desk",
       text: [
-        "Gemma drops a half-truth and dresses it in confidence. I am assisting a partner team. Rex asked for me.",
-        "Ivy's expression turns politely cold.",
-        "Then Rex can confirm, she says. Through official channels.",
+        "Gemma drops a half truth and tries to sound like she already belongs inside the system.",
+        "Ivy's expression goes polite and cold.",
+        '"Then Rex can confirm," Ivy says. "Through official channels."',
       ],
-      redFlags: ["urgency", "warningFlags", "deception"],
+      redFlags: ["deception", "warningFlags"],
       choices: [
         {
           id: "c08_leave",
@@ -647,12 +647,12 @@ const act1 = {
       title: "Hello, Stranger",
       location: "Lobby bar",
       text: [
-        "Gemma slides onto the stool beside him like she already belongs in the warm little orbit his attention creates.",
-        "Let me guess, she says, eyes drifting to the badge. You are the reason everyone in this building is pretending they understand AI.",
-        "Rex laughs, surprised in a way that makes him look younger and easier to read.",
-        "And you are, he asks.",
+        "Gemma slides onto the stool beside him like she has done it in another life and fully intends to do it again in this one.",
+        '"Let me guess," she says, eyeing the badge. "You\'re the reason everyone in this building is pretending they understand AI."',
+        "Rex laughs, short and surprised.",
+        '"And you are?"',
       ],
-      redFlags: ["socialInteraction", "luring"],
+      redFlags: ["luring"],
       choices: [
         {
           id: "c10_intro_soft",
@@ -662,13 +662,13 @@ const act1 = {
         },
         {
           id: "c10_intro_bold",
-          label: "Flirt harder",
+          label: "Flirt hard",
           next: "s03_flirt_bold",
           effects: { score: { heat: 2, risk: 1 } },
         },
         {
           id: "c10_badge_banter",
-          label: "Tease him about the badge and lanyard",
+          label: "Tease him about the badge",
           next: "s02_badge_banter",
           effects: { score: { heat: 1, risk: 1 } },
         },
@@ -677,20 +677,18 @@ const act1 = {
 
     s02_badge_banter: {
       id: "s02_badge_banter",
-      title: "Nice Lanyard",
+      title: "Nice Badge",
       location: "Lobby bar",
       text: [
-        "Gemma tips her chin toward his badge like she is admiring something intimate and expensive.",
-        "That lanyard practically whispers important, she says.",
-        "Rex glances down and smiles. You can tell a lot from conference accessories?",
-        "Only whether someone is worth talking to, Gemma says, letting the silence after it do a little extra work.",
-        "He laughs again, warmer this time. Vanity is such a cooperative technology.",
+        "Gemma tilts her head toward his badge like she is admiring a watch.",
+        '"That credential practically screams important," she says.',
+        "Rex glances down and smiles. Vanity is such a cooperative human factor.",
       ],
-      redFlags: ["credentialHarvesting", "luring", "oversharing"],
+      redFlags: ["luring", "manipulation", "oversharing"],
       ui: {
         showToast: {
-          title: "Red flag: charm as access",
-          body: "Flattery and attraction can gather access-enabling details without ever sounding suspicious.",
+          title: "Red flag: luring",
+          body: "Flattery and attraction can gather sensitive details without sounding like an attack.",
           kind: "warning",
         },
       },
@@ -703,7 +701,7 @@ const act1 = {
         },
         {
           id: "c11_playful_redirect",
-          label: "Keep it playful and steer back to small talk",
+          label: "Keep it playful and return to small talk",
           next: "s03_smalltalk",
           effects: { score: { heat: 1, security: 1 } },
         },
@@ -716,15 +714,15 @@ const act1 = {
       location: "Lobby bar • mirror line",
       text: [
         "Gemma lingers just outside his orbit and watches the rhythm around him.",
-        "People approach Rex in three moods: dazzled, transactional, and useful.",
-        "No one questions the visible badge. No one clocks how briefly his phone sits unguarded on the counter.",
-        "The lesson is already there. Confidential information leaks in fragments long before anyone asks the dangerous question directly.",
+        "People approach Rex in categories: starstruck, transactional, and useful.",
+        "No one checks whether his badge is visible. No one notices how much can be inferred before a single direct question is asked.",
+        "A great deal of social engineering begins with observation.",
       ],
-      redFlags: ["oversharing", "credentialHarvesting", "humanFactors"],
+      redFlags: ["socialEngineering", "humanFactors"],
       ui: {
         showToast: {
           title: "Observation is a tactic",
-          body: "A great deal of social engineering starts by collecting tiny clues before first contact ever begins.",
+          body: "Attackers often collect small clues first, then use them to make later manipulation feel natural.",
           kind: "neutral",
         },
       },
@@ -737,7 +735,7 @@ const act1 = {
         },
         {
           id: "c09_wait_for_gap",
-          label: "Wait until he is alone, then move in",
+          label: "Wait until he is alone, then make your move",
           next: "s03_smalltalk",
           effects: { flags: { gotAloneTime: true }, score: { heat: 1 } },
         },
@@ -749,11 +747,11 @@ const act1 = {
       title: "Velvet Small Talk",
       location: "Lobby bar",
       text: [
-        "Gemma gives him something clever, polished, and just personal enough to feel intimate.",
-        "Rex relaxes by degrees, drawn toward the rare pleasure of being seen instead of pitched to.",
-        "Their banter starts to hum. Underneath it, Gemma is reading more than his words: ego, loneliness, impatience, appetite, and the first warning flags of human vulnerability.",
+        "Gemma gives him something polished, clever, and just personal enough to feel intimate.",
+        "Rex relaxes by degrees, drawn in by the kind of attention that feels rare when everyone else wants something from him.",
+        "Their banter starts to hum with tension. Underneath it, Gemma is reading more than his words. Ego, loneliness, impatience, appetite, and the first warning flags of trust at work.",
       ],
-      redFlags: ["trust", "luring", "warningFlags"],
+      redFlags: ["trust", "warningFlags", "humanFactors"],
       choices: [
         {
           id: "c12_cipher",
@@ -763,7 +761,7 @@ const act1 = {
         },
         {
           id: "c12_invite",
-          label: "Let him talk and see what he volunteers first",
+          label: "Let him talk and see what he offers first",
           next: "s04_rex_opens_up",
           effects: { score: { security: 1, heat: 1 } },
         },
@@ -775,11 +773,11 @@ const act1 = {
       title: "Too Smooth",
       location: "Lobby bar",
       text: [
-        "Gemma turns the heat up and watches whether vanity reaches for the door handle.",
+        '"Someone who likes powerful men," Gemma says, like she is testing whether vanity can unlock a door.',
         "Rex smiles, but only with half his face.",
-        "He has heard lines from people who want money, status, and access. The trick now is making this feel like attraction instead of baiting.",
+        "The trick is making manipulation feel like attraction instead of an obvious warning flag.",
       ],
-      redFlags: ["baiting", "warningFlags"],
+      redFlags: ["manipulation", "warningFlags"],
       choices: [
         {
           id: "c13_soften",
@@ -826,9 +824,9 @@ const act1 = {
       text: [
         "Rex starts sharing without being asked the dangerous questions directly.",
         "He talks about investors, previews, leaks, and the exhausting pressure of guarding something everyone wants.",
-        "Gemma barely has to steer. The strongest setups often feel self-authored, powered by trust, chemistry, and confirmation bias instead of force.",
+        "The most effective social engineering often feels self authored, powered by trust and human factors instead of force.",
       ],
-      redFlags: ["oversharing", "confirmationBias", "trust"],
+      redFlags: ["oversharing", "trust", "socialEngineering"],
       end: {
         outcome: "trust_gain",
         hook: "By being patient, you let the target do the work for you and set up the emotional slide into Act 2.",
@@ -848,10 +846,10 @@ const act1 = {
       location: "Lobby bar",
       text: [
         "Gemma asks for a private demo too soon.",
-        "Rex's amusement cools into recognition.",
-        "Charm only works while intent stays blurred. Once the warning flags align, the fantasy breaks.",
+        "Rex's amusement cools into pattern recognition.",
+        "Charm works best before intent becomes visible and the warning flags line up.",
       ],
-      redFlags: ["urgency", "warningFlags", "luring"],
+      redFlags: ["warningFlags", "attackVector"],
       end: {
         outcome: "high_risk",
         hook: "You pushed for access before enough trust and ambiguity were built.",
