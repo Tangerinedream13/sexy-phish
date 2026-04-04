@@ -60,20 +60,26 @@ export default function ActPlayer({
         p={6}
       >
         <Stack gap={5}>
-          <VStack align="start" spacing={2}>
-            <HStack spacing={3} wrap="wrap">
-              <Badge colorScheme="pink">{act.meta?.title}</Badge>
-              <Badge colorScheme="purple">{act.meta?.subtitle}</Badge>
-            </HStack>
+          <HStack justify="space-between" align="start" wrap="wrap">
+            <VStack align="start" spacing={2}>
+              <HStack spacing={3} wrap="wrap">
+                <Badge colorScheme="pink">{act.meta?.title}</Badge>
+                <Badge colorScheme="purple">{act.meta?.subtitle}</Badge>
+              </HStack>
 
-            <Heading size="lg">{scene.title}</Heading>
+              <Heading size="lg">{scene.title}</Heading>
 
-            {scene.location ? (
-              <Text color="gray.500" fontSize="sm">
-                {scene.location}
-              </Text>
-            ) : null}
-          </VStack>
+              {scene.location ? (
+                <Text color="gray.500" fontSize="sm">
+                  {scene.location}
+                </Text>
+              ) : null}
+            </VStack>
+
+            <Button variant="outline" onClick={onHome}>
+              Return Home
+            </Button>
+          </HStack>
 
           {scene.ui?.showToast ? (
             <Box
