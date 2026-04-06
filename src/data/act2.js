@@ -62,11 +62,6 @@ const act2 = {
   },
 
   glossary: {
-    situationship: {
-      term: "situationship",
-      definition: "An emotionally close relationship with unclear boundaries.",
-      sources: [],
-    },
     breach: {
       term: "breach",
       definition: "A compromise of information, access, or security controls.",
@@ -318,8 +313,8 @@ const act2 = {
       location: "VIP lounge • late evening",
       text: [
         "Vegas gets softer after dark, and so do boundaries.",
-        "Rex waves Gemma past the velvet rope with the confidence of someone who has already decided she belongs beside him.",
-        "No badge check. No guest log. Just trust, attraction, and a one-time exception beginning to look like an attack vector.",
+        "Rex waves Gemma past the velvet rope with the easy confidence of someone who has already decided she belongs beside him.",
+        "No badge check. No guest log. Just trust, attraction, and a one-time exception starting to feel like a dangerous mistake.",
       ],
       redFlags: ["trust", "luring", "warningFlags"],
       ui: {
@@ -332,7 +327,7 @@ const act2 = {
       choices: [
         {
           id: "c00_follow",
-          label: "Go with the flow and let Rex normalize the exception",
+          label: "Go with the flow and follow Rex",
           next: "s01_vip_lounge",
           effects: {
             flags: { gotVipAccess: true },
@@ -341,7 +336,8 @@ const act2 = {
         },
         {
           id: "c00_pause",
-          label: "Notice the process failure and clock who saw it",
+          label:
+            "Notice the process failure and keep an eye out for who saw it",
           next: "s01_notice_ivy",
           effects: { score: { security: 1, risk: 1 } },
         },
@@ -353,9 +349,9 @@ const act2 = {
       title: "The Person Who Notices",
       location: "VIP lounge entrance",
       text: [
-        "Ivy looks up from her tablet as Gemma passes through.",
-        "Her face does not change, but that is almost worse.",
-        "Some people flirt. Some people remember everything.",
+        "Ivy glances up from her tablet as Gemma passes through.",
+        "Her expression stays perfectly still, and that restraint feels more ominous than open suspicion.",
+        "Some people flirt. Some people keep score.",
       ],
       redFlags: ["warningFlags"],
       choices: [
@@ -383,21 +379,20 @@ const act2 = {
       location: "VIP lounge",
       text: [
         "Rex is different in private, looser at the mouth, warmer in the eyes, easier to read when the room goes quiet around them.",
-        "Gemma leans in, and the space between them starts to feel charged enough to excuse bad decisions.",
+        "Gemma leans in, things heat up, and the space between them starts to feel charged enough to excuse bad decisions.",
         "That is the strange thing about trust. It often arrives dressed as chemistry, long before verification catches up.",
       ],
       redFlags: ["trust", "oversharing", "confirmationBias"],
       choices: [
         {
           id: "c02_personal",
-          label:
-            "Make it personal and become the easiest person in the room to talk to",
+          label: "Lean in closer",
           next: "s02_emotional_sync",
           effects: { flags: { rexTrusting: true }, score: { heat: 2 } },
         },
         {
           id: "c02_operational",
-          label: "Steer gently toward tomorrow's private session",
+          label: "Start to ask questions about Cipher",
           next: "s02_private_preview",
           effects: { score: { risk: 1, heat: 1 } },
         },
@@ -407,30 +402,32 @@ const act2 = {
     s02_emotional_sync: {
       id: "s02_emotional_sync",
       title: "Emotional Access",
-      location: "VIP lounge • side seating",
+      location: "VIP lounge",
       text: [
-        "Gemma listens the way people remember later, long after they have forgotten the exact words.",
-        "Rex starts confiding in layers, investor pressure, leaks, loyalty, fatigue, and all the things that sound more intimate in a dim room and too honest at close range.",
-        "By the time his hand lingers and the conversation loses its professional distance, the warning flags are already blurred by trust, social proof, and the feeling that this connection must mean something real.",
+        "Gemma listens intently to Rex. Rex's feelings are growing. The alcohol is making it easier to throw all inhibitions out the window. ",
+        "Rex starts confiding in layers, investor pressure, leaks, loyalty, fatigue.",
+        "Gemma pulls Rex in closer and their eyes lock. Their lips press together. Her hands find the back of his neck.",
+        "Her hands grabs the lanyard with the badge attached.",
+        "That was too easy.",
       ],
       redFlags: ["trust", "oversharing", "socialProof"],
       ui: {
         showToast: {
-          title: "Red flag: emotional trust is not security trust",
-          body: "Feeling close to someone does not make them verified, authorized, or safe.",
+          title: "Red flag: feelings are not proof",
+          body: "Just because someone feels familiar or attractive does not mean they are safe to trust.",
           kind: "warning",
         },
       },
       choices: [
         {
           id: "c03_text",
-          label: 'Suggest moving the conversation off platform: "Text me?"',
+          label: "Offer to take things back to his hotel room.",
           next: "s02_text_followup",
           effects: { score: { risk: 2, heat: 1 } },
         },
         {
           id: "c03_walk",
-          label: "Offer to walk with him to tomorrow's preview room",
+          label: "It's getting late and say you'll text him in the morning.",
           next: "s02_private_preview",
           effects: {
             flags: { sawPrivateSessionDoor: true },
@@ -467,32 +464,32 @@ const act2 = {
     },
 
     s02_text_followup: {
-      id: "s02_text_followup",
-      title: "Private Channel Energy",
-      location: "Later that night • messages",
+      id: "s02_hotel_room",
+      title: "Things Heat Up",
+      location: "Later that night",
       text: [
         "The first boundary shift is always the smallest.",
-        "Conference app becomes texting. Official channel becomes personal channel. Professional distance becomes something warmer and far less secure.",
-        "Rex sends a smiling message and a screenshot he should not have shared.",
+        "This relationship is no longer professional.",
+        "Gemma has a hold of Rex's heart and his access.",
       ],
       redFlags: ["oversharing", "trust", "warningFlags"],
       ui: {
         showToast: {
-          title: "Red flag: blurred channels",
-          body: "Sensitive coordination often becomes less secure when it moves into personal spaces that feel more intimate than official ones.",
+          title: "Red flag: Heat of the Moment",
+          body: "Oversharing",
           kind: "warning",
         },
       },
       choices: [
         {
           id: "c05_helpful",
-          label: 'Be helpful: "You can send it here, I will take a look."',
+          label: 'Slip away and take the badge to his laptop',
           next: "s03_file_share",
           effects: { score: { risk: 2, heat: 1 } },
         },
         {
           id: "c05_meet",
-          label: "Suggest meeting before the preview tomorrow",
+          label: "Hold on to the badge and discretely put it in your purse for tomorrow",
           next: "s03_coffee_exception",
           effects: { flags: { rexTrusting: true }, score: { heat: 2 } },
         },
@@ -558,24 +555,24 @@ const act2 = {
 
     s03_file_share: {
       id: "s03_file_share",
-      title: "Can You Look at This?",
-      location: "Text thread",
+      title: "Data breach",
+      location: "Rex's Hotel Room",
       text: [
-        "Rex sends a file preview without checking what context travels with it.",
-        "Gemma responds like someone helpful, calm, and familiar, exactly the kind of person people stop verifying once trust settles in.",
-        "The most effective social engineering rarely feels hostile while it is happening.",
+        "Rex lets his guard down, and Gemma ends up with access she was never meant to have.",
+        "What follows happens fast: sensitive information tied to Cipher is exposed, and by the time anyone realizes it, the damage is already spreading beyond the room.",
+        "A breach does not always begin with malware or force. Sometimes it begins with trust placed in the wrong person.",
       ],
       redFlags: ["oversharing", "trust", "confirmationBias"],
       choices: [
         {
           id: "c08_link",
-          label: 'Send a polished link: "Upload it here, easier to review."',
+          label: 'Return to bed with Rex',
           next: "s04_link_lure",
           effects: { score: { risk: 3, heat: 1 } },
         },
         {
           id: "c08_wait",
-          label: "Do not push. Let him volunteer more tomorrow.",
+          label: "Exit the hotel room quietly",
           next: "s03_coffee_exception",
           effects: { score: { security: 1, heat: 1 } },
         },
