@@ -292,18 +292,18 @@ const act1 = {
     s00_arrival: {
       id: "s00_arrival",
       title: "Neon Check-In",
-      location: "Conference lobby • CyberSteel Executive Summit",
+      location: "Conference Lobby • CyberSteel Executive Summit",
       text: [
-        "Las Vegas is all velvet light, mirrored ceilings, and expensive mistakes.",
-        "At the CyberSteel Executive Summit, badges flash like tiny passports into other people's power.",
-        "Gemma steps into the crowd looking effortless, but nothing about tonight is accidental.",
-        "She is here for one man, Rex Vale, and for whatever trust he can be seduced into mistaking for fate.",
+        "Las Vegas glows with velvet light, mirrored ceilings, and expensive mistakes.",
+        "Inside the CyberSteel Executive Summit, badges flash like tiny passports to power.",
+        "Gemma moves through the crowd with effortless confidence, but nothing about tonight is accidental.",
+        "She is here for one man, Rex Vale, and for whatever trust he can be persuaded to mistake for fate.",
       ],
       redFlags: ["socialEngineering", "attackVector"],
       ui: {
         showToast: {
           title: "Act 1: hello.friend",
-          body: "A meet-cute can also be an attack scenario. Watch how chemistry, trust, and charm start building the same attack vector that Act 2 deepens and Act 3 pays for.",
+          body: "A meet-cute can also be an attack scenario. Watch how chemistry, trust, and charm begin building the same attack vector that Act 2 deepens and Act 3 exposes.",
           kind: "neutral",
         },
       },
