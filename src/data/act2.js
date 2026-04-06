@@ -1,8 +1,6 @@
 // src/data/act2.js
 // Act 2: trust_me.exe, "The Situationship"
-//
-// IMPORTANT:
-// This file is DATA ONLY. No JSX. No Chakra components.
+
 
 const act2 = {
   meta: {
