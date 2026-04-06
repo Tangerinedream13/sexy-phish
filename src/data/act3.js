@@ -12,7 +12,8 @@ const act3 = {
     theme: "breach fallout • urgency • containment • consequence",
     setting: {
       city: "Las Vegas",
-      venue: "CyberSteel Executive Summit • backstage corridors, ops rooms, and the aftermath",
+      venue:
+        "Premier Tech Summit • backstage corridors, office, and the aftermath",
       vibe: "The chemistry is gone. The consequences are not.",
     },
     version: 3,
@@ -30,7 +31,8 @@ const act3 = {
       id: "gemma",
       name: "Gemma",
       publicBio: "Independent security consultant (conference attendee)",
-      hiddenBio: "Operative exploiting trust, attraction, and access for information",
+      hiddenBio:
+        "Operative exploiting trust, attraction, and access for information",
       archetype: "charismatic social engineer",
       traits: ["calm", "convincing", "strategic"],
     },
@@ -54,19 +56,14 @@ const act3 = {
       id: "marco",
       name: "Marco",
       publicBio: "Security staff (badge checks / VIP entrance)",
-      hiddenBio: "Now dealing with the consequences of a culture that normalized exceptions",
+      hiddenBio:
+        "Now dealing with the consequences of a culture that normalized exceptions",
       archetype: "overloaded security",
       traits: ["tired", "blunt"],
     },
   },
 
   glossary: {
-    incidentResponse: {
-      term: "incident response",
-      definition:
-        "The process of identifying, containing, investigating, and recovering from a security incident.",
-      sources: [],
-    },
     containment: {
       term: "containment",
       definition:
@@ -153,7 +150,8 @@ const act3 = {
     redFlags: {
       breach: {
         term: "breach",
-        definition: "A compromise of information, access, or security controls.",
+        definition:
+          "A compromise of information, access, or security controls.",
         sources: [1, 4],
       },
       misinformation: {
@@ -248,19 +246,17 @@ const act3 = {
   scenes: {
     s00_something_off: {
       id: "s00_something_off",
-      title: "Something Feels Off",
+      title: "Something Feels Off (Rex's Perspective)",
       location: "Backstage corridor",
       text: [
-        "A skipped check. A strange prompt. A detail that should not have traveled this far.",
-        "Nothing dramatic at first, just enough wrongness to make the room feel colder.",
-        "Rex looks at his phone. Ivy looks at Rex. Every charged moment from the night before starts to rearrange itself into warning flags.",
+        "Rex realizes that Gemma stole the source code for Cipher.",
+        "As the reality of the breach begins to settle in, he is forced to confront the damage, the deception, and the trust that opened the door.",
       ],
       redFlags: ["warningFlags", "trust"],
       ui: {
         showToast: {
           title: "Act 3: this_feels_real.txt",
-          body:
-            "The breach is no longer hypothetical. Now the warning flags, pressure, and fallout all arrive at once.",
+          body: "The breach is no longer hypothetical. Now the warning flags, pressure, and fallout all arrive at once.",
           kind: "warning",
         },
       },
@@ -276,7 +272,7 @@ const act3 = {
         },
         {
           id: "c00_handleprivate",
-          label: "Try to handle it quietly with Rex",
+          label: "Try to handle it quietly",
           next: "s01_private_fix",
           effects: { score: { risk: 2, heat: 1 } },
         },
@@ -298,15 +294,14 @@ const act3 = {
       location: "Side hallway",
       text: [
         "Rex lowers his voice like privacy can still fix this.",
-        "He says the line people always say when they are scared: \"Let's not make this bigger than it is.\"",
+        'He says the line people always say when they are scared: "Let\'s not make this bigger than it is."',
         "That sentence has probably made every breach bigger than it had to be.",
       ],
       redFlags: ["trust", "warningFlags", "deception"],
       ui: {
         showToast: {
           title: "Red flag: private incident handling",
-          body:
-            "Security events should go into official response channels, not side conversations shaped by fear, image, or attraction.",
+          body: "Security events should go into official response channels, not side conversations shaped by fear, image, or attraction.",
           kind: "warning",
         },
       },
@@ -335,7 +330,7 @@ const act3 = {
     s01_escalate_fast: {
       id: "s01_escalate_fast",
       title: "Say It Early, Say It Clearly",
-      location: "Ops room threshold",
+      location: "Office",
       text: [
         "Ivy does not waste time on denial, image management, or wishful thinking.",
         "She asks the right questions in the right order: what happened, what was shared, what changed, and who needs to know right now.",
@@ -345,8 +340,7 @@ const act3 = {
       ui: {
         showToast: {
           title: "Defense: fast escalation",
-          body:
-            "Early reporting helps teams preserve evidence, contain the breach, and understand how trust was exploited.",
+          body: "Early reporting helps teams preserve evidence, contain the breach, and understand how trust was exploited.",
           kind: "success",
         },
       },
@@ -372,10 +366,10 @@ const act3 = {
     s02_containment: {
       id: "s02_containment",
       title: "Containment in Real Time",
-      location: "Ops room",
+      location: "Office",
       text: [
         "Ivy moves fast without moving messy.",
-        "Badges get checked. Sessions get locked. Logs get preserved. Marco gets pulled into the loop.",
+        "Badges get checked. Sessions get locked. Logs get preserved. SOC team gets pulled into the loop. Extra cybersecurity consultants are hired.",
         "Nobody likes the look of a real incident. Everybody likes the aftermath of ignoring one even less.",
       ],
       redFlags: [],
@@ -401,7 +395,7 @@ const act3 = {
     s02_optics_pressure: {
       id: "s02_optics_pressure",
       title: "Optics vs. Reality",
-      location: "Outside ops room",
+      location: "Office",
       text: [
         "Rex is already thinking like a headline, not a responder.",
         "Ivy's face hardens by exactly one degree.",
@@ -430,9 +424,9 @@ const act3 = {
     s02_evidence_loss: {
       id: "s02_evidence_loss",
       title: "Delete, Deny, Regret",
-      location: "Rex's phone and inbox",
+      location: "Devices and accounts",
       text: [
-        "Messages disappear. Logs do not.",
+        "Messages disappear. Evidence does not.",
         "The instinct to hide embarrassment just destroyed useful evidence.",
         "Now the incident is harder to understand, harder to contain, and harder to explain.",
       ],
@@ -459,7 +453,7 @@ const act3 = {
     s03_truth_hurts: {
       id: "s03_truth_hurts",
       title: "The Honest Timeline",
-      location: "Ops room • whiteboard and cold coffee",
+      location: "Office",
       text: [
         "It is humiliating. It is also useful.",
         "The team maps the chain: after-hours access, private texting, oversharing, proximity, exceptions, and the moment trust became an attack vector.",
@@ -469,8 +463,7 @@ const act3 = {
       ui: {
         showToast: {
           title: "Defense: tell the whole story",
-          body:
-            "Accurate timelines help investigators understand how the breach happened and how trust was exploited.",
+          body: "Accurate timelines help investigators understand how the breach happened and how trust was exploited.",
           kind: "success",
         },
       },
@@ -487,7 +480,7 @@ const act3 = {
     s03_minimize_story: {
       id: "s03_minimize_story",
       title: "Edited for Reputation",
-      location: "Ops room",
+      location: "Office",
       text: [
         "The story gets cleaned up before the systems do.",
         "A vague timeline protects egos and weakens the response.",
@@ -539,17 +532,16 @@ const act3 = {
     s04_good_end: {
       id: "s04_good_end",
       title: "Damage Controlled",
-      location: "Ops room • post-incident",
+      location: "Office • post-incident",
       text: [
         "It is not clean, but it is contained.",
-        "Access is reviewed. Policies get sharper. Rex looks like someone who finally understands what \"just this once\" can cost.",
+        'Access is reviewed. Policies get sharper. Rex looks like someone who finally understands what "just this once" can cost.',
         "The breach became a lesson before it became a catastrophe.",
       ],
       redFlags: [],
       end: {
         outcome: "best_practice",
-        hook:
-          "Fast escalation, honest reporting, and real containment reduce long-term damage.",
+        hook: "Fast escalation, honest reporting, and real containment reduce long-term damage.",
       },
       choices: [
         {
@@ -563,7 +555,7 @@ const act3 = {
     s04_mixed_end: {
       id: "s04_mixed_end",
       title: "Contained, But Late",
-      location: "Ops room • post-incident",
+      location: "Office • post-incident",
       text: [
         "They got there eventually.",
         "Some damage was contained. Some evidence was blurred by delay. Some trust will not recover on the same timeline as the systems.",
@@ -572,8 +564,7 @@ const act3 = {
       redFlags: [],
       end: {
         outcome: "mixed",
-        hook:
-          "Delays make incidents harder to contain, even when the right people eventually get involved.",
+        hook: "Delays make incidents harder to contain, even when the right people eventually get involved.",
       },
       choices: [
         {
@@ -587,7 +578,7 @@ const act3 = {
     s04_bad_end: {
       id: "s04_bad_end",
       title: "This Feels Real",
-      location: "Conference floor • rumors, screens, and silence",
+      location: "Office • rumors, screens, and silence",
       text: [
         "The chemistry is gone now. All that is left is consequence.",
         "A preventable incident has become a public one, a technical one, and a human one.",
@@ -596,8 +587,7 @@ const act3 = {
       redFlags: ["urgency", "disinformation", "deception"],
       end: {
         outcome: "worst_case",
-        hook:
-          "Delays, secrecy, and reputation management can turn a manageable incident into a broader failure.",
+        hook: "Delays, secrecy, and reputation management can turn a manageable incident into a broader failure.",
       },
       choices: [
         {
@@ -611,4 +601,3 @@ const act3 = {
 };
 
 export default act3;
-
