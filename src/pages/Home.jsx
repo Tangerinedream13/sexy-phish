@@ -138,14 +138,16 @@ export default function Home({ onStartAct1, onStartAct2, onStartAct3 }) {
                 color="gray.700"
                 maxW="3xl"
               >
-                A cyber-thriller where attraction, trust, and manipulation
-                become the attack surface.
+                A Romance-Themed Cybersecurity Learning Experience
               </Text>
 
               <Text color="gray.600" maxW="2xl">
-                Play through interactive acts, spot red flags, and see how
-                social engineering works when charm becomes a weapon.
+                Sexy-Phish is an interactive choose-your-own-adventure story
+                that teaches phishing awareness through romance, deception, and
+                social engineering.
               </Text>
+
+              <Text color="gray.600" maxW="2xl"></Text>
 
               <Button
                 colorScheme="pink"
@@ -161,12 +163,14 @@ export default function Home({ onStartAct1, onStartAct2, onStartAct3 }) {
 
           <VStack spacing={4} textAlign="center" maxW="2xl">
             <Heading size="xl" color="pink.700">
-              Choose Your Act
+              How It Works
             </Heading>
-
             <Text color="gray.600">
-              Each act explores a different phase of the story, from first
-              contact to emotional manipulation to the fallout that follows.
+              Each act includes interactive choices that shape the story while
+              highlighting common phishing and social engineering red flags.
+              Players can click highlighted vocabulary words to learn terms like
+              pretexting, urgency, emotional manipulation, and trust building in
+              context.
             </Text>
           </VStack>
 
@@ -212,12 +216,20 @@ export default function Home({ onStartAct1, onStartAct2, onStartAct3 }) {
                 Learning Structure
               </Heading>
               <Text color="gray.700">
-                Each act includes interactive decision points that highlight
-                phishing red flags and social engineering tactics in context.
+                Rather than presenting cybersecurity as purely technical or
+                intimidating, Sexy-Phish makes it relatable, story-driven, and
+                interactive.
               </Text>
               <Text color="gray.600">
-                The story format helps players connect emotional manipulation to
-                real cybersecurity risks.
+                By combining romance-inspired storytelling, decision-based
+                learning, red-flag recognition, and click-to-define
+                cybersecurity vocabulary, the project helps players understand
+                how phishing attacks exploit trust, emotion, urgency, and human
+                behavior.
+              </Text>
+              <Text color="gray.600">
+                The goal is to make digital safety memorable, approachable, and
+                useful in real life.
               </Text>
             </VStack>
           </Box>
