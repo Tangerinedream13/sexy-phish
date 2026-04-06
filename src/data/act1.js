@@ -555,7 +555,7 @@ const act1 = {
     s02_app_lookup: {
       id: "s02_app_lookup",
       title: "Open the App",
-      location: "Near a charging station",
+      location: "Expo Hall",
       text: [
         "Gemma opens the summit app.",
         "It lists public sessions but masks VIP events behind a login.",
@@ -632,11 +632,11 @@ const act1 = {
     s02_ivy_pressure: {
       id: "s02_ivy_pressure",
       title: "Policy vs. Chemistry",
-      location: "Conference ops desk",
+      location: "Cybersteel Booth",
       text: [
-        "Gemma drops a half truth and tries to sound like she already belongs inside the system.",
-        "Ivy's expression goes polite and cold.",
-        '"Then Rex can confirm," Ivy says. "Through official channels."',
+        "Gemma offers a half-truth, polished to sound like she already belongs.",
+        "Ivy's expression cools without losing its professionalism.",
+        '"Then Rex can confirm," she says. "Through official channels."',
       ],
       redFlags: ["deception", "warningFlags"],
       choices: [
@@ -688,9 +688,9 @@ const act1 = {
       title: "Nice Badge",
       location: "Lobby bar",
       text: [
-        "Gemma tilts her head toward his badge like she is admiring a watch.",
-        '"That credential practically screams important," she says.',
-        "Rex glances down and smiles. Vanity is such a cooperative human factor.",
+        "Gemma lets her gaze drift toward his badge, as if she were admiring an expensive watch.",
+        '"I bet that badge gets you into places the rest of us never see," she says.',
+        "Rex glances down and smiles, clearly pleased by the attention.",
       ],
       redFlags: ["luring", "manipulation", "oversharing"],
       ui: {
