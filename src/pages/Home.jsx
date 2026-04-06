@@ -8,6 +8,8 @@ import {
   Badge,
   SimpleGrid,
   Image,
+  Wrap,
+  WrapItem,
 } from "@chakra-ui/react";
 
 import homeHero from "../assets/sexy_phish_home.png";
@@ -26,6 +28,13 @@ function ActCard({
   isDisabled = false,
   buttonText,
 }) {
+  const themeList = Array.isArray(themes)
+    ? themes
+    : String(themes)
+        .split(",")
+        .map((t) => t.trim())
+        .filter(Boolean);
+
   return (
     <Box
       bg="white"
@@ -33,6 +42,9 @@ function ActCard({
       boxShadow="xl"
       overflow="hidden"
       transition="all 0.2s ease"
+      h="100%"
+      display="flex"
+      flexDirection="column"
       _hover={{
         transform: isDisabled ? "none" : "translateY(-6px)",
         boxShadow: isDisabled ? "xl" : "2xl",
@@ -53,18 +65,20 @@ function ActCard({
           position="absolute"
           top={4}
           left={4}
-          colorScheme="pink"
+          bg="pink.500"
+          color="white"
           px={3}
           py={1}
-          rounded="full"
+          borderRadius="full"
           boxShadow="md"
+          textTransform="none"
         >
           {actLabel}
         </Badge>
       </Box>
 
-      <VStack align="start" spacing={4} p={6}>
-        <Box>
+      <VStack align="start" spacing={4} p={6} flex="1" w="full">
+        <Box w="full">
           <Heading size="lg" color="gray.800">
             {title}
           </Heading>
@@ -73,26 +87,52 @@ function ActCard({
           </Text>
         </Box>
 
-        <Text color="gray.600">{description}</Text>
+        <Box flex="1" w="full">
+          <Text color="gray.600">{description}</Text>
+        </Box>
 
-        <Text color="gray.500" fontSize="sm">
-          Themes: {themes}
-        </Text>
+        <VStack align="start" spacing={3} w="full">
+          <Box w="full">
+            <Text fontWeight="semibold" fontSize="sm" color="gray.600" mb={2}>
+              Themes:
+            </Text>
 
-        <Button
-          mt={2}
-          colorScheme="pink"
-          onClick={onClick}
-          isDisabled={isDisabled}
-          alignSelf="start"
-        >
-          {buttonText}
-        </Button>
+            <Wrap spacing={2}>
+              {themeList.map((theme) => (
+                <WrapItem key={theme}>
+                  <Badge
+                    bg="pink.100"
+                    color="pink.700"
+                    px={2}
+                    py={0.5}
+                    borderRadius="full"
+                    textTransform="none"
+                    fontSize="0.7rem"
+                    fontWeight="medium"
+                  >
+                    {theme}
+                  </Badge>
+                </WrapItem>
+              ))}
+            </Wrap>
+          </Box>
+
+          <Button
+            bg="pink.500"
+            color="white"
+            _hover={{ bg: "pink.600" }}
+            _active={{ bg: "pink.700" }}
+            onClick={onClick}
+            isDisabled={isDisabled}
+            alignSelf="start"
+          >
+            {buttonText}
+          </Button>
+        </VStack>
       </VStack>
     </Box>
   );
 }
-
 export default function Home({ onStartAct1, onStartAct2, onStartAct3 }) {
   return (
     <Box minH="100vh" bg="pink.50" px={6} py={{ base: 8, md: 12 }}>
@@ -146,18 +186,6 @@ export default function Home({ onStartAct1, onStartAct2, onStartAct3 }) {
                 that teaches phishing awareness through romance, deception, and
                 social engineering.
               </Text>
-
-              <Text color="gray.600" maxW="2xl"></Text>
-
-              <Button
-                colorScheme="pink"
-                size="lg"
-                rounded="full"
-                px={8}
-                onClick={onStartAct1}
-              >
-                Start with Act 1
-              </Button>
             </VStack>
           </Box>
 
@@ -168,19 +196,24 @@ export default function Home({ onStartAct1, onStartAct2, onStartAct3 }) {
             <Text color="gray.600">
               Each act includes interactive choices that shape the story while
               highlighting common phishing and social engineering red flags.
-              Players can click highlighted vocabulary words to learn terms like
-              pretexting, urgency, emotional manipulation, and trust building in
-              context.
+              Players can click highlighted vocabulary words to learn terms in
+              context and see how trust, manipulation, urgency, and human
+              factors shape decision making.
             </Text>
           </VStack>
 
-          <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8} w="full">
+          <SimpleGrid
+            columns={{ base: 1, md: 3 }}
+            spacing={8}
+            w="full"
+            alignItems="stretch"
+          >
             <ActCard
               actLabel="Act 1"
               title="hello.friend"
               subtitle="Meet Cute"
-              description="Las Vegas. A cybersecurity summit. A charismatic operative. A billionaire CEO with too much access and not enough caution."
-              themes="first contact, badge exposure, pretexting, trust building"
+              description="Gemma and Rex meet for the first time in Las Vegas at a cybersecurity conference. Rex is immediately charmed by Gemma, unaware that she is really after access to Cypher AI information."
+              themes="social engineering, luring, warning flags"
               image={act1Img}
               onClick={onStartAct1}
               buttonText="Play Act 1"
@@ -190,8 +223,8 @@ export default function Home({ onStartAct1, onStartAct2, onStartAct3 }) {
               actLabel="Act 2"
               title="trust_me.exe"
               subtitle="Situationship"
-              description="The connection deepens. Boundaries blur. Trust becomes the vulnerability as private messages, quick favors, and small exceptions start to open bigger doors."
-              themes="emotional trust, out-of-band requests, device access, exception abuse"
+              description="As the connection deepens, trust and attraction begin to lower defenses. What feels intimate and harmless starts opening the door to oversharing, access, and manipulation."
+              themes="trust, oversharing, human factors"
               image={act2Img}
               onClick={onStartAct2}
               buttonText="Play Act 2"
@@ -201,8 +234,8 @@ export default function Home({ onStartAct1, onStartAct2, onStartAct3 }) {
               actLabel="Act 3"
               title="this_feels_real.txt"
               subtitle="Damage Control"
-              description="The emotional hook is set. Now the fallout begins as urgency, guilt, and confusion make the scam feel personal, believable, and dangerously real."
-              themes="compromise, escalation, emotional manipulation, damage control"
+              description="The damage is done. Now the focus shifts to breach, fallout, response, and the challenge of fixing what trust allowed to break."
+              themes="breach, urgency, manipulation, response"
               image={act3Img}
               onClick={onStartAct3}
               isDisabled={!onStartAct3}
@@ -210,7 +243,14 @@ export default function Home({ onStartAct1, onStartAct2, onStartAct3 }) {
             />
           </SimpleGrid>
 
-          <Box w="full" bg="white" borderRadius="2xl" boxShadow="lg" p={6}>
+          <Box
+            w="full"
+            bg="white"
+            borderRadius="2xl"
+            boxShadow="lg"
+            p={6}
+            mt={{ base: 4, md: 8 }}
+          >
             <VStack align="start" spacing={3}>
               <Heading size="md" color="pink.700">
                 Learning Structure
@@ -228,8 +268,8 @@ export default function Home({ onStartAct1, onStartAct2, onStartAct3 }) {
                 behavior.
               </Text>
               <Text color="gray.600">
-                The goal is to make digital safety memorable, approachable, and
-                useful in real life.
+                The goal is to make cybersecurity awareness memorable,
+                approachable, and useful in real life.
               </Text>
             </VStack>
           </Box>
