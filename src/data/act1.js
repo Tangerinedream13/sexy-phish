@@ -292,12 +292,12 @@ const act1 = {
     s00_arrival: {
       id: "s00_arrival",
       title: "Neon Check-In",
-      location: "Conference Lobby • CyberSteel Executive Summit",
+      location: "Conference Lobby • Premier Tech Summit",
       text: [
-        "Las Vegas glows with velvet light, mirrored ceilings, and expensive mistakes.",
-        "Inside the CyberSteel Executive Summit, badges flash like tiny passports to power.",
+        "Las Vegas glows with golden light, mirrored ceilings, and expensive regrets.",
+        "Inside the Premier Tech Summit, badges flash like tiny passports to power, opening doors to influence, information, and the people behind both.",
         "Gemma moves through the crowd with effortless confidence, but nothing about tonight is accidental.",
-        "She is here for one man, Rex Vale, and for whatever trust he can be persuaded to mistake for fate.",
+        "She is here for one man, Rex Vale, and for the access tied to the badge hanging from his lanyard.",
       ],
       redFlags: ["socialEngineering", "attackVector"],
       ui: {
@@ -330,7 +330,7 @@ const act1 = {
       text: [
         "The registration desk hands Gemma a badge and a bright professional smile.",
         "A staffer reminds everyone that badges are required for all sessions, including VIP floors.",
-        "Gemma lets her gaze rest on the word VIP just long enough to look intrigued instead of intentional.",
+        "Gemma lets her gaze rest on the word VIP just long enough to look curious rather than calculated. But that access is exactly what she came here to get.",
       ],
       redFlags: ["socialEngineering", "humanFactors"],
       ui: {
@@ -358,12 +358,14 @@ const act1 = {
 
     s01_vip_line: {
       id: "s01_vip_line",
-      title: "Velvet Rope Economics",
+      title: "Behind the Velvet Rope",
       location: "VIP entrance",
       text: [
-        "Marco checks badges with the speed of someone doing three jobs at once.",
-        "Attendees flash credentials and keep moving. Nobody wants to be the person who breaks the rhythm.",
-        "Gemma sees it immediately. Social proof can make weak verification look polished, even sexy.",
+        "Crowds, status, and momentum can make weak security feel normal. When everyone keeps moving, it becomes easier for someone to slip through without being questioned.",
+        "Marco checks badges with the distracted speed of someone doing three jobs at once.",
+        "Attendees flash their credentials and keep moving. No one wants to be the person who slows everything down or interrupts the flow.",
+        "Gemma knows exactly how to use first impressions. She looks stunning in a fitted red dress that makes her hard to ignore, but not so conspicuous that anyone studies her too closely. She draws just the right kind of attention: enough to seem like she belongs, not enough to invite real scrutiny.",
+        "She notices it right away. People are trusting the situation too easily. The polished atmosphere makes the security look stronger than it really is, and she knows she could slip straight into the VIP lounge.",
       ],
       redFlags: ["socialProof", "tailgating"],
       ui: {
@@ -394,7 +396,7 @@ const act1 = {
       title: "Two Steps Behind",
       location: "VIP entrance",
       text: [
-        "Gemma slips into the wake of a suited attendee like the move was rehearsed in silk and neon.",
+        "Gemma slips into the wake of a suited attendee like the move was rehearsed before.",
         "Marco glances up, just long enough to catch that something is off.",
         "Ma'am, he says. Badge?",
       ],
@@ -420,10 +422,10 @@ const act1 = {
       title: "Badge Issue",
       location: "VIP entrance",
       text: [
-        "Gemma's voice turns honey-soft, all polish and plausible embarrassment.",
-        "Marco's gaze flicks to the impatient line behind her and to the cost of slowing everything down for one beautiful inconvenience.",
-        "Security and speed pull in opposite directions. In real life, speed gets kissed first.",
-        "He waves her away. Get it fixed. Do not come back up without it.",
+        "Gemma’s voice softens, all polish and practiced embarrassment.",
+        "Marco glances at the growing line behind her and weighs the cost of slowing everything down for one small disruption.",
+        "Security and speed are always at war. Most of the time, speed wins.",
+        'He weighs it for a second, then steps aside. "I\'ll let you in," he says.',
       ],
       redFlags: ["urgency", "manipulation"],
       ui: {
@@ -452,11 +454,13 @@ const act1 = {
     s01_spot_rex: {
       id: "s01_spot_rex",
       title: "Target Acquired",
-      location: "Lobby bar • off the main floor",
+      location: "Lobby bar",
       text: [
-        "Rex Vale stands at the bar with his sleeves rolled and his attention finally unguarded.",
-        "His badge hangs forward, the NFC chip catching the light like an invitation it was never meant to be.",
-        "He looks up just as Gemma appears behind him in the mirror, and for one dangerous second the scene reads less like surveillance and more like destiny.",
+        "Beyond the expo floor, Rex has drifted to the bar, jacket off, sleeves rolled, and for the first time all night, his attention is unguarded.",
+        "His badge hangs forward, catching the light like an invitation it was never meant to be.",
+        "Then he catches Gemma's reflection in the mirror. Their eyes meet for a charged, deliberate moment, and she notices the badge almost immediately. It is exactly the kind of access she came here to find.",
+        "She moves with the kind of presence that turns heads without trying. Her dress traces her figure with effortless sexiness, and Rex finds himself unable to look away.",
+        "Rex's attention belongs entirely with Gemma.",
       ],
       redFlags: ["credentialHarvesting", "humanFactors"],
       ui: {
@@ -487,10 +491,11 @@ const act1 = {
       title: "Walk Like You Belong",
       location: "Expo hall",
       text: [
-        "The expo hall is a sea of logos, polished smiles, and soft bragging.",
+        "Gemma slips back into the main Expo Hall, her move toward the VIP lounge quietly shut down by Marco.",
+        "The expo hall is a sea of logos, the who's who of tech, and soft bragging.",
         "Gemma moves with purpose. Purpose often reads as permission.",
-        'A booth demo flashes: "Cipher: Secure Intelligence at Scale."',
-        "There it is, the name out in the open, like the most sensitive things are always hidden better than that.",
+        'A booth demo flashes: "Cipher: CyberSteel\'s New AI Commodity."',
+        "There it is, displayed in plain sight. Truly sensitive information is usually obscured, not advertised, and that alone feels like a warning.",
       ],
       redFlags: ["confidentialInformation", "humanFactors"],
       choices: [
@@ -512,11 +517,12 @@ const act1 = {
     s02_ops_ivy: {
       id: "s02_ops_ivy",
       title: "Gatekeeper Energy",
-      location: "Conference ops desk",
+      location: "CyberSteel booth",
       text: [
-        "Ivy runs conference ops like a chessboard.",
-        "Gemma asks casual questions about VIP rooms and whether Rex is speaking.",
-        "Ivy smiles, pleasant and not fooled.",
+        "Strong gatekeepers do not leak sensitive details in conversation. They redirect requests into official, verified channels and make the boundary feel final.",
+        "Ivy commands the CyberSteel booth with effortless polish, sharp as glass and impossible to rattle. She knows Rex, knows his world, and recognizes the practiced charm of people trying to get close to him under the guise of harmless curiosity.",
+        "Gemma asks lightly about the VIP rooms and whether Rex is speaking.",
+        "Ivy's smile is immaculate, but it never softens into trust.",
         '"All speaker updates are in the official app," she says. "And we do not share VIP schedules."',
       ],
       redFlags: ["warningFlags", "socialEngineering"],
@@ -598,12 +604,13 @@ const act1 = {
     s02_ivy_charm: {
       id: "s02_ivy_charm",
       title: "Charm Offensive",
-      location: "Conference ops desk",
+      location: "CyberSteel booth",
       text: [
         "Gemma leans closer, voice soft like a secret.",
         "Ivy's smile stays put. Her eyes do not.",
-        '"We have a strict policy," Ivy says. "And people notice when policy bends."',
-        "Gemma clocks it immediately. Ivy is the kind of person who files reports without raising her voice.",
+        '"We have a strict policy," Ivy says.',
+        "Gemma sees it immediately. Ivy is not someone people push past.",
+        ,
       ],
       redFlags: ["trust", "warningFlags"],
       choices: [
@@ -647,9 +654,10 @@ const act1 = {
       title: "Hello, Stranger",
       location: "Lobby bar",
       text: [
-        "Gemma slides onto the stool beside him like she has done it in another life and fully intends to do it again in this one.",
-        '"Let me guess," she says, eyeing the badge. "You\'re the reason everyone in this building is pretending they understand AI."',
-        "Rex laughs, short and surprised.",
+        "Gemma slides onto the stool beside him with sexy confidence",
+        "Rex's heart skips a beat.",
+        '"Let me guess," she says, looking toward his badge. "You\'re the one everyone here keeps trying to impress."',
+        "Rex laughs, genuinely amused.",
         '"And you are?"',
       ],
       redFlags: ["luring"],
@@ -711,12 +719,12 @@ const act1 = {
     s02_observe_rex: {
       id: "s02_observe_rex",
       title: "Read the Room",
-      location: "Lobby bar • mirror line",
+      location: "Lobby bar",
       text: [
-        "Gemma lingers just outside his orbit and watches the rhythm around him.",
-        "People approach Rex in categories: starstruck, transactional, and useful.",
-        "No one checks whether his badge is visible. No one notices how much can be inferred before a single direct question is asked.",
-        "A great deal of social engineering begins with observation.",
+        "Gemma keeps just outside his orbit, watching the rhythm of the room around him.",
+        "People approach Rex in ways that feel familiar: some starstruck, some calculating, some eager to prove their value.",
+        "A badge with that level of access should never be left exposed in a public space.",
+        "A great deal of social engineering begins long before anyone says a word.",
       ],
       redFlags: ["socialEngineering", "humanFactors"],
       ui: {
@@ -744,12 +752,13 @@ const act1 = {
 
     s03_smalltalk: {
       id: "s03_smalltalk",
-      title: "Velvet Small Talk",
+      title: "The Opening Move",
       location: "Lobby bar",
       text: [
-        "Gemma gives him something polished, clever, and just personal enough to feel intimate.",
-        "Rex relaxes by degrees, drawn in by the kind of attention that feels rare when everyone else wants something from him.",
-        "Their banter starts to hum with tension. Underneath it, Gemma is reading more than his words. Ego, loneliness, impatience, appetite, and the first warning flags of trust at work.",
+        'Gemma smiles. "Hi, I\'m Gemma."',
+        "From there, the conversation flows like he's known this woman his whole life. They talk and laugh like the connection was waiting to happen, and for a moment Rex feels the pull of something that seems almost familiar.",
+        "He relaxes by degrees, drawn in by Gemma's sexy energy.",
+        "Underneath it all, Gemma is taking mental notes. Every reaction, every weakness, every subtle sign that his trust is starting to open the door.",
       ],
       redFlags: ["trust", "warningFlags", "humanFactors"],
       choices: [
@@ -773,9 +782,9 @@ const act1 = {
       title: "Too Smooth",
       location: "Lobby bar",
       text: [
-        '"Someone who likes powerful men," Gemma says, like she is testing whether vanity can unlock a door.',
-        "Rex smiles, but only with half his face.",
-        "The trick is making manipulation feel like attraction instead of an obvious warning flag.",
+        '"Someone who knows exactly who she\'s talking to," Gemma says, testing whether a little vanity might loosen the lock.',
+        "Rex smiles, his attention settling on Gemma exactly where she wants it.",
+        "The trick is making manipulation feel like chemistry instead of an obvious warning sign.",
       ],
       redFlags: ["manipulation", "warningFlags"],
       choices: [
@@ -822,14 +831,14 @@ const act1 = {
       title: "Voluntary Disclosure",
       location: "Lobby bar",
       text: [
-        "Rex starts sharing without being asked the dangerous questions directly.",
-        "He talks about investors, previews, leaks, and the exhausting pressure of guarding something everyone wants.",
-        "The most effective social engineering often feels self authored, powered by trust and human factors instead of force.",
+        "Rex starts revealing more than he means to, without Gemma ever having to ask the dangerous questions outright.",
+        "He talks about investors, private previews, leaks, and the exhausting pressure of protecting something everyone seems to want.",
+        "The most effective social engineering rarely feels forced. It feels self-directed, powered by trust, ego, and ordinary human vulnerability.",
       ],
       redFlags: ["oversharing", "trust", "socialEngineering"],
       end: {
         outcome: "trust_gain",
-        hook: "By being patient, you let the target do the work for you and set up the emotional slide into Act 2.",
+        hook: "By being patient, Gemma let the target do the work for her and set the stage for the emotional slide into Act 2.",
       },
       choices: [
         {
@@ -845,14 +854,16 @@ const act1 = {
       title: "Too Much, Too Fast",
       location: "Lobby bar",
       text: [
-        "Gemma asks for a private demo too soon.",
-        "Rex's amusement cools into pattern recognition.",
-        "Charm works best before intent becomes visible and the warning flags line up.",
+        "Gemma pushes fast, hinting at a more private demo in Rex's hotel room. Her hand gently grazing Rex's thigh.",
+        "For a moment, Rex seems tempted. Then the look on his face changes. Amusement cools into recognition.",
+        "He has seen this pattern before.",
+        '"Nice try," he says, setting his glass down.',
+        "Charm only works until people realize you want something from them.",
       ],
       redFlags: ["warningFlags", "attackVector"],
       end: {
         outcome: "high_risk",
-        hook: "You pushed for access before enough trust and ambiguity were built.",
+        hook: "You pushed for access before enough trust was built.",
       },
       choices: [
         {
