@@ -87,6 +87,28 @@ The project explores:
 
 ---
 
+## Academic Foundation
+
+Sexy-Phish is grounded in research on social engineering, phishing awareness, romance scams, and the human factors that influence cybersecurity decisions. These sources helped shape the story, vocabulary, red flags, and interactive choices throughout the project.
+
+Akeiber explains how modern social engineering attacks combine technical tools with behavioral tactics such as phishing, impersonation, and manipulation. This supports the project’s focus on how attackers exploit psychology, trust, and emotion rather than relying only on technical vulnerabilities.
+
+Hatfield provides a framework for understanding how social engineering has evolved as a cybersecurity concept. This source helped guide the project’s use of terms such as phishing, scams, manipulation, and deception while showing why these attacks are effective against real people and organizations.
+
+Iovine’s article on romance scams connects directly to the romance-themed structure of Sexy-Phish. It explains how scammers build emotional trust through dating apps and social media before asking for money, access, or personal information. This helped shape the project’s focus on charm, attachment, and warning signs.
+
+Wang, Sun, and Zhu provide a strong definition of social engineering and emphasize the role of human factors in cybersecurity. Their work helped inform the project’s glossary terms and its focus on how attackers exploit trust, authority, curiosity, deception, and emotional responses.
+
+## References
+
+[1] Akeiber, H. J. (2025). *The evolution of social engineering attacks: A cybersecurity engineering perspective.* Rafidain Journal of Engineering Sciences, 3(1), 294–316. https://doi.org/10.61268/r9c49865
+
+[2] Hatfield, J. M. (2018). *Social engineering in cybersecurity: The evolution of a concept.* Computers & Security, 73, 102–113. https://doi.org/10.1016/j.cose.2017.10.008
+
+[3] Iovine, A. (2026, February 19). *What are romance scams and how can you avoid them?* Mashable. https://mashable.com/article/what-are-romance-scams
+
+[4] Wang, Z., Sun, L., & Zhu, H. (2020). *Defining social engineering in cybersecurity.* IEEE Access, 8, 85094–85115. https://doi.org/10.1109/ACCESS.2020.2992807
+
 ## About the Author
 
 Built by Maria Haddon  
