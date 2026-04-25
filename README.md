@@ -74,7 +74,7 @@ The project explores:
 - Chakra UI
 - Railway
 - Cloudflare DNS
-- Custom domain: [sexyphish.com](https://sexyphish.com)
+- Custom domain: [www.sexyphish.com](https://www.sexyphish.com)
 
 ---
 
