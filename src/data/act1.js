@@ -197,76 +197,43 @@ const act1 = {
           },
         },
         {
-          id: "c01_ask_ivy",
-          label:
-            "Ask Ivy whether Rex is attending the private Cipher reception",
-          next: "s02_ivy_gatekeeper",
+          id: "c01_listen",
+          label: "Keep listening for public clues about Rex and Cipher",
+          next: "s01_public_clues",
           effects: {
-            flags: { ivyNoticed: true },
-            score: { suspicion: 1 },
+            score: { deception: 1, rapport: 1 },
           },
         },
       ],
     },
-
-    s02_ivy_gatekeeper: {
-      id: "s02_ivy_gatekeeper",
-      title: "Gatekeeper Energy",
-      location: "Conference Ops Desk",
+    s01_public_clues: {
+      id: "s01_public_clues",
+      title: "Public Clues",
+      location: "Expo Hall",
       text: [
-        "Ivy runs conference operations like a chessboard.",
-        "Gemma asks about Rex with a smile that sounds casual but lands too specifically.",
-        "Ivy smiles back, polite and sharp.",
-        '"All speaker and VIP updates are handled through official channels," Ivy says.',
-        "Gemma clocks it immediately. Ivy is the kind of person who notices patterns.",
+        "Gemma lingers near a product demo without looking like she is lingering.",
+        "A CyberSteel presenter mentions a private Cipher reception for select executives and investors.",
+        "Nobody shares anything that sounds like a secret, but Gemma understands the value of small public details.",
+        "A name, a room, a schedule, a product codename. Alone, each detail feels harmless. Together, they begin to form a path.",
       ],
-      redFlags: ["warningFlags", "socialEngineering"],
-      ui: {
-        showToast: {
-          title: "Warning flag",
-          body: "A request can sound friendly and still be probing for information that should not be shared casually.",
-          kind: "warning",
-        },
-      },
+      redFlags: ["socialEngineering", "warningFlags"],
       choices: [
         {
-          id: "c02_backoff",
-          label: "Back off and find Rex directly",
+          id: "c02_move_to_rex",
+          label: "Use the public clues to find Rex",
           next: "s01_target_acquired",
           effects: {
+            flags: { rexTargeted: true },
+            score: { deception: 1 },
+          },
+        },
+        {
+          id: "c02_keep_observing",
+          label: "Watch the crowd until Rex appears near the lobby bar",
+          next: "s01_target_acquired",
+          effects: {
+            flags: { rexTargeted: true },
             score: { rapport: 1 },
-          },
-        },
-        {
-          id: "c02_charm",
-          label: "Keep charming Ivy for just one hint",
-          next: "s02_ivy_noticed",
-          effects: {
-            flags: { ivyNoticed: true },
-            score: { suspicion: 2, deception: 1 },
-          },
-        },
-      ],
-    },
-
-    s02_ivy_noticed: {
-      id: "s02_ivy_noticed",
-      title: "Too Many Questions",
-      location: "Conference Ops Desk",
-      text: [
-        "Gemma softens her voice and makes the question sound harmless.",
-        "Ivy’s expression stays pleasant, but her eyes stop smiling.",
-        '"If Rex wants someone at a private event, Rex can confirm it himself," Ivy says.',
-        "The door closes without slamming. Gemma has learned something useful: Ivy is a problem.",
-      ],
-      redFlags: ["warningFlags", "socialInteraction"],
-      choices: [
-        {
-          id: "c03_leave_ivy",
-          label: "Leave before this becomes memorable",
-          next: "s01_target_acquired",
-          effects: {
-            score: { suspicion: 1 },
           },
         },
       ],
