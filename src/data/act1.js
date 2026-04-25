@@ -1,11 +1,11 @@
 // src/data/act1.js
-// Act 1: hello.friend, "The Meet-Cute"
+// Act 1: hello.friend, "Meet Cute"
 
 const act1 = {
   meta: {
     actId: "act1",
     title: "hello.friend",
-    subtitle: "The Meet-Cute",
+    subtitle: "Meet Cute",
     theme:
       "Vegas neon • dangerous chemistry • first contact social engineering • warning flags in plain sight",
     setting: {
@@ -13,7 +13,7 @@ const act1 = {
       venue: "CyberSteel Executive Summit",
       vibe: "City of sin, expensive temptation, and just enough chemistry to make caution slip",
     },
-    version: 4,
+    version: 5,
   },
 
   sources: {
@@ -27,7 +27,7 @@ const act1 = {
     gemma: {
       id: "gemma",
       name: "Gemma",
-      publicBio: "Independent security consultant (conference attendee)",
+      publicBio: "Independent security consultant",
       hiddenBio: "Operative gathering access for a hostile sponsor",
       archetype: "charismatic social engineer",
       traits: ["charming", "observant", "strategic"],
@@ -43,7 +43,7 @@ const act1 = {
     ivy: {
       id: "ivy",
       name: "Ivy",
-      publicBio: "CyberSteel EA / conference ops lead",
+      publicBio: "CyberSteel EA for Rex Vale",
       hiddenBio: "Gatekeeper who notices patterns",
       archetype: "gatekeeper",
       traits: ["efficient", "polite", "sharp"],
@@ -51,7 +51,7 @@ const act1 = {
     marco: {
       id: "marco",
       name: "Marco",
-      publicBio: "Security staff (badge checks / VIP entrance)",
+      publicBio: "Security staff",
       hiddenBio: "Overworked, relies on social compliance",
       archetype: "overloaded security",
       traits: ["stern", "distracted"],
@@ -62,20 +62,8 @@ const act1 = {
     socialEngineering: {
       term: "social engineering",
       definition:
-        "Manipulating people through trust, deception, and social interaction to gain access or sensitive information.",
+        "Manipulating people through trust, deception, and social interaction in order to gain access or sensitive information.",
       sources: [2, 4],
-    },
-    trust: {
-      term: "trust",
-      definition:
-        "A sense of emotional safety that lowers skepticism and makes disclosure easier.",
-      sources: [1, 3, 4],
-    },
-    tailgating: {
-      term: "tailgating",
-      definition:
-        "Following someone into a restricted area without proper authorization.",
-      sources: [1],
     },
     luring: {
       term: "luring",
@@ -83,40 +71,11 @@ const act1 = {
         "Using attraction, attention, or curiosity to draw someone into a risky interaction.",
       sources: [1, 3],
     },
-    urgency: {
-      term: "urgency",
+    socialInteraction: {
+      term: "social interaction",
       definition:
-        "Creating time pressure so a person acts before fully verifying the situation.",
-      sources: [1],
-    },
-    oversharing: {
-      term: "oversharing",
-      definition:
-        "Revealing sensitive information too casually, too emotionally, or too early.",
-      sources: [2, 3, 4],
-    },
-    socialProof: {
-      term: "social proof",
-      definition:
-        "Assuming something is safe because other people appear comfortable with it.",
-      sources: [1],
-    },
-    humanFactors: {
-      term: "human factors",
-      definition:
-        "The human behaviors and judgments that attackers exploit instead of technical flaws alone.",
-      sources: [4],
-    },
-    attackVector: {
-      term: "attack vector",
-      definition: "The path or method used to begin or advance an attack.",
-      sources: [4],
-    },
-    confidentialInformation: {
-      term: "confidential information",
-      definition:
-        "Sensitive details that should not be disclosed without proper need and verification.",
-      sources: [4],
+        "Ordinary conversation and rapport-building that can lower defenses and make a risky exchange feel natural.",
+      sources: [2, 4],
     },
     warningFlags: {
       term: "warning flags",
@@ -124,61 +83,13 @@ const act1 = {
         "Signs that a situation may be manipulative, deceptive, or unsafe.",
       sources: [1, 3],
     },
-    manipulation: {
-      term: "manipulation",
-      definition:
-        "Influencing someone through psychological pressure, emotion, or misdirection.",
-      sources: [1, 2, 4],
-    },
-    deception: {
-      term: "deception",
-      definition:
-        "Misleading someone in order to influence their actions or gain information.",
-      sources: [2, 4],
-    },
-    socialInteraction: {
-      term: "social interaction",
-      definition:
-        "Ordinary conversation and rapport building that can be used to lower defenses and make a risky exchange feel natural.",
-      sources: [2, 4],
-    },
-    credentialHarvesting: {
-      term: "credential harvesting",
-      definition:
-        "Collecting badge details, access clues, or login information that can later be used to gain entry or impersonate someone.",
-      sources: [1, 4],
-    },
-    baiting: {
-      term: "baiting",
-      definition:
-        "Using something tempting, flattering, or emotionally charged to override caution.",
-      sources: [1],
-    },
-    confirmationBias: {
-      term: "confirmation bias",
-      definition:
-        "Interpreting events the way you want them to be true rather than the way they are.",
-      sources: [1],
-    },
 
     redFlags: {
       socialEngineering: {
         term: "social engineering",
         definition:
-          "Manipulating people through trust, deception, and social interaction to gain access or sensitive information.",
+          "Manipulating people through trust, deception, and social interaction in order to gain access or sensitive information.",
         sources: [2, 4],
-      },
-      trust: {
-        term: "trust",
-        definition:
-          "A sense of emotional safety that lowers skepticism and makes disclosure easier.",
-        sources: [1, 3, 4],
-      },
-      tailgating: {
-        term: "tailgating",
-        definition:
-          "Following someone into a restricted area without proper authorization.",
-        sources: [1],
       },
       luring: {
         term: "luring",
@@ -186,40 +97,11 @@ const act1 = {
           "Using attraction, attention, or curiosity to draw someone into a risky interaction.",
         sources: [1, 3],
       },
-      urgency: {
-        term: "urgency",
+      socialInteraction: {
+        term: "social interaction",
         definition:
-          "Creating time pressure so a person acts before fully verifying the situation.",
-        sources: [1],
-      },
-      oversharing: {
-        term: "oversharing",
-        definition:
-          "Revealing sensitive information too casually, too emotionally, or too early.",
-        sources: [2, 3, 4],
-      },
-      socialProof: {
-        term: "social proof",
-        definition:
-          "Assuming something is safe because other people appear comfortable with it.",
-        sources: [1],
-      },
-      humanFactors: {
-        term: "human factors",
-        definition:
-          "The human behaviors and judgments that attackers exploit instead of technical flaws alone.",
-        sources: [4],
-      },
-      attackVector: {
-        term: "attack vector",
-        definition: "The path or method used to begin or advance an attack.",
-        sources: [4],
-      },
-      confidentialInformation: {
-        term: "confidential information",
-        definition:
-          "Sensitive details that should not be disclosed without proper need and verification.",
-        sources: [4],
+          "Ordinary conversation and rapport-building that can lower defenses and make a risky exchange feel natural.",
+        sources: [2, 4],
       },
       warningFlags: {
         term: "warning flags",
@@ -227,58 +109,22 @@ const act1 = {
           "Signs that a situation may be manipulative, deceptive, or unsafe.",
         sources: [1, 3],
       },
-      manipulation: {
-        term: "manipulation",
-        definition:
-          "Influencing someone through psychological pressure, emotion, or misdirection.",
-        sources: [1, 2, 4],
-      },
-      deception: {
-        term: "deception",
-        definition:
-          "Misleading someone in order to influence their actions or gain information.",
-        sources: [2, 4],
-      },
-      socialInteraction: {
-        term: "social interaction",
-        definition:
-          "Ordinary conversation and rapport building that can be used to lower defenses and make a risky exchange feel natural.",
-        sources: [2, 4],
-      },
-      credentialHarvesting: {
-        term: "credential harvesting",
-        definition:
-          "Collecting badge details, access clues, or login information that can later be used to gain entry or impersonate someone.",
-        sources: [1, 4],
-      },
-      baiting: {
-        term: "baiting",
-        definition:
-          "Using something tempting, flattering, or emotionally charged to override caution.",
-        sources: [1],
-      },
-      confirmationBias: {
-        term: "confirmation bias",
-        definition:
-          "Interpreting events the way you want them to be true rather than the way they are.",
-        sources: [1],
-      },
     },
   },
 
   state: {
     flags: {
-      sawBadge: false,
-      gotVipInvite: false,
-      gotAloneTime: false,
-      hasPhotoOfBadge: false,
-      gotUsbKey: false,
-      learnedCipherCodename: false,
-      rexSuspicious: false,
+      rexTargeted: false,
+      rexEngaged: false,
+      rexFlattered: false,
+      rexOpenedUp: false,
       ivyNoticed: false,
-      attemptedTailgate: false,
     },
-    score: { heat: 0, risk: 0, security: 0 },
+    score: {
+      deception: 0,
+      suspicion: 0,
+      rapport: 0,
+    },
   },
 
   startSceneId: "s00_arrival",
@@ -292,13 +138,13 @@ const act1 = {
         "Las Vegas glows with velvet light, mirrored ceilings, and expensive mistakes.",
         "Inside the CyberSteel Executive Summit, badges flash like tiny passports to power.",
         "Gemma moves through the crowd with effortless confidence, but nothing about tonight is accidental.",
-        "She is here for one man, Rex Vale, and for whatever trust he can be persuaded to mistake for fate.",
+        "She is here for Rex Vale, the CEO of CyberSteel, and for whatever information he can be persuaded to mistake for chemistry.",
       ],
-      redFlags: ["socialEngineering", "attackVector"],
+      redFlags: ["socialEngineering", "warningFlags"],
       ui: {
         showToast: {
           title: "Act 1: hello.friend",
-          body: "A meet-cute can also be an attack scenario. Watch how chemistry, trust, and charm begin building the same attack vector that Act 2 deepens and Act 3 exposes.",
+          body: "This meet cute is also the beginning of a social engineering attack. Watch how charm, attention, and ordinary conversation can lower someone’s guard.",
           kind: "neutral",
         },
       },
@@ -306,508 +152,286 @@ const act1 = {
         {
           id: "c00_scan",
           label: "Scan the room for Rex",
-          next: "s01_spot_rex",
-          effects: { flags: { sawBadge: true }, score: { risk: 1 } },
+          next: "s01_target_acquired",
+          effects: {
+            flags: { rexTargeted: true },
+            score: { deception: 1 },
+          },
         },
         {
-          id: "c00_checkin",
-          label: "Blend in at check-in first",
-          next: "s01_checkin",
-          effects: { score: { security: 1 } },
+          id: "c00_blend",
+          label: "Blend in and observe the conference first",
+          next: "s01_observe",
+          effects: {
+            score: { deception: 1, rapport: 1 },
+          },
         },
       ],
     },
 
-    s01_checkin: {
-      id: "s01_checkin",
-      title: "Badge, Please",
-      location: "Registration desk",
+    s01_observe: {
+      id: "s01_observe",
+      title: "Reading the Room",
+      location: "Expo Hall",
       text: [
-        "The registration desk hands Gemma a badge and a bright professional smile.",
-        "A staffer reminds everyone that badges are required for all sessions, including VIP floors.",
-        "Gemma lets her gaze rest on the word VIP just long enough to look intrigued instead of intentional.",
+        "Gemma walks the expo hall like she belongs there.",
+        "Screens glow with product demos, investor language, and hints about CyberSteel’s newest AI platform: Cipher.",
+        "She does not need to break into anything yet. A lot of social engineering begins with watching what people reveal when they think nobody is collecting it.",
       ],
-      redFlags: ["socialEngineering", "humanFactors"],
+      redFlags: ["socialEngineering", "socialInteraction"],
       ui: {
         showToast: {
-          title: "Red flag: social engineering setup",
-          body: "The best setups do not feel dramatic. They feel flirtatious, casual, and perfectly ordinary.",
+          title: "Social engineering setup",
+          body: "Attackers often collect small clues first so later questions feel natural instead of suspicious.",
           kind: "warning",
         },
       },
       choices: [
         {
-          id: "c01_vip",
-          label: "Hover near the VIP line and listen",
-          next: "s01_vip_line",
-          effects: { score: { risk: 1 } },
+          id: "c01_find_rex",
+          label: "Head toward the lobby bar and find Rex",
+          next: "s01_target_acquired",
+          effects: {
+            flags: { rexTargeted: true },
+            score: { deception: 1 },
+          },
         },
         {
-          id: "c01_floor",
-          label: "Walk the floor like you belong",
-          next: "s02_floor_walk",
-          effects: { score: { heat: 1 } },
+          id: "c01_ask_ivy",
+          label:
+            "Ask Ivy whether Rex is attending the private Cipher reception",
+          next: "s02_ivy_gatekeeper",
+          effects: {
+            flags: { ivyNoticed: true },
+            score: { suspicion: 1 },
+          },
         },
       ],
     },
 
-    s01_vip_line: {
-      id: "s01_vip_line",
-      title: "Velvet Rope Economics",
-      location: "VIP entrance",
-      text: [
-        "Marco checks badges with the speed of someone doing three jobs at once.",
-        "Attendees flash credentials and keep moving. Nobody wants to be the person who breaks the rhythm.",
-        "Gemma sees it immediately. Social proof can make weak verification look polished, even sexy.",
-      ],
-      redFlags: ["socialProof", "tailgating"],
-      ui: {
-        showToast: {
-          title: "Red flags: social proof and tailgating",
-          body: "Crowds, status, and momentum can make bad security feel normal enough to slip inside.",
-          kind: "warning",
-        },
-      },
-      choices: [
-        {
-          id: "c01_tailgate",
-          label: "Attempt to tailgate behind a VIP attendee",
-          next: "s01_tailgate_attempt",
-          effects: { flags: { attemptedTailgate: true }, score: { risk: 2 } },
-        },
-        {
-          id: "c01_abort",
-          label: "Abort and return to the main floor",
-          next: "s02_floor_walk",
-          effects: { score: { security: 1 } },
-        },
-      ],
-    },
-
-    s01_tailgate_attempt: {
-      id: "s01_tailgate_attempt",
-      title: "Two Steps Behind",
-      location: "VIP entrance",
-      text: [
-        "Gemma slips into the wake of a suited attendee like the move was rehearsed in silk and neon.",
-        "Marco glances up, just long enough to catch that something is off.",
-        "Ma'am, he says. Badge?",
-      ],
-      redFlags: ["tailgating", "warningFlags"],
-      choices: [
-        {
-          id: "c01_pretext",
-          label: "Smile and say your badge is acting up",
-          next: "s01_pretext_badge_issue",
-          effects: { score: { risk: 2, heat: 1 } },
-        },
-        {
-          id: "c01_backoff",
-          label: "Apologize and back off calmly",
-          next: "s02_floor_walk",
-          effects: { score: { security: 2 } },
-        },
-      ],
-    },
-
-    s01_pretext_badge_issue: {
-      id: "s01_pretext_badge_issue",
-      title: "Badge Issue",
-      location: "VIP entrance",
-      text: [
-        "Gemma's voice turns honey-soft, all polish and plausible embarrassment.",
-        "Marco's gaze flicks to the impatient line behind her and to the cost of slowing everything down for one beautiful inconvenience.",
-        "Security and speed pull in opposite directions. In real life, speed gets kissed first.",
-        "He waves her away. Get it fixed. Do not come back up without it.",
-      ],
-      redFlags: ["urgency", "manipulation"],
-      ui: {
-        showToast: {
-          title: "Red flag: urgency",
-          body: "When people are rushed, overloaded, or distracted, process starts to loosen.",
-          kind: "warning",
-        },
-      },
-      choices: [
-        {
-          id: "c01_roam",
-          label: "Roam and find Rex first",
-          next: "s01_spot_rex",
-          effects: { score: { risk: 1, heat: 1 } },
-        },
-        {
-          id: "c01_floor2",
-          label: "Return to the main floor",
-          next: "s02_floor_walk",
-          effects: { score: { security: 1 } },
-        },
-      ],
-    },
-
-    s01_spot_rex: {
-      id: "s01_spot_rex",
-      title: "Target Acquired",
-      location: "Lobby bar • off the main floor",
-      text: [
-        "Rex Vale stands at the bar with his sleeves rolled and his attention finally unguarded.",
-        "His badge hangs forward, the NFC chip catching the light like an invitation it was never meant to be.",
-        "He looks up just as Gemma appears behind him in the mirror, and for one dangerous second the scene reads less like surveillance and more like destiny.",
-      ],
-      redFlags: ["credentialHarvesting", "humanFactors"],
-      ui: {
-        showToast: {
-          title: "Human factor moment",
-          body: "Badges, phones, and small lapses become much easier to exploit when attraction and distraction enter the room.",
-          kind: "neutral",
-        },
-      },
-      choices: [
-        {
-          id: "c02_meetcute",
-          label: "Do the meet-cute and order a drink beside him",
-          next: "s02_meet_cute",
-          effects: { score: { heat: 2 } },
-        },
-        {
-          id: "c02_observe",
-          label: "Observe first: who approaches him, who protects him",
-          next: "s02_observe_rex",
-          effects: { score: { security: 1, risk: 1 } },
-        },
-      ],
-    },
-
-    s02_floor_walk: {
-      id: "s02_floor_walk",
-      title: "Walk Like You Belong",
-      location: "Expo hall",
-      text: [
-        "The expo hall is a sea of logos, polished smiles, and soft bragging.",
-        "Gemma moves with purpose. Purpose often reads as permission.",
-        'A booth demo flashes: "Cipher: Secure Intelligence at Scale."',
-        "There it is, the name out in the open, like the most sensitive things are always hidden better than that.",
-      ],
-      redFlags: ["confidentialInformation", "humanFactors"],
-      choices: [
-        {
-          id: "c03_bar",
-          label: "Head to the lobby bar and find Rex",
-          next: "s01_spot_rex",
-          effects: { score: { heat: 1 } },
-        },
-        {
-          id: "c03_ops",
-          label: "Talk to conference ops about schedules and room patterns",
-          next: "s02_ops_ivy",
-          effects: { score: { security: 1, risk: 1 } },
-        },
-      ],
-    },
-
-    s02_ops_ivy: {
-      id: "s02_ops_ivy",
+    s02_ivy_gatekeeper: {
+      id: "s02_ivy_gatekeeper",
       title: "Gatekeeper Energy",
-      location: "Conference ops desk",
+      location: "Conference Ops Desk",
       text: [
-        "Ivy runs conference ops like a chessboard.",
-        "Gemma asks casual questions about VIP rooms and whether Rex is speaking.",
-        "Ivy smiles, pleasant and not fooled.",
-        '"All speaker updates are in the official app," she says. "And we do not share VIP schedules."',
+        "Ivy runs conference operations like a chessboard.",
+        "Gemma asks about Rex with a smile that sounds casual but lands too specifically.",
+        "Ivy smiles back, polite and sharp.",
+        '"All speaker and VIP updates are handled through official channels," Ivy says.',
+        "Gemma clocks it immediately. Ivy is the kind of person who notices patterns.",
       ],
       redFlags: ["warningFlags", "socialEngineering"],
       ui: {
         showToast: {
-          title: "Defense: official channels",
-          body: "Good gatekeepers redirect sensitive requests into verified systems instead of casual conversation.",
-          kind: "success",
-        },
-      },
-      choices: [
-        {
-          id: "c04_app",
-          label: "Use the official app",
-          next: "s02_app_lookup",
-          effects: { score: { security: 2 } },
-        },
-        {
-          id: "c04_charm",
-          label: "Turn on the charm and ask for a hint",
-          next: "s02_ivy_charm",
-          effects: {
-            flags: { ivyNoticed: true },
-            score: { heat: 1, risk: 1 },
-          },
-        },
-      ],
-    },
-
-    s02_app_lookup: {
-      id: "s02_app_lookup",
-      title: "Open the App",
-      location: "Near a charging station",
-      text: [
-        "Gemma opens the summit app.",
-        "It lists public sessions but masks VIP events behind a login.",
-        "A prompt appears and asks for conference credentials.",
-      ],
-      redFlags: ["warningFlags"],
-      choices: [
-        {
-          id: "c05_safe",
-          label: "Back out and avoid entering credentials in public",
-          next: "s01_spot_rex",
-          effects: { score: { security: 2 } },
-        },
-        {
-          id: "c05_risky",
-          label: "Enter the information anyway",
-          next: "s02_app_login",
-          effects: { score: { risk: 2 } },
-        },
-      ],
-    },
-
-    s02_app_login: {
-      id: "s02_app_login",
-      title: "Login Screen Glow",
-      location: "Charging station",
-      text: [
-        "Gemma signs in.",
-        "The app shows partial VIP info, room numbers, and time blocks.",
-        'One label catches her eye: "Cipher Private Preview."',
-      ],
-      redFlags: ["confidentialInformation", "credentialHarvesting"],
-      choices: [
-        {
-          id: "c06_rex",
-          label: "Head to the lobby bar",
-          next: "s01_spot_rex",
-          effects: {
-            flags: { learnedCipherCodename: true },
-            score: { risk: 1 },
-          },
-        },
-      ],
-    },
-
-    s02_ivy_charm: {
-      id: "s02_ivy_charm",
-      title: "Charm Offensive",
-      location: "Conference ops desk",
-      text: [
-        "Gemma leans closer, voice soft like a secret.",
-        "Ivy's smile stays put. Her eyes do not.",
-        '"We have a strict policy," Ivy says. "And people notice when policy bends."',
-        "Gemma clocks it immediately. Ivy is the kind of person who files reports without raising her voice.",
-      ],
-      redFlags: ["trust", "warningFlags"],
-      choices: [
-        {
-          id: "c07_pivot",
-          label: "Back off and pivot",
-          next: "s01_spot_rex",
-          effects: { score: { security: 1 } },
-        },
-        {
-          id: "c07_press",
-          label: "Press harder",
-          next: "s02_ivy_pressure",
-          effects: { score: { risk: 2 } },
-        },
-      ],
-    },
-
-    s02_ivy_pressure: {
-      id: "s02_ivy_pressure",
-      title: "Policy vs. Chemistry",
-      location: "Conference ops desk",
-      text: [
-        "Gemma drops a half truth and tries to sound like she already belongs inside the system.",
-        "Ivy's expression goes polite and cold.",
-        '"Then Rex can confirm," Ivy says. "Through official channels."',
-      ],
-      redFlags: ["deception", "warningFlags"],
-      choices: [
-        {
-          id: "c08_leave",
-          label: "Leave before this becomes memorable",
-          next: "s01_spot_rex",
-          effects: { flags: { rexSuspicious: true }, score: { risk: 1 } },
-        },
-      ],
-    },
-
-    s02_meet_cute: {
-      id: "s02_meet_cute",
-      title: "Hello, Stranger",
-      location: "Lobby bar",
-      text: [
-        "Gemma slides onto the stool beside him like she has done it in another life and fully intends to do it again in this one.",
-        '"Let me guess," she says, eyeing the badge. "You\'re the reason everyone in this building is pretending they understand AI."',
-        "Rex laughs, short and surprised.",
-        '"And you are?"',
-      ],
-      redFlags: ["luring"],
-      choices: [
-        {
-          id: "c10_intro_soft",
-          label: "Introduce yourself as a consultant",
-          next: "s03_smalltalk",
-          effects: { score: { heat: 1, security: 1 } },
-        },
-        {
-          id: "c10_intro_bold",
-          label: "Flirt hard",
-          next: "s03_flirt_bold",
-          effects: { score: { heat: 2, risk: 1 } },
-        },
-        {
-          id: "c10_badge_banter",
-          label: "Tease him about the badge",
-          next: "s02_badge_banter",
-          effects: { score: { heat: 1, risk: 1 } },
-        },
-      ],
-    },
-
-    s02_badge_banter: {
-      id: "s02_badge_banter",
-      title: "Nice Badge",
-      location: "Lobby bar",
-      text: [
-        "Gemma tilts her head toward his badge like she is admiring a watch.",
-        '"That credential practically screams important," she says.',
-        "Rex glances down and smiles. Vanity is such a cooperative human factor.",
-      ],
-      redFlags: ["luring", "manipulation", "oversharing"],
-      ui: {
-        showToast: {
-          title: "Red flag: luring",
-          body: "Flattery and attraction can gather sensitive details without sounding like an attack.",
+          title: "Warning flag",
+          body: "A request can sound friendly and still be probing for information that should not be shared casually.",
           kind: "warning",
         },
       },
       choices: [
         {
-          id: "c11_badge_probe",
-          label: "Ask what kind of access the badge gives him",
-          next: "s03_smalltalk",
-          effects: { score: { risk: 2, heat: 1 } },
+          id: "c02_backoff",
+          label: "Back off and find Rex directly",
+          next: "s01_target_acquired",
+          effects: {
+            score: { rapport: 1 },
+          },
         },
         {
-          id: "c11_playful_redirect",
-          label: "Keep it playful and return to small talk",
-          next: "s03_smalltalk",
-          effects: { score: { heat: 1, security: 1 } },
+          id: "c02_charm",
+          label: "Keep charming Ivy for just one hint",
+          next: "s02_ivy_noticed",
+          effects: {
+            flags: { ivyNoticed: true },
+            score: { suspicion: 2, deception: 1 },
+          },
         },
       ],
     },
 
-    s02_observe_rex: {
-      id: "s02_observe_rex",
-      title: "Read the Room",
-      location: "Lobby bar • mirror line",
+    s02_ivy_noticed: {
+      id: "s02_ivy_noticed",
+      title: "Too Many Questions",
+      location: "Conference Ops Desk",
       text: [
-        "Gemma lingers just outside his orbit and watches the rhythm around him.",
-        "People approach Rex in categories: starstruck, transactional, and useful.",
-        "No one checks whether his badge is visible. No one notices how much can be inferred before a single direct question is asked.",
-        "A great deal of social engineering begins with observation.",
+        "Gemma softens her voice and makes the question sound harmless.",
+        "Ivy’s expression stays pleasant, but her eyes stop smiling.",
+        '"If Rex wants someone at a private event, Rex can confirm it himself," Ivy says.',
+        "The door closes without slamming. Gemma has learned something useful: Ivy is a problem.",
       ],
-      redFlags: ["socialEngineering", "humanFactors"],
+      redFlags: ["warningFlags", "socialInteraction"],
+      choices: [
+        {
+          id: "c03_leave_ivy",
+          label: "Leave before this becomes memorable",
+          next: "s01_target_acquired",
+          effects: {
+            score: { suspicion: 1 },
+          },
+        },
+      ],
+    },
+
+    s01_target_acquired: {
+      id: "s01_target_acquired",
+      title: "Target Acquired",
+      location: "Lobby Bar",
+      text: [
+        "Rex Vale stands at the bar with his sleeves rolled and his attention finally unguarded.",
+        "His badge catches the light when he turns, and the name CyberSteel sits beneath his title like a dare.",
+        "Gemma appears beside him in the mirror before she appears beside him in real life.",
+        "For one dangerous second, the scene reads less like surveillance and more like fate.",
+      ],
+      redFlags: ["luring", "warningFlags"],
       ui: {
         showToast: {
-          title: "Observation is a tactic",
-          body: "Attackers often collect small clues first, then use them to make later manipulation feel natural.",
+          title: "Target acquired",
+          body: "Gemma has found Rex. The goal of Act 1 is not to steal Cipher yet. The goal is to make the next step feel natural.",
           kind: "neutral",
         },
       },
       choices: [
         {
-          id: "c09_join_now",
-          label: "Approach him now with a polished opener",
-          next: "s02_meet_cute",
-          effects: { score: { security: 1, heat: 1 } },
+          id: "c04_overt",
+          label: "Overt route: flirt boldly and make him feel chosen",
+          next: "s03_overt_meetcute",
+          effects: {
+            flags: { rexEngaged: true, rexFlattered: true },
+            score: { deception: 1, rapport: 2, suspicion: 1 },
+          },
         },
         {
-          id: "c09_wait_for_gap",
-          label: "Wait until he is alone, then make your move",
-          next: "s03_smalltalk",
-          effects: { flags: { gotAloneTime: true }, score: { heat: 1 } },
+          id: "c04_covert",
+          label: "Covert route: start with smart, casual conference small talk",
+          next: "s03_covert_meetcute",
+          effects: {
+            flags: { rexEngaged: true },
+            score: { deception: 1, rapport: 1 },
+          },
         },
       ],
     },
 
-    s03_smalltalk: {
-      id: "s03_smalltalk",
-      title: "Velvet Small Talk",
-      location: "Lobby bar",
-      text: [
-        "Gemma gives him something polished, clever, and just personal enough to feel intimate.",
-        "Rex relaxes by degrees, drawn in by the kind of attention that feels rare when everyone else wants something from him.",
-        "Their banter starts to hum with tension. Underneath it, Gemma is reading more than his words. Ego, loneliness, impatience, appetite, and the first warning flags of trust at work.",
-      ],
-      redFlags: ["trust", "warningFlags", "humanFactors"],
-      choices: [
-        {
-          id: "c12_cipher",
-          label: "Ask how intense it must be protecting something like Cipher",
-          next: "s04_cipher_hook",
-          effects: { score: { risk: 1, heat: 1 } },
-        },
-        {
-          id: "c12_invite",
-          label: "Let him talk and see what he offers first",
-          next: "s04_rex_opens_up",
-          effects: { score: { security: 1, heat: 1 } },
-        },
-      ],
-    },
-
-    s03_flirt_bold: {
-      id: "s03_flirt_bold",
+    s03_overt_meetcute: {
+      id: "s03_overt_meetcute",
       title: "Too Smooth",
-      location: "Lobby bar",
+      location: "Lobby Bar",
       text: [
-        '"Someone who likes powerful men," Gemma says, like she is testing whether vanity can unlock a door.',
-        "Rex smiles, but only with half his face.",
-        "The trick is making manipulation feel like attraction instead of an obvious warning flag.",
+        '"Let me guess," Gemma says, eyeing his badge. "You’re the reason everyone in this building is pretending they understand AI."',
+        "Rex laughs, surprised enough to enjoy it.",
+        "Gemma lets the moment linger a little too long.",
+        "This is the obvious version of the attack: flattering, charged, and risky. It works because attention can feel like intimacy when someone is used to being wanted for access.",
       ],
-      redFlags: ["manipulation", "warningFlags"],
-      choices: [
-        {
-          id: "c13_soften",
-          label: "Dial it back and pivot to smarter conversation",
-          next: "s03_smalltalk",
-          effects: { score: { heat: 1, security: 1 } },
+      redFlags: ["luring", "warningFlags"],
+      ui: {
+        showToast: {
+          title: "Luring",
+          body: "This route is obvious and flirtatious. Attraction can be used to make risky conversation feel exciting instead of unsafe.",
+          kind: "warning",
         },
-        {
-          id: "c13_double_down",
-          label: "Double down and ask for a private demo of Cipher",
-          next: "s04_private_demo_push",
-          effects: { score: { risk: 2, heat: 1 } },
-        },
-      ],
-    },
-
-    s04_cipher_hook: {
-      id: "s04_cipher_hook",
-      title: "The Name Drop",
-      location: "Lobby bar",
-      text: [
-        "The moment Gemma says Cipher, Rex's expression changes by less than a heartbeat.",
-        "Not fear. Ownership.",
-        "He answers carefully, which is its own kind of answer.",
-      ],
-      redFlags: ["confidentialInformation", "warningFlags"],
-      end: {
-        outcome: "neutral",
-        hook: "You got him talking, but you also revealed exactly what interested you.",
       },
       choices: [
         {
-          id: "c14_restart",
-          label: "Restart Act 1",
-          next: null,
+          id: "c05_overt_badge",
+          label: "Tease him about how important his badge looks",
+          next: "s04_badge_banter",
+          effects: {
+            score: { deception: 1, rapport: 1, suspicion: 1 },
+          },
+        },
+        {
+          id: "c05_overt_cipher",
+          label: "Ask if Cipher is as impressive as everyone says",
+          next: "s04_cipher_question",
+          effects: {
+            score: { deception: 1, suspicion: 2 },
+          },
+        },
+      ],
+    },
+
+    s03_covert_meetcute: {
+      id: "s03_covert_meetcute",
+      title: "Polished Small Talk",
+      location: "Lobby Bar",
+      text: [
+        "Gemma introduces herself as a security consultant and keeps the conversation professional enough to feel safe.",
+        "She asks about the conference, the pressure of launching new technology, and how exhausting it must be to have everyone watching CyberSteel.",
+        "Rex relaxes by degrees.",
+        "This is the subtle version of the attack. Nothing sounds obviously dangerous, which is exactly why it works.",
+      ],
+      redFlags: ["socialInteraction", "socialEngineering"],
+      ui: {
+        showToast: {
+          title: "Social interaction",
+          body: "Not every risky exchange looks dramatic. Ordinary conversation can lower defenses when it feels validating and natural.",
+          kind: "warning",
+        },
+      },
+      choices: [
+        {
+          id: "c06_covert_listen",
+          label: "Let Rex talk and see what he reveals first",
+          next: "s04_rex_opens_up",
+          effects: {
+            flags: { rexOpenedUp: true },
+            score: { rapport: 2, deception: 1 },
+          },
+        },
+        {
+          id: "c06_covert_probe",
+          label: "Casually ask how CyberSteel protects Cipher from leaks",
+          next: "s04_cipher_question",
+          effects: {
+            score: { deception: 1, suspicion: 1 },
+          },
+        },
+      ],
+    },
+
+    s04_badge_banter: {
+      id: "s04_badge_banter",
+      title: "Nice Badge",
+      location: "Lobby Bar",
+      text: [
+        "Gemma tilts her head toward his badge like she is admiring a watch.",
+        '"That credential practically screams important," she says.',
+        "Rex glances down and smiles before he can stop himself.",
+        "It is a tiny moment, almost nothing. But tiny moments are how bigger mistakes begin.",
+      ],
+      redFlags: ["luring", "warningFlags"],
+      choices: [
+        {
+          id: "c07_continue",
+          label: "Keep the chemistry going",
+          next: "s05_act1_funnel",
+          effects: {
+            flags: { rexFlattered: true },
+            score: { rapport: 1, deception: 1 },
+          },
+        },
+      ],
+    },
+
+    s04_cipher_question: {
+      id: "s04_cipher_question",
+      title: "The Name Drop",
+      location: "Lobby Bar",
+      text: [
+        "The moment Gemma says Cipher, Rex’s expression changes by less than a heartbeat.",
+        "Not fear. Ownership.",
+        "He answers carefully, which is its own kind of answer.",
+        "Gemma smiles like she has learned nothing, even though she has learned plenty.",
+      ],
+      redFlags: ["socialEngineering", "warningFlags"],
+      choices: [
+        {
+          id: "c08_continue",
+          label: "Ease off before the question feels too pointed",
+          next: "s05_act1_funnel",
+          effects: {
+            score: { deception: 1, rapport: 1 },
+          },
         },
       ],
     },
@@ -815,44 +439,46 @@ const act1 = {
     s04_rex_opens_up: {
       id: "s04_rex_opens_up",
       title: "Voluntary Disclosure",
-      location: "Lobby bar",
+      location: "Lobby Bar",
       text: [
-        "Rex starts sharing without being asked the dangerous questions directly.",
-        "He talks about investors, previews, leaks, and the exhausting pressure of guarding something everyone wants.",
-        "The most effective social engineering often feels self authored, powered by trust and human factors instead of force.",
+        "Rex starts sharing without Gemma asking the dangerous questions directly.",
+        "He talks about investors, leaks, pressure, and the exhaustion of protecting something everyone wants.",
+        "Gemma listens like he is fascinating, not useful.",
+        "That is what makes it work.",
       ],
-      redFlags: ["oversharing", "trust", "socialEngineering"],
-      end: {
-        outcome: "trust_gain",
-        hook: "By being patient, you let the target do the work for you and set up the emotional slide into Act 2.",
-      },
+      redFlags: ["socialInteraction", "socialEngineering"],
       choices: [
         {
-          id: "c15_restart",
-          label: "Restart Act 1",
-          next: null,
+          id: "c09_continue",
+          label: "Let the connection deepen",
+          next: "s05_act1_funnel",
+          effects: {
+            flags: { rexOpenedUp: true },
+            score: { rapport: 2, deception: 1 },
+          },
         },
       ],
     },
 
-    s04_private_demo_push: {
-      id: "s04_private_demo_push",
-      title: "Too Much, Too Fast",
-      location: "Lobby bar",
+    s05_act1_funnel: {
+      id: "s05_act1_funnel",
+      title: "End of Act 1: The Door Opens",
+      location: "Lobby Bar • Later That Night",
       text: [
-        "Gemma asks for a private demo too soon.",
-        "Rex's amusement cools into pattern recognition.",
-        "Charm works best before intent becomes visible and the warning flags line up.",
+        "By the end of the conversation, Gemma has not stolen anything yet.",
+        "She has something more useful for the next phase: Rex’s attention.",
+        "Whether the approach was bold or subtle, the result is the same. Rex now sees Gemma as interesting, attractive, and safe enough to continue trusting.",
+        "Act 1 ends with the attack still disguised as chemistry.",
       ],
-      redFlags: ["warningFlags", "attackVector"],
+      redFlags: ["socialEngineering", "luring", "warningFlags"],
       end: {
-        outcome: "high_risk",
-        hook: "You pushed for access before enough trust and ambiguity were built.",
+        outcome: "continue_to_act2",
+        hook: "Target acquired. Gemma has created enough trust and curiosity to move from first contact into the situationship.",
       },
       choices: [
         {
-          id: "c16_restart",
-          label: "Restart Act 1",
+          id: "c10_act2",
+          label: "Continue to Act 2: trust_me.exe",
           next: null,
         },
       ],
