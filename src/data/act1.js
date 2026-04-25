@@ -395,7 +395,7 @@ const act1 = {
       location: "Lobby Bar",
       text: [
         "Gemma tilts her head toward his badge like she is admiring a watch.",
-        '"That credential practically screams important," she says.',
+        '"You look so handsome in your photo," she says.',
         "Rex glances down and smiles before he can stop himself.",
         "It is a tiny moment, almost nothing. But tiny moments are how bigger mistakes begin.",
       ],
