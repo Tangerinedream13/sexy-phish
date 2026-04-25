@@ -1,6 +1,17 @@
 // src/data/act2.js
 // Act 2: trust_me.exe, "Situationship"
 
+import afterHoursGlowImg from "../assets/after_hours_glow.png";
+import attentionAsAccessImg from "../assets/attention_as_access.png";
+import softLaunchTrustImg from "../assets/soft_launch_trust.png";
+import privatePreviewImg from "../assets/private_preview.png";
+import rexOversharesImg from "../assets/rex_overshares.png";
+import habitLoopImg from "../assets/habit_loop.png";
+import accessInPlainSightImg from "../assets/access_in_plain_sight.png";
+import unlockedMomentImg from "../assets/unlocked_moment.png";
+import cipherOpensImg from "../assets/cipher_opens.png";
+import limoPullsAwayImg from "../assets/limo_pulls_away.png";
+
 const act2 = {
   meta: {
     actId: "act2",
@@ -127,6 +138,7 @@ const act2 = {
       id: "s00_after_hours",
       title: "After-Hours Glow",
       location: "Private lounge • CyberSteel Executive Summit",
+      image: afterHoursGlowImg,
       text: [
         "By the time the official conference lights dim, Rex has stopped treating Gemma like a stranger.",
         "The connection from the lobby bar has followed them into the private lounge, where the music is softer, the room is darker, and caution feels easier to misplace.",
@@ -167,6 +179,7 @@ const act2 = {
       id: "s01_overt_romance",
       title: "Attention as Access",
       location: "Private lounge",
+      image: attentionAsAccessImg,
       text: [
         "Gemma lets the chemistry become obvious.",
         "She laughs at Rex’s jokes, remembers tiny details, and makes him feel like the only person in the room who does not have to perform.",
@@ -207,6 +220,7 @@ const act2 = {
       id: "s01_covert_trust",
       title: "Soft Launch of Trust",
       location: "Quiet hotel corridor",
+      image: softLaunchTrustImg,
       text: [
         "Gemma does not push. She listens.",
         "Rex talks more when he does not feel interrogated.",
@@ -245,6 +259,7 @@ const act2 = {
       id: "s02_private_preview_push",
       title: "The Private Preview",
       location: "Private lounge",
+      image: privatePreviewImg,
       text: [
         '"You have to show me what everyone is whispering about," Gemma says.',
         "Rex laughs at first, but the request lands close to something protected.",
@@ -286,6 +301,7 @@ const act2 = {
       id: "s02_rex_overshares",
       title: "What He Says Without Meaning To",
       location: "Private lounge",
+      image: rexOversharesImg,
       text: [
         "Rex does not hand Gemma a password.",
         "He gives her something more believable: fragments.",
@@ -319,6 +335,7 @@ const act2 = {
       id: "s02_laptop_habit",
       title: "The Habit Loop",
       location: "Hotel elevator",
+      image: habitLoopImg,
       text: [
         "Rex checks his phone, then his watch, then the slim laptop bag at his side.",
         "Gemma notices the pattern.",
@@ -350,6 +367,7 @@ const act2 = {
       id: "s02_badge_observe",
       title: "Access in Plain Sight",
       location: "Hotel corridor",
+      image: accessInPlainSightImg,
       text: [
         "Rex moves through the hotel like someone used to doors opening for him.",
         "His badge, laptop bag, and phone stay close, but his attention does not.",
@@ -382,6 +400,7 @@ const act2 = {
       id: "s03_laptop_access",
       title: "Unlocked Moment",
       location: "Hotel suite",
+      image: unlockedMomentImg,
       text: [
         "Rex opens the laptop to check one thing.",
         "One thing becomes several.",
@@ -411,10 +430,11 @@ const act2 = {
       ],
     },
 
-        s04_cipher_access: {
+    s04_cipher_access: {
       id: "s04_cipher_access",
       title: "Cipher Opens",
       location: "Hotel suite • later",
+      image: cipherOpensImg,
       text: [
         "Rex finally sleeps.",
         "The room is quiet except for the city below and the soft pulse of the laptop screen.",
@@ -447,6 +467,7 @@ const act2 = {
       id: "s05_limo_exit",
       title: "End of Act 2: The Limo Pulls Away",
       location: "Hotel entrance • before sunrise",
+      image: limoPullsAwayImg,
       text: [
         "By morning, Gemma is gone.",
         "The only things left behind are a lipstick mark on a glass, Rex’s jacket folded over a chair, and a laptop that looks exactly where he left it.",
