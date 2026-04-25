@@ -1,6 +1,16 @@
 // src/data/act3.js
 // Act 3: this_feels_real.txt, "Damage Control"
 
+import morningAfter from "../assets/morning_after.png";
+import somethingIsWrong from "../assets/something_is_wrong.png";
+import callTheSoc from "../assets/call_the_soc.png";
+import reconstructTheNight from "../assets/reconstruct_the_night.png";
+import containmentMode from "../assets/containment_mode.png";
+import logsAndEvidence from "../assets/what_the_logs_remember.png";
+import teamBriefing from "../assets/the_whole_team_knows.png";
+import recoveryPlan from "../assets/recovery_plan.png";
+import finalReport from "../assets/final_report.png";
+
 const act3 = {
   meta: {
     actId: "act3",
@@ -129,6 +139,7 @@ const act3 = {
       id: "s00_morning_after",
       title: "Morning After",
       location: "Hotel suite • sunrise",
+      image: morningAfter,
       text: [
         "Rex wakes to a room that looks almost normal.",
         "His jacket is still folded over the chair. His laptop is still on the desk. The city is still glowing through the glass.",
@@ -169,6 +180,7 @@ const act3 = {
       id: "s01_check_laptop",
       title: "Something Is Wrong",
       location: "Hotel suite",
+      image: somethingIsWrong,
       text: [
         "Rex opens the laptop and sees what he hoped not to see.",
         "Recent access. Opened files. A session that does not match his memory of the night.",
@@ -208,6 +220,7 @@ const act3 = {
       id: "s01_report_breach",
       title: "Call the SOC",
       location: "CyberSteel security operations center",
+      image: callTheSoc,
       text: [
         "Rex contacts CyberSteel’s security team, and the response starts immediately.",
         "He explains the alert, the laptop access, the private Cipher materials, and Gemma’s sudden disappearance.",
@@ -250,6 +263,7 @@ const act3 = {
       id: "s02_reconstruct_timeline",
       title: "Reconstruct the Night",
       location: "CyberSteel incident response bridge",
+      image: reconstructTheNight,
       text: [
         "The CyberSteel team builds the timeline minute by minute.",
         "Lobby bar. Private lounge. Hotel corridor. Laptop access. Cipher alert.",
@@ -283,6 +297,7 @@ const act3 = {
       id: "s03_containment",
       title: "Containment Mode",
       location: "CyberSteel security operations center",
+      image: containmentMode,
       text: [
         "The SOC team moves fast.",
         "They sign Rex out of every device, reset his passwords, lock down the Cipher files, and isolate the systems connected to the alert.",
@@ -323,6 +338,7 @@ const act3 = {
       id: "s04_logs_and_evidence",
       title: "What the Logs Remember",
       location: "CyberSteel SOC dashboard",
+      image: logsAndEvidence,
       text: [
         "The logs are less emotional than Rex is.",
         "They show access times, file movement, unusual activity, and the path the breach appears to have taken.",
@@ -357,6 +373,7 @@ const act3 = {
       id: "s05_team_briefing",
       title: "The Whole Team Knows",
       location: "CyberSteel executive briefing room",
+      image: teamBriefing,
       text: [
         "By midmorning, CyberSteel’s security, engineering, legal, and leadership teams are in one room.",
         "The update is uncomfortable but clear: Cipher information was accessed and copied.",
@@ -395,6 +412,7 @@ const act3 = {
       id: "s06_recovery_plan",
       title: "Recovery Plan",
       location: "CyberSteel SOC",
+      image: recoveryPlan,
       text: [
         "CyberSteel tightens access controls around Cipher.",
         "The SOC team expands monitoring, reviews executive device policies, and adds stronger safeguards for private product previews.",
@@ -428,6 +446,7 @@ const act3 = {
       id: "s07_final_report",
       title: "End of Act 3: Damage Control",
       location: "CyberSteel incident response report",
+      image: finalReport,
       text: [
         "The final report does not read like a love story.",
         "It reads like an incident: initial contact, trust-building, access opportunity, data exposure, containment, investigation, and recovery.",
