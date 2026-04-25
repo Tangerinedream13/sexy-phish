@@ -46,11 +46,12 @@ Each act includes 3–4 interactive decision points highlighting phishing red fl
 ## Target Audience
 
 This project is designed for:
-- People who enjoy romance stories and interactive narratives
-- Users who may not engage with traditional cybersecurity education
-- Learners who benefit from storytelling rather than lectures
 
-By embedding cybersecurity lessons in romance tropes, Sexy-Phish reframes online safety as modern and human-centered.
+- People who enjoy romance stories and interactive narratives
+- Users who may not connect with traditional cybersecurity education
+- Learners who benefit from storytelling rather than lecture-based instruction
+
+By embedding cybersecurity concepts within romance tropes, Sexy-Phish reframes phishing awareness and social engineering education as modern, relatable, and human-centered.
 
 ---
 
