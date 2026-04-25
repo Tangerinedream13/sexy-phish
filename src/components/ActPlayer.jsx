@@ -38,8 +38,20 @@ export default function ActPlayer({
 
   const isEndingScene = Boolean(scene?.end);
 
+  const getChoicePrompt = () => {
+    if (act.meta?.actId === "act1" || act.meta?.actId === "act2") {
+      return "What should Gemma do next?";
+    }
+
+    if (act.meta?.actId === "act3") {
+      return "What should Rex do next?";
+    }
+
+    return "What happens next?";
+  };
+
   const getRedFlagEntry = (flagKey) => {
-    return act?.glossary?.redFlags?.[flagKey] || null;
+    return act?.glossary?.redFlags?.[flagKey] || act?.glossary?.[flagKey] || null;
   };
 
   const getCitationText = (sources = []) => {
@@ -112,7 +124,7 @@ export default function ActPlayer({
           {scene.redFlags?.length ? (
             <Box>
               <Text fontWeight="semibold" color="gray.700" mb={2}>
-                Red Flags
+                Vocabulary
               </Text>
 
               <Box display="flex" flexWrap="wrap" gap={2}>
@@ -163,7 +175,7 @@ export default function ActPlayer({
                 </Box>
               ) : (
                 <Text color="gray.500" fontSize="sm" mt={2}>
-                  Click a red flag term to see its definition and citation.
+                  Click a vocabulary term to see its definition and citation.
                 </Text>
               )}
             </Box>
@@ -189,7 +201,7 @@ export default function ActPlayer({
           {!isEndingScene ? (
             <VStack align="stretch" spacing={3}>
               <Text fontWeight="semibold" color="gray.700">
-                What do you do next?
+                {getChoicePrompt()}
               </Text>
 
               {scene.choices?.map((choice) => (
