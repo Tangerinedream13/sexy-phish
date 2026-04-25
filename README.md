@@ -1,5 +1,10 @@
-# Sexy-Phish 💋🎣  
-*A Romance-Themed Cybersecurity Learning Experience*
+# Sexy-Phish 💋🎣
+
+## A Romance-Themed Cybersecurity Learning Experience
+
+![Sexy-Phish homepage preview](src/assets/sexy_phish_home.png)
+
+Sexy-Phish is an interactive choose-your-own-adventure web application that teaches phishing awareness through a romance-inspired narrative.
 
 ## The Core Question
 What are the most commonly employed phishing methods and how do they exploit human behavior?
@@ -64,9 +69,12 @@ The project explores:
 ## Tech Stack
 
 - React
-- Node.js
-- Express
-- PostgreSQL
+- Vite
+- JavaScript / JSX
+- Chakra UI
+- Railway
+- Cloudflare DNS
+- Custom domain: [sexyphish.com](https://sexyphish.com)
 
 ---
 
@@ -74,7 +82,7 @@ The project explores:
 
 - Romance novels and rom-com storytelling
 - Interactive narrative 
-- Psychological themes in cybersecurity (i.e., Mr. Robot)
+- Psychological themes in cybersecurity 
 - Technology-driven fiction
 
 ---
