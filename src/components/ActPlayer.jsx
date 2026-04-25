@@ -22,7 +22,7 @@ export default function ActPlayer({
 
   const scene = useMemo(
     () => act.scenes[currentSceneId],
-    [act, currentSceneId]
+    [act, currentSceneId],
   );
 
   const handleChoice = (choice) => {
@@ -51,7 +51,9 @@ export default function ActPlayer({
   };
 
   const getRedFlagEntry = (flagKey) => {
-    return act?.glossary?.redFlags?.[flagKey] || act?.glossary?.[flagKey] || null;
+    return (
+      act?.glossary?.redFlags?.[flagKey] || act?.glossary?.[flagKey] || null
+    );
   };
 
   const getCitationText = (sources = []) => {
@@ -97,6 +99,29 @@ export default function ActPlayer({
               🏠 Return Home
             </Button>
           </HStack>
+
+          {scene.image ? (
+            <Box
+              borderRadius="2xl"
+              overflow="hidden"
+              border="1px solid"
+              borderColor="pink.100"
+              boxShadow="md"
+              bg="pink.50"
+              display="flex"
+              justifyContent="center"
+            >
+              <Box
+                as="img"
+                src={scene.image}
+                alt={scene.title}
+                w="100%"
+                maxW="520px"
+                h="auto"
+                objectFit="contain"
+              />
+            </Box>
+          ) : null}
 
           {scene.ui?.showToast ? (
             <Box

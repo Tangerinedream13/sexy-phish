@@ -1,6 +1,17 @@
 // src/data/act1.js
 // Act 1: hello.friend, "Meet Cute"
 
+import neonCheckInImg from "../assets/neon_check-in.png";
+import readingTheRoomImg from "../assets/reading_the_room.png";
+import targetAcquiredImg from "../assets/target_acquired.png";
+import tooSmoothImg from "../assets/too_smooth.png";
+import polishedSmallTalkImg from "../assets/polished_small_talk.png";
+import niceBadgeImg from "../assets/nice_badge.png";
+import nameDropImg from "../assets/the_name_drop.png";
+import voluntaryDisclosureImg from "../assets/voluntary_disclosure.png";
+import doorOpensImg from "../assets/the_door_opens.png";
+import publicCluesImg from "../assets/public_clues.png";
+
 const act1 = {
   meta: {
     actId: "act1",
@@ -39,22 +50,6 @@ const act1 = {
       hiddenBio: "Protective of Cipher, anxious about leaks, used to attention",
       archetype: "high value target",
       traits: ["confident", "guarded", "busy"],
-    },
-    ivy: {
-      id: "ivy",
-      name: "Ivy",
-      publicBio: "CyberSteel EA for Rex Vale",
-      hiddenBio: "Gatekeeper who notices patterns",
-      archetype: "gatekeeper",
-      traits: ["efficient", "polite", "sharp"],
-    },
-    marco: {
-      id: "marco",
-      name: "Marco",
-      publicBio: "Security staff",
-      hiddenBio: "Overworked, relies on social compliance",
-      archetype: "overloaded security",
-      traits: ["stern", "distracted"],
     },
   },
 
@@ -118,7 +113,6 @@ const act1 = {
       rexEngaged: false,
       rexFlattered: false,
       rexOpenedUp: false,
-      ivyNoticed: false,
     },
     score: {
       deception: 0,
@@ -134,6 +128,7 @@ const act1 = {
       id: "s00_arrival",
       title: "Neon Check-In",
       location: "Conference Lobby • CyberSteel Executive Summit",
+      image: neonCheckInImg,
       text: [
         "Las Vegas glows with velvet light, mirrored ceilings, and expensive mistakes.",
         "Inside the CyberSteel Executive Summit, badges flash like tiny passports to power.",
@@ -173,6 +168,7 @@ const act1 = {
       id: "s01_observe",
       title: "Reading the Room",
       location: "Expo Hall",
+      image: readingTheRoomImg,
       text: [
         "Gemma walks the expo hall like she belongs there.",
         "Screens glow with product demos, investor language, and hints about CyberSteel’s newest AI platform: Cipher.",
@@ -210,6 +206,7 @@ const act1 = {
       id: "s01_public_clues",
       title: "Public Clues",
       location: "Expo Hall",
+      image: publicCluesImg,
       text: [
         "Gemma lingers near a product demo without looking like she is lingering.",
         "A CyberSteel presenter mentions a private Cipher reception for select executives and investors.",
@@ -243,6 +240,7 @@ const act1 = {
       id: "s01_target_acquired",
       title: "Target Acquired",
       location: "Lobby Bar",
+      image: targetAcquiredImg,
       text: [
         "Rex Vale stands at the bar with his sleeves rolled and his attention finally unguarded.",
         "His badge catches the light when he turns, and the name CyberSteel sits beneath his title like a dare.",
@@ -283,6 +281,7 @@ const act1 = {
       id: "s03_overt_meetcute",
       title: "Too Smooth",
       location: "Lobby Bar",
+      image: tooSmoothImg,
       text: [
         '"Let me guess," Gemma says, eyeing his badge. "You’re the reason everyone in this building is pretending they understand AI."',
         "Rex laughs, surprised enough to enjoy it.",
@@ -321,6 +320,7 @@ const act1 = {
       id: "s03_covert_meetcute",
       title: "Polished Small Talk",
       location: "Lobby Bar",
+      image: polishedSmallTalkImg,
       text: [
         "Gemma introduces herself as a security consultant and keeps the conversation professional enough to feel safe.",
         "She asks about the conference, the pressure of launching new technology, and how exhausting it must be to have everyone watching CyberSteel.",
@@ -360,6 +360,7 @@ const act1 = {
       id: "s04_badge_banter",
       title: "Nice Badge",
       location: "Lobby Bar",
+      image: niceBadgeImg,
       text: [
         "Gemma tilts her head toward his badge like she is admiring a watch.",
         '"You look so handsome in your photo," she says.',
@@ -384,6 +385,7 @@ const act1 = {
       id: "s04_cipher_question",
       title: "The Name Drop",
       location: "Lobby Bar",
+      image: nameDropImg,
       text: [
         "The moment Gemma says Cipher, Rex’s expression changes by less than a heartbeat.",
         "Not fear. Ownership.",
@@ -407,6 +409,7 @@ const act1 = {
       id: "s04_rex_opens_up",
       title: "Voluntary Disclosure",
       location: "Lobby Bar",
+      image: voluntaryDisclosureImg,
       text: [
         "Rex starts sharing without Gemma asking the dangerous questions directly.",
         "He talks about investors, leaks, pressure, and the exhaustion of protecting something everyone wants.",
@@ -431,6 +434,7 @@ const act1 = {
       id: "s05_act1_funnel",
       title: "End of Act 1: The Door Opens",
       location: "Lobby Bar • Later That Night",
+      image: doorOpensImg,
       text: [
         "By the end of the conversation, Gemma has not stolen anything yet.",
         "She has something more useful for the next phase: Rex’s attention.",
