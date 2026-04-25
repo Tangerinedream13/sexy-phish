@@ -6,14 +6,14 @@ const act3 = {
     actId: "act3",
     title: "this_feels_real.txt",
     subtitle: "Damage Control",
-    theme: "breach fallout • urgency • containment • consequence",
+    theme:
+      "breach discovery • incident response • SOC containment • accountability after social engineering",
     setting: {
       city: "Las Vegas",
-      venue:
-        "Premier Tech Summit • backstage corridors, office, and the aftermath",
-      vibe: "The chemistry is gone. The consequences are not.",
+      venue: "CyberSteel Executive Summit",
+      vibe: "Morning-after panic, executive pressure, and a security team racing to contain the damage",
     },
-    version: 3,
+    version: 5,
   },
 
   sources: {
@@ -24,102 +24,37 @@ const act3 = {
   },
 
   characters: {
-    gemma: {
-      id: "gemma",
-      name: "Gemma",
-      publicBio: "Independent security consultant (conference attendee)",
-      hiddenBio:
-        "Operative exploiting trust, attraction, and access for information",
-      archetype: "charismatic social engineer",
-      traits: ["calm", "convincing", "strategic"],
-    },
     rex: {
       id: "rex",
       name: "Rex Vale",
       publicBio: "Billionaire tech executive, CEO of CyberSteel",
-      hiddenBio: "Now caught between embarrassment, panic, and damage control",
-      archetype: "compromised target",
-      traits: ["shaken", "defensive", "image-conscious"],
-    },
-    ivy: {
-      id: "ivy",
-      name: "Ivy",
-      publicBio: "CyberSteel EA / conference ops lead",
-      hiddenBio: "The first person to recognize that something is wrong",
-      archetype: "gatekeeper turned incident coordinator",
-      traits: ["sharp", "controlled", "unimpressed"],
-    },
-    marco: {
-      id: "marco",
-      name: "Marco",
-      publicBio: "Security staff (badge checks / VIP entrance)",
       hiddenBio:
-        "Now dealing with the consequences of a culture that normalized exceptions",
-      archetype: "overloaded security",
-      traits: ["tired", "blunt"],
+        "Protective of Cipher, now forced to confront how trust became a security failure",
+      archetype: "compromised executive",
+      traits: ["confident", "guarded", "accountable"],
+    },
+    socTeam: {
+      id: "socTeam",
+      name: "CyberSteel SOC Team",
+      publicBio: "Security operations team responsible for incident response",
+      hiddenBio:
+        "The team responsible for containment, investigation, recovery, and reporting",
+      archetype: "incident response team",
+      traits: ["focused", "technical", "urgent"],
+    },
+    cybersteelTeam: {
+      id: "cybersteelTeam",
+      name: "CyberSteel Team",
+      publicBio:
+        "CyberSteel leadership, legal, engineering, and security staff",
+      hiddenBio:
+        "Cross-functional team managing damage control after the Cipher breach",
+      archetype: "crisis response team",
+      traits: ["pressured", "coordinated", "accountable"],
     },
   },
 
   glossary: {
-    containment: {
-      term: "containment",
-      definition:
-        "Immediate actions taken to prevent a compromise from getting worse.",
-      sources: [],
-    },
-    breach: {
-      term: "breach",
-      definition: "A compromise of information, access, or security controls.",
-      sources: [1, 4],
-    },
-    misinformation: {
-      term: "misinformation",
-      definition:
-        "False or misleading information that distorts what is really happening.",
-      sources: [1],
-    },
-    disinformation: {
-      term: "disinformation",
-      definition:
-        "Information shaped or framed to manipulate what others believe about an incident.",
-      sources: [1],
-    },
-    warningFlags: {
-      term: "warning flags",
-      definition:
-        "Signs that a situation may be manipulative, deceptive, or unsafe.",
-      sources: [1, 3],
-    },
-    trust: {
-      term: "trust",
-      definition:
-        "A sense of emotional safety that lowers skepticism and makes disclosure easier.",
-      sources: [1, 3, 4],
-    },
-    oversharing: {
-      term: "oversharing",
-      definition:
-        "Revealing sensitive information too casually, too emotionally, or too early.",
-      sources: [2, 3, 4],
-    },
-    urgency: {
-      term: "urgency",
-      definition:
-        "Creating time pressure so a person acts before fully verifying the situation.",
-      sources: [1],
-    },
-    confidentialInformation: {
-      term: "confidential information",
-      definition:
-        "Sensitive details that should not be disclosed without proper need and verification.",
-      sources: [4],
-    },
-    socialEngineering: {
-      term: "social engineering",
-      definition:
-        "Manipulating people through trust, deception, and social interaction to gain access or sensitive information.",
-      sources: [2, 4],
-    },
     attackVector: {
       term: "attack vector",
       definition: "The path or method used to begin or advance an attack.",
@@ -128,7 +63,7 @@ const act3 = {
     humanFactors: {
       term: "human factors",
       definition:
-        "The human behaviors and judgments that attackers exploit instead of technical flaws alone.",
+        "The human behaviors and judgments that attackers exploit instead of relying only on technical flaws.",
       sources: [4],
     },
     manipulation: {
@@ -145,60 +80,6 @@ const act3 = {
     },
 
     redFlags: {
-      breach: {
-        term: "breach",
-        definition:
-          "A compromise of information, access, or security controls.",
-        sources: [1, 4],
-      },
-      misinformation: {
-        term: "misinformation",
-        definition:
-          "False or misleading information that distorts what is really happening.",
-        sources: [1],
-      },
-      disinformation: {
-        term: "disinformation",
-        definition:
-          "Information shaped or framed to manipulate what others believe about an incident.",
-        sources: [1],
-      },
-      warningFlags: {
-        term: "warning flags",
-        definition:
-          "Signs that a situation may be manipulative, deceptive, or unsafe.",
-        sources: [1, 3],
-      },
-      trust: {
-        term: "trust",
-        definition:
-          "A sense of emotional safety that lowers skepticism and makes disclosure easier.",
-        sources: [1, 3, 4],
-      },
-      oversharing: {
-        term: "oversharing",
-        definition:
-          "Revealing sensitive information too casually, too emotionally, or too early.",
-        sources: [2, 3, 4],
-      },
-      urgency: {
-        term: "urgency",
-        definition:
-          "Creating time pressure so a person acts before fully verifying the situation.",
-        sources: [1],
-      },
-      confidentialInformation: {
-        term: "confidential information",
-        definition:
-          "Sensitive details that should not be disclosed without proper need and verification.",
-        sources: [4],
-      },
-      socialEngineering: {
-        term: "social engineering",
-        definition:
-          "Manipulating people through trust, deception, and social interaction to gain access or sensitive information.",
-        sources: [2, 4],
-      },
       attackVector: {
         term: "attack vector",
         definition: "The path or method used to begin or advance an attack.",
@@ -207,7 +88,7 @@ const act3 = {
       humanFactors: {
         term: "human factors",
         definition:
-          "The human behaviors and judgments that attackers exploit instead of technical flaws alone.",
+          "The human behaviors and judgments that attackers exploit instead of relying only on technical flaws.",
         sources: [4],
       },
       manipulation: {
@@ -227,368 +108,341 @@ const act3 = {
 
   state: {
     flags: {
-      triedPrivateFix: false,
-      evidenceLost: false,
-      rexReportedHonestly: false,
-      ivyInLoop: false,
-      marcoInLoop: false,
-      opticsPriority: false,
-      delayedResponse: false,
+      breachReported: false,
+      accessRevoked: false,
+      logsReviewed: false,
+      teamBriefed: false,
+      evidencePreserved: false,
+      cipherContained: false,
     },
-    score: { heat: 0, risk: 0, security: 0 },
+    score: {
+      containment: 0,
+      investigation: 0,
+      accountability: 0,
+    },
   },
 
-  startSceneId: "s00_something_off",
+  startSceneId: "s00_morning_after",
 
   scenes: {
-    s00_something_off: {
-      id: "s00_something_off",
-      title: "Something Feels Off (Rex's Perspective)",
-      location: "Backstage corridor",
+    s00_morning_after: {
+      id: "s00_morning_after",
+      title: "Morning After",
+      location: "Hotel suite • sunrise",
       text: [
-        "Rex realizes that Gemma stole the source code for Cipher.",
-        "As the reality of the breach begins to settle in, he is forced to confront the damage, the deception, and the trust that opened the door.",
+        "Rex wakes to a room that looks almost normal.",
+        "His jacket is still folded over the chair. His laptop is still on the desk. The city is still glowing through the glass.",
+        "But Gemma is gone.",
+        "Then Rex sees the notification: an unusual access alert tied to Cipher.",
+        "The story is no longer about chemistry. It is about damage control.",
       ],
-      redFlags: ["warningFlags", "trust"],
+      redFlags: ["humanFactors", "deception"],
       ui: {
         showToast: {
           title: "Act 3: this_feels_real.txt",
-          body: "The breach is no longer hypothetical. Now the warning flags, pressure, and fallout all arrive at once.",
-          kind: "warning",
+          body: "The perspective shifts to Rex. Cipher has been stolen, and CyberSteel has to respond quickly, honestly, and carefully.",
+          kind: "neutral",
         },
       },
       choices: [
         {
-          id: "c00_tellivy",
-          label: "Tell Ivy immediately",
-          next: "s01_escalate_fast",
+          id: "c00_report",
+          label: "Report the alert to the CyberSteel security team immediately",
+          next: "s01_report_breach",
           effects: {
-            flags: { ivyInLoop: true, rexReportedHonestly: true },
-            score: { security: 2 },
+            flags: { breachReported: true },
+            score: { containment: 2, accountability: 2 },
           },
         },
         {
-          id: "c00_handleprivate",
-          label: "Try to handle it quietly",
-          next: "s01_private_fix",
-          effects: { score: { risk: 2, heat: 1 } },
-        },
-        {
-          id: "c00_optics",
-          label: "Worry about optics first",
-          next: "s02_optics_pressure",
+          id: "c00_check_first",
+          label: "Check the laptop first and try to understand what happened",
+          next: "s01_check_laptop",
           effects: {
-            flags: { opticsPriority: true },
-            score: { risk: 2, heat: 1 },
+            score: { investigation: 1, accountability: 1 },
           },
         },
       ],
     },
 
-    s01_private_fix: {
-      id: "s01_private_fix",
-      title: "Keep This Between Us",
-      location: "Side hallway",
+    s01_check_laptop: {
+      id: "s01_check_laptop",
+      title: "Something Is Wrong",
+      location: "Hotel suite",
       text: [
-        "Rex lowers his voice like privacy can still fix this.",
-        'He says the line people always say when they are scared: "Let\'s not make this bigger than it is."',
-        "That sentence has probably made every breach bigger than it had to be.",
+        "Rex opens the laptop and sees what he hoped not to see.",
+        "Recent access. Opened files. A session that does not match his memory of the night.",
+        "The timeline starts arranging itself in a way he does not like.",
+        "Gemma was not just charming. She was collecting access.",
       ],
-      redFlags: ["trust", "warningFlags", "deception"],
+      redFlags: ["attackVector", "deception"],
       ui: {
         showToast: {
-          title: "Red flag: private incident handling",
-          body: "Security events should go into official response channels, not side conversations shaped by fear, image, or attraction.",
+          title: "Attack vector",
+          body: "The attack vector was not only technical. The breach began through social contact, trust, and access opportunities.",
           kind: "warning",
         },
       },
       choices: [
         {
-          id: "c01_pushreport",
-          label: "Push him to report it properly",
-          next: "s01_escalate_fast",
+          id: "c01_report_now",
+          label: "Report the breach before touching anything else",
+          next: "s01_report_breach",
           effects: {
-            flags: { ivyInLoop: true, rexReportedHonestly: true },
-            score: { security: 2 },
+            flags: { breachReported: true },
+            score: { containment: 2, accountability: 2 },
           },
         },
         {
-          id: "c01_cleanup",
-          label: "Try to delete evidence and clean it up",
-          next: "s02_evidence_loss",
+          id: "c01_retrace",
+          label: "Write down what he remembers before calling the team",
+          next: "s02_reconstruct_timeline",
           effects: {
-            flags: { triedPrivateFix: true, evidenceLost: true },
-            score: { risk: 3 },
+            score: { investigation: 2, accountability: 1 },
           },
         },
       ],
     },
 
-    s01_escalate_fast: {
-      id: "s01_escalate_fast",
-      title: "Say It Early, Say It Clearly",
-      location: "Office",
+    s01_report_breach: {
+      id: "s01_report_breach",
+      title: "Call the SOC",
+      location: "CyberSteel security operations center",
       text: [
-        "Ivy does not waste time on denial, image management, or wishful thinking.",
-        "She asks the right questions in the right order: what happened, what was shared, what changed, and who needs to know right now.",
-        "Real incident response starts by treating social engineering as both a technical problem and a human one.",
+        "Rex contacts CyberSteel’s security team, and the response starts immediately.",
+        "He explains the alert, the laptop access, the private Cipher materials, and Gemma’s sudden disappearance.",
+        "Nobody wastes time making the situation sound better than it is.",
+        "The SOC lead names the priority: contain first, investigate second, recover third.",
       ],
-      redFlags: [],
+      redFlags: ["humanFactors", "attackVector"],
       ui: {
         showToast: {
-          title: "Defense: fast escalation",
-          body: "Early reporting helps teams preserve evidence, contain the breach, and understand how trust was exploited.",
+          title: "Damage control begins",
+          body: "Fast reporting helps the team contain the incident before more systems, credentials, or files are exposed.",
           kind: "success",
         },
       },
       choices: [
         {
           id: "c02_contain",
-          label: "Move straight into containment",
-          next: "s02_containment",
+          label:
+            "Start containment: revoke access and isolate affected systems",
+          next: "s03_containment",
           effects: {
-            flags: { ivyInLoop: true, marcoInLoop: true },
-            score: { security: 2 },
+            flags: { accessRevoked: true, cipherContained: true },
+            score: { containment: 3 },
           },
         },
         {
-          id: "c02_downplay",
-          label: "Report it, but leave out the embarrassing parts",
-          next: "s03_minimize_story",
-          effects: { score: { risk: 2 } },
+          id: "c02_timeline",
+          label:
+            "Start investigation: reconstruct the timeline with the SOC team",
+          next: "s02_reconstruct_timeline",
+          effects: {
+            flags: { logsReviewed: true },
+            score: { investigation: 2 },
+          },
         },
       ],
     },
 
-    s02_containment: {
-      id: "s02_containment",
-      title: "Containment in Real Time",
-      location: "Office",
+    s02_reconstruct_timeline: {
+      id: "s02_reconstruct_timeline",
+      title: "Reconstruct the Night",
+      location: "CyberSteel incident response bridge",
       text: [
-        "Ivy moves fast without moving messy.",
-        "Badges get checked. Sessions get locked. Logs get preserved. SOC team gets pulled into the loop. Extra cybersecurity consultants are hired.",
-        "Nobody likes the look of a real incident. Everybody likes the aftermath of ignoring one even less.",
+        "The CyberSteel team builds the timeline minute by minute.",
+        "Lobby bar. Private lounge. Hotel corridor. Laptop access. Cipher alert.",
+        "What felt like romance now reads like a sequence of decisions, distractions, and exploited human factors.",
+        "Rex has to say the quiet part out loud: Gemma used trust to get close enough to steal from them.",
       ],
-      redFlags: [],
+      redFlags: ["humanFactors", "manipulation"],
       choices: [
         {
-          id: "c03_rexhonest",
-          label: "Be fully honest about every exception and interaction",
-          next: "s03_truth_hurts",
+          id: "c03_logs",
+          label: "Have the SOC team review access logs and file activity",
+          next: "s04_logs_and_evidence",
           effects: {
-            flags: { rexReportedHonestly: true },
-            score: { security: 2 },
+            flags: { logsReviewed: true, evidencePreserved: true },
+            score: { investigation: 3 },
           },
         },
         {
-          id: "c03_rexminimize",
-          label: "Minimize what happened to protect Rex's image",
-          next: "s03_minimize_story",
-          effects: { score: { risk: 2, heat: 1 } },
-        },
-      ],
-    },
-
-    s02_optics_pressure: {
-      id: "s02_optics_pressure",
-      title: "Optics vs. Reality",
-      location: "Office",
-      text: [
-        "Rex is already thinking like a headline, not a responder.",
-        "Ivy's face hardens by exactly one degree.",
-        "A breach does not become less real because people work harder to keep it quiet.",
-      ],
-      redFlags: ["misinformation", "deception"],
-      choices: [
-        {
-          id: "c04_escalate_anyway",
-          label: "Escalate anyway",
-          next: "s02_containment",
-          effects: { score: { security: 2 } },
-        },
-        {
-          id: "c04_wait",
-          label: "Wait and see if it blows over",
-          next: "s03_delay_costs",
+          id: "c03_contain",
+          label: "Move directly into containment before the breach spreads",
+          next: "s03_containment",
           effects: {
-            flags: { delayedResponse: true },
-            score: { risk: 3 },
+            flags: { accessRevoked: true, cipherContained: true },
+            score: { containment: 3 },
           },
         },
       ],
     },
 
-    s02_evidence_loss: {
-      id: "s02_evidence_loss",
-      title: "Delete, Deny, Regret",
-      location: "Devices and accounts",
+    s03_containment: {
+      id: "s03_containment",
+      title: "Containment Mode",
+      location: "CyberSteel security operations center",
       text: [
-        "Messages disappear. Evidence does not.",
-        "The instinct to hide embarrassment just destroyed useful evidence.",
-        "Now the incident is harder to understand, harder to contain, and harder to explain.",
+        "The SOC team moves fast.",
+        "They sign Rex out of every device, reset his passwords, lock down the Cipher files, and isolate the systems connected to the alert.",
+        "The CyberSteel team temporarily limits access to sensitive systems while security checks for further exposure.",
+        "The goal is simple: stop the damage from spreading and preserve what the team needs to investigate.",
       ],
-      redFlags: ["misinformation", "deception"],
-      choices: [
-        {
-          id: "c05_confess",
-          label: "Confess and escalate before more damage is done",
-          next: "s02_containment",
-          effects: { score: { security: 1 } },
-        },
-        {
-          id: "c05_commit",
-          label: "Double down and hope nobody notices",
-          next: "s03_delay_costs",
-          effects: {
-            flags: { delayedResponse: true },
-            score: { risk: 3, heat: 1 },
-          },
-        },
-      ],
-    },
-
-    s03_truth_hurts: {
-      id: "s03_truth_hurts",
-      title: "The Honest Timeline",
-      location: "Office",
-      text: [
-        "It is humiliating. It is also useful.",
-        "The team maps the chain: after-hours access, private texting, oversharing, proximity, exceptions, and the moment trust became an attack vector.",
-        "Every awkward detail becomes defensive intelligence.",
-      ],
-      redFlags: [],
+      redFlags: ["attackVector", "deception"],
       ui: {
         showToast: {
-          title: "Defense: tell the whole story",
-          body: "Accurate timelines help investigators understand how the breach happened and how trust was exploited.",
+          title: "Good containment choice",
+          body: "Containment limits additional damage by cutting off access paths before the attacker can use them again.",
           kind: "success",
         },
       },
       choices: [
         {
-          id: "c06_locklessons",
-          label: "Capture lessons learned and notify the right people",
-          next: "s04_good_end",
-          effects: { score: { security: 3 } },
+          id: "c04_logs",
+          label: "Review access logs to learn what was touched",
+          next: "s04_logs_and_evidence",
+          effects: {
+            flags: { logsReviewed: true, evidencePreserved: true },
+            score: { investigation: 2 },
+          },
+        },
+        {
+          id: "c04_team",
+          label: "Brief CyberSteel leadership, legal, and engineering",
+          next: "s05_team_briefing",
+          effects: {
+            flags: { teamBriefed: true },
+            score: { accountability: 2 },
+          },
         },
       ],
     },
 
-    s03_minimize_story: {
-      id: "s03_minimize_story",
-      title: "Edited for Reputation",
-      location: "Office",
+    s04_logs_and_evidence: {
+      id: "s04_logs_and_evidence",
+      title: "What the Logs Remember",
+      location: "CyberSteel SOC dashboard",
       text: [
-        "The story gets cleaned up before the systems do.",
-        "A vague timeline protects egos and weakens the response.",
-        "The technical damage may be containable. The cultural damage is the part that lingers.",
+        "The logs are less emotional than Rex is.",
+        "They show access times, file movement, unusual activity, and the path the breach appears to have taken.",
+        "The evidence points to a blended attack: deception created the opportunity, human factors lowered resistance, and technical access finished the job.",
+        "The team preserves evidence instead of guessing. The timeline matters now.",
       ],
-      redFlags: ["misinformation", "disinformation"],
+      redFlags: ["attackVector", "humanFactors", "deception"],
       choices: [
         {
-          id: "c07_correct",
-          label: "Correct the record and be honest",
-          next: "s03_truth_hurts",
-          effects: { score: { security: 2 } },
+          id: "c05_scope",
+          label: "Determine what Cipher information was copied",
+          next: "s05_team_briefing",
+          effects: {
+            flags: { logsReviewed: true },
+            score: { investigation: 2, accountability: 1 },
+          },
         },
         {
-          id: "c07_keepspinning",
-          label: "Keep spinning it",
-          next: "s04_bad_end",
-          effects: { score: { risk: 3 } },
+          id: "c05_hunt",
+          label:
+            "Search for signs of additional access across CyberSteel systems",
+          next: "s05_team_briefing",
+          effects: {
+            flags: { logsReviewed: true },
+            score: { containment: 1, investigation: 2 },
+          },
         },
       ],
     },
 
-    s03_delay_costs: {
-      id: "s03_delay_costs",
-      title: "Time Is a Threat Actor",
-      location: "Summit floor • one hour later",
+    s05_team_briefing: {
+      id: "s05_team_briefing",
+      title: "The Whole Team Knows",
+      location: "CyberSteel executive briefing room",
       text: [
-        "Delay always feels passive. It never is.",
-        "The longer a compromised situation sits unreported, the more room it has to spread, confuse, and calcify.",
-        "By the time action starts, the story is already harder to trust and the breach is harder to contain.",
+        "By midmorning, CyberSteel’s security, engineering, legal, and leadership teams are in one room.",
+        "The update is uncomfortable but clear: Cipher information was accessed and copied.",
+        "Rex does not frame himself as the victim of a mysterious technical failure.",
+        "He explains the social engineering honestly because the team cannot fix what the company refuses to name.",
       ],
-      redFlags: ["urgency", "warningFlags", "misinformation"],
-      choices: [
-        {
-          id: "c08_escalate_late",
-          label: "Escalate late",
-          next: "s04_mixed_end",
-          effects: { score: { security: 1, risk: 1 } },
+      redFlags: ["manipulation", "humanFactors"],
+      ui: {
+        showToast: {
+          title: "Accountability",
+          body: "Social engineering incidents require honesty. Blaming only the technology can hide the human factors that made the breach possible.",
+          kind: "success",
         },
-        {
-          id: "c08_keepwaiting",
-          label: "Keep waiting",
-          next: "s04_bad_end",
-          effects: { score: { risk: 3 } },
-        },
-      ],
-    },
-
-    s04_good_end: {
-      id: "s04_good_end",
-      title: "Damage Controlled",
-      location: "Office • post-incident",
-      text: [
-        "It is not clean, but it is contained.",
-        'Access is reviewed. Policies get sharper. Rex looks like someone who finally understands what "just this once" can cost.',
-        "The breach became a lesson before it became a catastrophe.",
-      ],
-      redFlags: [],
-      end: {
-        outcome: "best_practice",
-        hook: "Fast escalation, honest reporting, and real containment reduce long-term damage.",
       },
       choices: [
         {
-          id: "c09_restart",
-          label: "Restart Act 3",
-          next: null,
+          id: "c06_recovery",
+          label: "Move into recovery and strengthen access controls",
+          next: "s06_recovery_plan",
+          effects: {
+            score: { containment: 1, accountability: 2 },
+          },
+        },
+        {
+          id: "c06_lessons",
+          label: "Turn the incident into a company-wide security lesson",
+          next: "s06_recovery_plan",
+          effects: {
+            score: { accountability: 3 },
+          },
         },
       ],
     },
 
-    s04_mixed_end: {
-      id: "s04_mixed_end",
-      title: "Contained, But Late",
-      location: "Office • post-incident",
+    s06_recovery_plan: {
+      id: "s06_recovery_plan",
+      title: "Recovery Plan",
+      location: "CyberSteel SOC",
       text: [
-        "They got there eventually.",
-        "Some damage was contained. Some evidence was blurred by delay. Some trust will not recover on the same timeline as the systems.",
-        "Late reporting is better than never. It is still worse than immediate truth.",
+        "CyberSteel tightens access controls around Cipher.",
+        "The SOC team expands monitoring, reviews executive device policies, and adds stronger safeguards for private product previews.",
+        "The company also updates training to show how manipulation, trust, and deception can create real technical consequences.",
+        "Rex cannot undo the breach, but he can help make sure the lesson survives longer than the embarrassment.",
       ],
-      redFlags: [],
-      end: {
-        outcome: "mixed",
-        hook: "Delays make incidents harder to contain, even when the right people eventually get involved.",
-      },
+      redFlags: ["manipulation", "deception", "humanFactors"],
       choices: [
         {
-          id: "c10_restart",
-          label: "Restart Act 3",
-          next: null,
+          id: "c07_finish",
+          label: "Finalize the incident response report",
+          next: "s07_final_report",
+          effects: {
+            flags: { cipherContained: true, teamBriefed: true },
+            score: { containment: 2, accountability: 2 },
+          },
+        },
+        {
+          id: "c07_reflect",
+          label: "Have Rex document exactly how Gemma gained his trust",
+          next: "s07_final_report",
+          effects: {
+            flags: { evidencePreserved: true },
+            score: { investigation: 1, accountability: 3 },
+          },
         },
       ],
     },
 
-    s04_bad_end: {
-      id: "s04_bad_end",
-      title: "This Feels Real",
-      location: "Office • rumors, screens, and silence",
+    s07_final_report: {
+      id: "s07_final_report",
+      title: "End of Act 3: Damage Control",
+      location: "CyberSteel incident response report",
       text: [
-        "The chemistry is gone now. All that is left is consequence.",
-        "A preventable incident has become a public one, a technical one, and a human one.",
-        "Somebody will write a timeline later. Everybody in it will wish they had made a different choice sooner.",
+        "The final report does not read like a love story.",
+        "It reads like an incident: initial contact, trust-building, access opportunity, data exposure, containment, investigation, and recovery.",
+        "Gemma is gone, but CyberSteel can finally see how the breach happened.",
+        "CyberSteel names the breach for what it was: a social engineering attack that used human factors as the opening.",
+        "Damage control cannot erase what happened. It can stop the bleeding, preserve the evidence, and make the next attack harder to repeat.",
       ],
-      redFlags: ["urgency", "disinformation", "deception"],
+      redFlags: ["attackVector", "humanFactors", "manipulation", "deception"],
       end: {
-        outcome: "worst_case",
-        hook: "Delays, secrecy, and reputation management can turn a manageable incident into a broader failure.",
+        outcome: "damage_control_complete",
+        hook: "Rex and the CyberSteel team contained the breach, investigated the attack vector, and turned the incident into a lesson about deception, manipulation, and human factors.",
       },
       choices: [
         {
-          id: "c11_restart",
+          id: "c08_restart",
           label: "Restart Act 3",
           next: null,
         },
