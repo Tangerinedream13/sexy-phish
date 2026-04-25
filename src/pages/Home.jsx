@@ -183,9 +183,9 @@ export default function Home({ onStartAct1, onStartAct2, onStartAct3 }) {
               </Text>
 
               <Text color="gray.600" maxW="2xl">
-                Sexy-Phish is an interactive choose-your-own-adventure story
-                that teaches phishing awareness through romance, deception, and
-                social engineering.
+                Sexy-Phish is an interactive romance-themed cybersecurity story
+                where each choice reveals how trust, urgency, and deception can
+                become social engineering red flags.
               </Text>
             </VStack>
           </Box>
@@ -195,11 +195,8 @@ export default function Home({ onStartAct1, onStartAct2, onStartAct3 }) {
               How It Works
             </Heading>
             <Text color="gray.600">
-              Each act includes interactive choices that shape the story while
-              highlighting common phishing and social engineering red flags.
-              Players can click highlighted vocabulary words to learn terms in
-              context and see how trust, manipulation, urgency, and human
-              factors shape decision making.
+              Play through each act, make choices, and click highlighted terms
+              to learn how social engineering tactics work in context.
             </Text>
           </VStack>
 
@@ -213,7 +210,7 @@ export default function Home({ onStartAct1, onStartAct2, onStartAct3 }) {
               actLabel="Act 1"
               title="hello.friend"
               subtitle="Meet Cute"
-              description="Gemma and Rex meet for the first time in Las Vegas at a cybersecurity conference. Rex is immediately charmed by Gemma, unaware that she is really after access to Cipher information."
+              description="Gemma meets Rex in Las Vegas, where charm, chemistry, and curiosity begin to blur the line between romance and risk."
               themes="social engineering, luring, warning flags"
               image={act1Img}
               onClick={onStartAct1}
@@ -224,7 +221,7 @@ export default function Home({ onStartAct1, onStartAct2, onStartAct3 }) {
               actLabel="Act 2"
               title="trust_me.exe"
               subtitle="Situationship"
-              description="As the connection deepens, trust and attraction begin to lower defenses. What feels intimate and harmless starts opening the door to oversharing, access, and manipulation."
+              description="What feels like connection becomes a test of trust, urgency, and access as Gemma gets closer to Rex and Cipher."
               themes="trust, oversharing, human factors"
               image={act2Img}
               onClick={onStartAct2}
@@ -235,8 +232,8 @@ export default function Home({ onStartAct1, onStartAct2, onStartAct3 }) {
               actLabel="Act 3"
               title="this_feels_real.txt"
               subtitle="Damage Control"
-              description="The damage is done. Now the focus shifts to breach, fallout, response, and the challenge of fixing what trust allowed to break."
-              themes="breach, urgency, manipulation, response"
+              description="The morning after, Rex and CyberSteel must contain the breach, trace the attack, and face how trust became the opening."
+              themes="breach, containment, response"
               image={act3Img}
               onClick={onStartAct3}
               isDisabled={!onStartAct3}
@@ -257,16 +254,9 @@ export default function Home({ onStartAct1, onStartAct2, onStartAct3 }) {
                 Learning Structure
               </Heading>
               <Text color="gray.700">
-                Rather than presenting cybersecurity as purely technical or
-                intimidating, Sexy-Phish makes it relatable, story-driven, and
-                interactive.
-              </Text>
-              <Text color="gray.600">
-                By combining romance-inspired storytelling, decision-based
-                learning, red-flag recognition, and click-to-define
-                cybersecurity vocabulary, the project helps players understand
-                how phishing attacks exploit trust, emotion, urgency, and human
-                behavior.
+                Sexy-Phish uses story-driven choices, red-flag recognition, and
+                click-to-define cybersecurity vocabulary to make social
+                engineering easier to recognize.
               </Text>
               <Text color="gray.600">
                 The goal is to make cybersecurity awareness memorable,
@@ -290,11 +280,44 @@ export default function Home({ onStartAct1, onStartAct2, onStartAct3 }) {
               </Heading>
 
               <Text color="gray.700">
-                Sexy-Phish is informed by research on social engineering,
+                Sexy-Phish is grounded in research on social engineering,
                 phishing awareness, romance scams, and the human factors that
                 influence cybersecurity decisions. These sources helped shape
-                the story structure, vocabulary terms, and learning goals
+                the story, vocabulary, red flags, and interactive choices
                 throughout the project.
+              </Text>
+
+              <Text color="gray.600">
+                Akeiber explains how modern social engineering attacks combine
+                technical tools with behavioral tactics such as phishing,
+                impersonation, and manipulation. This supports the project’s
+                focus on how attackers exploit psychology, trust, and emotion
+                rather than relying only on technical vulnerabilities.
+              </Text>
+
+              <Text color="gray.600">
+                Hatfield provides a framework for understanding how social
+                engineering has evolved as a cybersecurity concept. This source
+                helped guide the project’s use of terms such as phishing, scams,
+                manipulation, and deception while showing why these attacks are
+                effective against real people and organizations.
+              </Text>
+
+              <Text color="gray.600">
+                Iovine’s article on romance scams connects directly to the
+                romance-themed structure of Sexy-Phish. It explains how scammers
+                build emotional trust through dating apps and social media
+                before asking for money, access, or personal information. This
+                helped shape the project’s focus on charm, attachment, and
+                warning signs.
+              </Text>
+
+              <Text color="gray.600">
+                Wang, Sun, and Zhu provide a strong definition of social
+                engineering and emphasize the role of human factors in
+                cybersecurity. Their work helped inform the project’s glossary
+                terms and its focus on how attackers exploit trust, authority,
+                curiosity, deception, and emotional responses.
               </Text>
 
               <VStack align="start" spacing={3} color="gray.600" fontSize="sm">
@@ -306,7 +329,9 @@ export default function Home({ onStartAct1, onStartAct2, onStartAct3 }) {
                   <Text as="span" fontStyle="italic">
                     The evolution of social engineering attacks: A cybersecurity
                     engineering perspective.
-                  </Text>
+                  </Text>{" "}
+                  Rafidain Journal of Engineering Sciences, 3(1), 294–316.
+                  https://doi.org/10.61268/r9c49865
                 </Text>
 
                 <Text>
@@ -317,17 +342,20 @@ export default function Home({ onStartAct1, onStartAct2, onStartAct3 }) {
                   <Text as="span" fontStyle="italic">
                     Social engineering in cybersecurity: The evolution of a
                     concept.
-                  </Text>
+                  </Text>{" "}
+                  Computers & Security, 73, 102–113.
+                  https://doi.org/10.1016/j.cose.2017.10.008
                 </Text>
 
                 <Text>
                   <Text as="span" fontWeight="bold" color="pink.700">
                     [3]
                   </Text>{" "}
-                  Iovine, A. (2026).{" "}
+                  Iovine, A. (2026, February 19).{" "}
                   <Text as="span" fontStyle="italic">
                     What are romance scams and how can you avoid them?
-                  </Text>
+                  </Text>{" "}
+                  Mashable. https://mashable.com/article/what-are-romance-scams
                 </Text>
 
                 <Text>
@@ -337,7 +365,9 @@ export default function Home({ onStartAct1, onStartAct2, onStartAct3 }) {
                   Wang, Z., Sun, L., & Zhu, H. (2020).{" "}
                   <Text as="span" fontStyle="italic">
                     Defining social engineering in cybersecurity.
-                  </Text>
+                  </Text>{" "}
+                  IEEE Access, 8, 85094–85115.
+                  https://doi.org/10.1109/ACCESS.2020.2992807
                 </Text>
               </VStack>
             </VStack>
