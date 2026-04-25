@@ -40,7 +40,6 @@ The experience unfolds in three acts:
 
 Each act includes 3–4 interactive decision points highlighting phishing red flags.
 
-A final questionnaire assesses learning outcomes.
 
 ---
 
