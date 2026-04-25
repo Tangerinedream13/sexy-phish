@@ -116,7 +116,7 @@ export default function ActPlayer({
                 src={scene.image}
                 alt={scene.title}
                 w="100%"
-                maxW="520px"
+                maxW="420px"
                 h="auto"
                 objectFit="contain"
               />
