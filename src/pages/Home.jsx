@@ -133,6 +133,7 @@ function ActCard({
     </Box>
   );
 }
+
 export default function Home({ onStartAct1, onStartAct2, onStartAct3 }) {
   return (
     <Box minH="100vh" bg="pink.50" px={6} py={{ base: 8, md: 12 }}>
@@ -212,7 +213,7 @@ export default function Home({ onStartAct1, onStartAct2, onStartAct3 }) {
               actLabel="Act 1"
               title="hello.friend"
               subtitle="Meet Cute"
-              description="Gemma and Rex meet for the first time in Las Vegas at a cybersecurity conference. Rex is immediately charmed by Gemma, unaware that she is really after access to Cypher AI information."
+              description="Gemma and Rex meet for the first time in Las Vegas at a cybersecurity conference. Rex is immediately charmed by Gemma, unaware that she is really after access to Cipher information."
               themes="social engineering, luring, warning flags"
               image={act1Img}
               onClick={onStartAct1}
@@ -271,6 +272,74 @@ export default function Home({ onStartAct1, onStartAct2, onStartAct3 }) {
                 The goal is to make cybersecurity awareness memorable,
                 approachable, and useful in real life.
               </Text>
+            </VStack>
+          </Box>
+
+          <Box
+            w="full"
+            bg="white"
+            borderRadius="2xl"
+            boxShadow="lg"
+            p={6}
+            border="1px solid"
+            borderColor="pink.100"
+          >
+            <VStack align="start" spacing={4}>
+              <Heading size="md" color="pink.700">
+                Academic Foundation
+              </Heading>
+
+              <Text color="gray.700">
+                Sexy-Phish is informed by research on social engineering,
+                phishing awareness, romance scams, and the human factors that
+                influence cybersecurity decisions. These sources helped shape
+                the story structure, vocabulary terms, and learning goals
+                throughout the project.
+              </Text>
+
+              <VStack align="start" spacing={3} color="gray.600" fontSize="sm">
+                <Text>
+                  <Text as="span" fontWeight="bold" color="pink.700">
+                    [1]
+                  </Text>{" "}
+                  Akeiber, H. J. (2025).{" "}
+                  <Text as="span" fontStyle="italic">
+                    The evolution of social engineering attacks: A cybersecurity
+                    engineering perspective.
+                  </Text>
+                </Text>
+
+                <Text>
+                  <Text as="span" fontWeight="bold" color="pink.700">
+                    [2]
+                  </Text>{" "}
+                  Hatfield, J. M. (2018).{" "}
+                  <Text as="span" fontStyle="italic">
+                    Social engineering in cybersecurity: The evolution of a
+                    concept.
+                  </Text>
+                </Text>
+
+                <Text>
+                  <Text as="span" fontWeight="bold" color="pink.700">
+                    [3]
+                  </Text>{" "}
+                  Iovine, A. (2026).{" "}
+                  <Text as="span" fontStyle="italic">
+                    What are romance scams and how can you avoid them?
+                  </Text>
+                </Text>
+
+                <Text>
+                  <Text as="span" fontWeight="bold" color="pink.700">
+                    [4]
+                  </Text>{" "}
+                  Wang, Z., Sun, L., & Zhu, H. (2020).{" "}
+                  <Text as="span" fontStyle="italic">
+                    Defining social engineering in cybersecurity.
+                  </Text>
+                </Text>
+              </VStack>
             </VStack>
           </Box>
         </VStack>
