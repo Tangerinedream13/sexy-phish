@@ -242,7 +242,7 @@ const act1 = {
       location: "Lobby Bar",
       image: targetAcquiredImg,
       text: [
-        "Rex Vale stands at the bar with his sleeves rolled and his attention finally unguarded.",
+        "Rex Vale stands at the bar with a drink in one hand and his attention finally unguarded.",
         "His badge catches the light when he turns, and the name CyberSteel sits beneath his title like a dare.",
         "Gemma appears beside him in the mirror before she appears beside him in real life.",
         "For one dangerous second, the scene reads less like surveillance and more like fate.",
