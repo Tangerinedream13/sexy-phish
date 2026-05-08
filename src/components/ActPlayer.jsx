@@ -19,6 +19,7 @@ export default function ActPlayer({
 }) {
   const [currentSceneId, setCurrentSceneId] = useState(act.startSceneId);
   const [activeFlag, setActiveFlag] = useState(null);
+  const [history, setHistory] = useState([]);
 
   const scene = useMemo(
     () => act.scenes[currentSceneId],
@@ -27,12 +28,30 @@ export default function ActPlayer({
 
   const handleChoice = (choice) => {
     setActiveFlag(null);
+
     if (!choice.next) return;
+
+    setHistory((prev) => [...prev, currentSceneId]);
     setCurrentSceneId(choice.next);
+  };
+
+  const handleBack = () => {
+    setActiveFlag(null);
+
+    if (history.length === 0) {
+      onHome();
+      return;
+    }
+
+    const previousScene = history[history.length - 1];
+
+    setHistory((prev) => prev.slice(0, -1));
+    setCurrentSceneId(previousScene);
   };
 
   const handleRestart = () => {
     setActiveFlag(null);
+    setHistory([]);
     setCurrentSceneId(act.startSceneId);
   };
 
@@ -225,6 +244,10 @@ export default function ActPlayer({
 
           {!isEndingScene ? (
             <VStack align="stretch" spacing={3}>
+              <Button variant="ghost" colorScheme="gray" onClick={handleBack}>
+                ← Back
+              </Button>
+
               <Text fontWeight="semibold" color="gray.700">
                 {getChoicePrompt()}
               </Text>
@@ -246,6 +269,10 @@ export default function ActPlayer({
             </VStack>
           ) : (
             <VStack align="stretch" spacing={3}>
+              <Button variant="ghost" colorScheme="gray" onClick={handleBack}>
+                ← Back
+              </Button>
+
               <Button colorScheme="pink" onClick={handleRestart}>
                 Restart {act.meta?.subtitle}
               </Button>
