@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import {
   Box,
   Button,
@@ -20,6 +20,16 @@ export default function ActPlayer({
   const [currentSceneId, setCurrentSceneId] = useState(act.startSceneId);
   const [activeFlag, setActiveFlag] = useState(null);
   const [history, setHistory] = useState([]);
+  const topRef = useRef(null);
+
+  const scrollToTop = () => {
+    setTimeout(() => {
+      topRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 0);
+  };
 
   const scene = useMemo(
     () => act.scenes[currentSceneId],
@@ -33,6 +43,7 @@ export default function ActPlayer({
 
     setHistory((prev) => [...prev, currentSceneId]);
     setCurrentSceneId(choice.next);
+    scrollToTop();
   };
 
   const handleBack = () => {
@@ -47,12 +58,14 @@ export default function ActPlayer({
 
     setHistory((prev) => prev.slice(0, -1));
     setCurrentSceneId(previousScene);
+    scrollToTop();
   };
 
   const handleRestart = () => {
     setActiveFlag(null);
     setHistory([]);
     setCurrentSceneId(act.startSceneId);
+    scrollToTop();
   };
 
   const isEndingScene = Boolean(scene?.end);
@@ -85,6 +98,7 @@ export default function ActPlayer({
   return (
     <Box minH="100vh" bg="pink.50" display="flex" justifyContent="center" p={6}>
       <Box
+        ref={topRef}
         w="full"
         maxW="3xl"
         bg="white"
